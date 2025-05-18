@@ -23,6 +23,15 @@ class SCR_SetLoadoutAction : SCR_BaseFactionCheckUserAction
 	//------------------------------------------------------------------------------------------------
 	override bool CanBeShownScript(IEntity user)
 	{
+		//~ Added this here cause in Init it is not found, maybe delayed call?
+		m_LoadoutManager = GetGame().GetLoadoutManager();
+
+		if (!m_LoadoutManager)
+		{
+			Print("[SCR_SetLoadoutAction_7R: CanBeShownScript] No loadoutmanager found ", LogLevel.ERROR);
+			return false;
+		}
+		
 		if (!m_eRole)
 			return false;
 		
@@ -55,26 +64,6 @@ class SCR_SetLoadoutAction : SCR_BaseFactionCheckUserAction
 			Print(("[SCR_SetLoadoutAction_7R: PerformAction] No loadout found for role " + m_eRole), LogLevel.WARNING);
 			return;
 		}
-		
-		Resource resource = m_ResourceHandler.GenerateAndValidateResource(loadout.GetLoadoutResource());
-		IEntity entity;
-		GameEntity character;
-		
-		if (resource.IsValid())
-		{
-			entity = GetGame().SpawnEntityPrefab(resource);
-		}
-
-		if(GameEntity.Cast(entity))
-		{
-			character = GameEntity.Cast(entity);
-		}
-		
-		if(!character)
-		{
-			Print("[SCR_SetLoadoutAction_7R: PerformAction] Could not cast to GameEntity", LogLevel.ERROR);
-			return;
-		}
 
 		// Find player id
 		int playerId = GetGame().GetPlayerManager().GetPlayerIdFromControlledEntity(pUserEntity);
@@ -100,7 +89,11 @@ class SCR_SetLoadoutAction : SCR_BaseFactionCheckUserAction
 			return;
 		}
 		
-		m_ArsenalManager.S7R_TrySetPlayerArsenalLoadout_S("1", playerId, character, m_ArsenalComponent, SCR_EArsenalSupplyCostType.DEFAULT);
+		// Set as official loadout
+		m_ArsenalManager.S7R_TrySetPlayerArsenalLoadout_S("Loadout7R", playerId, loadout, m_ArsenalComponent, SCR_EArsenalSupplyCostType.DEFAULT);
+		
+		// Load loadout
+		m_ArsenalManager.S7R_LoadPlayerArsenalLoadout_S("Loadout7R", playerId, GameEntity.Cast(pUserEntity))
  	}
 	
 	//------------------------------------------------------------------------------------------------
@@ -153,15 +146,6 @@ class SCR_SetLoadoutAction : SCR_BaseFactionCheckUserAction
 		if (!m_ArsenalManager || !m_ArsenalComponent)
 		{
 			Print("[SCR_SetLoadoutAction_7R: Init] No arsenalmanager or arsenalcomponent found ", LogLevel.ERROR);
-			return;
-		}
-
-		//~ Get Loadout manager
-		m_LoadoutManager = GetGame().GetLoadoutManager();
-
-		if (!m_LoadoutManager)
-		{
-			Print("[SCR_SetLoadoutAction_7R: Init] No loadoutmanager found ", LogLevel.ERROR);
 			return;
 		}
 		

@@ -3,27 +3,49 @@ modded class SCR_LoadoutManagerClass
 {
 }
 
-modded class SCR_LoadoutManager
+/*
+
+TO DO:
+
+	- Add override attributes for groups of roles so multiple factions supported
+	- Add proper validation of loadouts
+
+*/
+
+modded class SCR_LoadoutManager : GenericEntity
 {	
 	[Attribute("", UIWidgets.ComboBox, enumType: ELoadouts7R, category: "7R Loadout Selection")]
-	protected ELoadouts7R m_7RLoadout;
+	protected ELoadouts7R m_7RFactionLoadoutKey;
 	
 	[Attribute("", UIWidgets.Auto, category: "7R Loadouts Import")]
-	protected ref SCR_LoadoutMasterConfig7R m_7RLoadoutImports;
+	protected ref S7R_LoadoutMasterConfig m_7RLoadoutImports;
 	
-	protected ref SCR_Loadouts7R m_Loadouts7R;
-
-	void AddPlayerLoadout(SCR_BasePlayerLoadout loadout)
+	protected ref SCR_PlayerArsenalLoadout m_BaseLoadout;
+	protected ref S7R_FactionLoadouts m_Loadouts7R;
+	
+	//------------------------------------------------------------------------------------------------
+	//! Get selected 7R Faction Key for this mission
+	ELoadouts7R Get7RLoadoutKey()
 	{
-		if (!loadout)
+		if(!m_7RFactionLoadoutKey)
+			return false;
+		
+		return m_7RFactionLoadoutKey;
+	}
+	
+	//------------------------------------------------------------------------------------------------
+	//! Validate Loadout
+	//! \param[in] SCR_PlayerArsenalLoadout
+	//! \return bool
+	protected bool IsValid7RLoadout(SCR_PlayerArsenalLoadout loadout)
+	{
+		if (loadout.GetFactionKey() != "7R")
 		{
-			Print("[SCR_LoadoutManager7R: AddPlayerLoadout] No loadout found", LogLevel.ERROR);
-			return;
+			Print("[SCR_Loadouts7RComponent: IsValidLoadout] No faction key found for selected SCR_Role7R", LogLevel.ERROR);
+			return false;
 		}
 		
-		m_aPlayerLoadouts.Insert(loadout);
-		
-		GetOnMappedPlayerLoadoutInfoChanged();
+		return true;
 	}
 	
 	//------------------------------------------------------------------------------------------------
@@ -47,20 +69,66 @@ modded class SCR_LoadoutManager
 	}
 	
 	//------------------------------------------------------------------------------------------------
-	//! TO DO: Should return the base loadout for the current loadout or the basic 7R one if not found
 	SCR_PlayerArsenalLoadout GetBase7RArsenalLoadout()
 	{
-		foreach(SCR_BasePlayerLoadout loadout: m_aPlayerLoadouts)
+		if (!m_BaseLoadout)
 		{
-			// Sketchy condition, find better way
-			if (loadout.ClassName() == "SCR_PlayerArsenalLoadout")
-			{
-				SCR_PlayerArsenalLoadout loadout7R = SCR_PlayerArsenalLoadout.Cast(loadout);
-				if (loadout7R.GetSlotID() == "Base7R")
-					return loadout7R;
-			}
+			Print("[S7R_LoadoutManager: GetBase7RArsenalLoadout] No base loadout", LogLevel.ERROR);
+			return null;
 		}
-		Print("[S7R_LoadoutManager: GetBase7RArsenalLoadout] No loadout with slotID 'Base' found", LogLevel.ERROR);
-		return null;
+		
+		return m_BaseLoadout;
+	}
+	
+	//------------------------------------------------------------------------------------------------
+	// Perhaps change the Efunction here?
+	override protected void EOnActivate(IEntity owner)
+	{
+		// Find the base loadout
+		if (!m_7RLoadoutImports)
+		{
+			Print("[S7R_LoadoutManager: EOnActivate] Master Config is empty", LogLevel.ERROR);
+			return;
+		}
+		
+		m_BaseLoadout = m_7RLoadoutImports.GetBase7RLoadout(m_7RFactionLoadoutKey);
+		
+		if (!m_BaseLoadout)
+		{
+			Print("[S7R_LoadoutManager: EOnActivate] No base loadout found", LogLevel.ERROR);
+			return;
+		}
+		
+		m_aPlayerLoadouts.Insert(m_BaseLoadout);
+		
+		// Find the faction loadouts
+		m_Loadouts7R = m_7RLoadoutImports.GetLoadoutsFromFactionKey(m_7RFactionLoadoutKey);
+		
+		if (!m_Loadouts7R)
+		{
+			Print("[S7R_LoadoutManager: EOnActivate] Did not find selected faction in master config", LogLevel.ERROR);
+			GetOnMappedPlayerLoadoutInfoChanged();
+			return;
+		}
+		
+		array<ref SCR_PlayerArsenalLoadout> loadouts = m_Loadouts7R.GetLoadouts();
+		
+		if (!loadouts)
+		{
+			Print("[S7R_LoadoutManager: EOnActivate] Did not find loadouts for selected faction in master config", LogLevel.ERROR);
+			GetOnMappedPlayerLoadoutInfoChanged();
+			return;
+		}
+		
+		foreach (SCR_PlayerArsenalLoadout loadout : loadouts)
+		{
+			if (!IsValid7RLoadout(loadout))
+			{
+				continue;
+			}
+			m_aPlayerLoadouts.Insert(loadout);
+		}
+		
+		GetOnMappedPlayerLoadoutInfoChanged();
 	}
 }

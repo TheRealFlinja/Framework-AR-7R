@@ -1,14 +1,9 @@
 modded class SCR_ArsenalManagerComponent : SCR_BaseGameModeComponent
 {
+	// Map of <Player, <SlotID, LoadoutData>>
 	ref map<string, ref map<string, ref SCR_PlayerLoadoutData>> m_mS7RLocalPlayerLoadoutSlots = new map<string, ref map<string, ref SCR_PlayerLoadoutData>>();
 	protected ref map<string, ref map<string, ref map<string, ref S7R_ArsenalPlayerLoadout>>> m_mS7RPlayerLoadoutSlots = new map<string, ref map<string, ref map<string, ref S7R_ArsenalPlayerLoadout>>>();
 	protected ref map<string, ref S7R_ArsenalPlayerLoadout> m_mS7RSelectedPlayerLoadoutSlots = new map<string, ref S7R_ArsenalPlayerLoadout>();
-	
-	//------------------------------------------------------------------------------------------------
-	override void EOnInit(IEntity owner)
-	{
-		super.EOnInit(owner);
-	}
 	
 	//------------------------------------------------------------------------------------------------
 	SCR_PlayerLoadoutData S7R_GetPlayerLoadoutData_C(string slotId)
@@ -285,7 +280,7 @@ modded class SCR_ArsenalManagerComponent : SCR_BaseGameModeComponent
 	void S7R_TrySetPlayerArsenalLoadout_S(
 		string slotId,
 		int playerId,
-		notnull GameEntity characterEntity,
+		notnull SCR_PlayerArsenalLoadout playerLoadout,
 		SCR_ArsenalComponent arsenalComponent,
 		SCR_EArsenalSupplyCostType arsenalSupplyType
 	)
@@ -296,8 +291,25 @@ modded class SCR_ArsenalManagerComponent : SCR_BaseGameModeComponent
 		const SCR_PlayerController clientPlayerController = SCR_PlayerController.Cast(GetGame().GetPlayerManager().GetPlayerController(playerId));
 		if (!clientPlayerController || clientPlayerController.IsPossessing())
 			return;
+		
+		// Spawn CharacterEntity Locally to retrieve loadout information
+		ResourceName loadoutResource = playerLoadout.GetLoadoutResource();
+		if (!loadoutResource)
+			return;
+				
+		Resource resource = Resource.Load(loadoutResource);
+		if (!resource)
+			return;
+		
+		IEntity ent = GetGame().SpawnEntityPrefabLocal(resource);
+		if (!ent)
+			return;
+		
+		GameEntity characterEntity = GameEntity.Cast(ent);
+		if (!characterEntity)
+			return;
 
-		const FactionAffiliationComponent factionAffiliation = FactionAffiliationComponent.Cast(characterEntity.FindComponent(FactionAffiliationComponent));
+		const FactionAffiliationComponent factionAffiliation = FactionAffiliationComponent.Cast(clientPlayerController.FindComponent(FactionAffiliationComponent));
 		if (!factionAffiliation)
 			return;
 		
@@ -308,57 +320,7 @@ modded class SCR_ArsenalManagerComponent : SCR_BaseGameModeComponent
 		if (!CanSaveLoadout(playerId, characterEntity, factionAffiliation, arsenalComponent, true))
 			return;
 
-		S7R_SetPlayerArsenalLoadout_S(slotId, factionKey, playerId, characterEntity, arsenalSupplyType);
-	}
-
-	//------------------------------------------------------------------------------------------------
-	private void S7R_SetPlayerArsenalLoadout_S(string slotId, string factionKey, int playerId, notnull GameEntity characterEntity, SCR_EArsenalSupplyCostType arsenalSupplyType)
-	{
-		const string playerUID = S7R_GetPlayerUID(playerId);
-		const S7R_ArsenalPlayerLoadout currentLoadout = m_mS7RSelectedPlayerLoadoutSlots.Get(playerUID);
-		const string characterSaveJson = S7R_ArsenalPlayerLoadout.GetCharacterSaveJson(characterEntity);
-		const int newLoadoutHash = characterSaveJson.Hash();
-		const bool isLoadoutValid = newLoadoutHash != 0;
-
-		if (isLoadoutValid)
-		{
-			map<string, ref S7R_ArsenalPlayerLoadout> playerLoadouts = S7R_GetPlayerLoadouts_S(playerId, factionKey);
-			if (!playerLoadouts)
-			{
-				playerLoadouts = new map<string, ref S7R_ArsenalPlayerLoadout>();
-				S7R_SetPlayerLoadouts_S(playerId, factionKey, playerLoadouts);
-			}
-
-			// Create new loadout
-			S7R_ArsenalPlayerLoadout newLoadout();
-			m_mS7RSelectedPlayerLoadoutSlots.Set(playerUID, newLoadout);
-			playerLoadouts.Set(slotId, newLoadout);
-
-			// Create temp loadout for cost calulation (uses exiting vanilla code for calculations)
-			SCR_ArsenalPlayerLoadout tempLoadoutForCostCalculation();
-			tempLoadoutForCostCalculation.loadout = characterSaveJson;
-
-			const FactionAffiliationComponent factionAffiliation = FactionAffiliationComponent.Cast(characterEntity.FindComponent(FactionAffiliationComponent));
-			ComputeSuppliesCost(SCR_Faction.Cast(factionAffiliation.GetAffiliatedFaction()), tempLoadoutForCostCalculation, arsenalSupplyType);
-
-			newLoadout.Hash = newLoadoutHash;
-			newLoadout.SlotId = slotId;
-			newLoadout.PlayerUID = playerUID;
-			newLoadout.FactionK = factionKey;
-			newLoadout.Loadout = GetPlayerLoadoutData(characterEntity);
-			newLoadout.LoadoutCost = 0;
-			newLoadout.Loadout.LoadoutCost = 0;
-			newLoadout.Loadout.FactionIndex = GetGame().GetFactionManager().GetFactionIndex(SCR_FactionManager.SGetPlayerFaction(playerId));
-			newLoadout.Loadout.SlotId = slotId;
-			newLoadout.SaveLoadoutToFile(characterEntity);
-
-			const PlayerController playerController = GetGame().GetPlayerManager().GetPlayerController(playerId);
-			const S7R_LoadoutEditorPlayerComponent editorPlayerComponent = S7R_LoadoutEditorPlayerComponent.Cast(playerController.FindComponent(S7R_LoadoutEditorPlayerComponent));
-			if (editorPlayerComponent)
-				editorPlayerComponent.Rpc(editorPlayerComponent.S7R_DoSendPlayerLoadout, playerId, factionKey, newLoadout.Loadout);
-		}
-
-		Rpc(DoSetPlayerHasLoadout, playerId, isLoadoutValid, true, true);
+		S7R_SavePlayerArsenalLoadout_S(slotId, factionKey, playerId, characterEntity, arsenalSupplyType);
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -403,10 +365,12 @@ modded class SCR_ArsenalManagerComponent : SCR_BaseGameModeComponent
 	//------------------------------------------------------------------------------------------------
 	protected void S7R_InitPlayerLoadouts(int playerId)
 	{
+		// Get PlayerController
 		const PlayerController playerController = GetGame().GetPlayerManager().GetPlayerController(playerId);
 		if (!playerController)
 			return;
 		
+		// Get LoadoutEditorComponent
 		const S7R_LoadoutEditorPlayerComponent editorPlayerComponent = S7R_LoadoutEditorPlayerComponent.Cast(playerController.FindComponent(S7R_LoadoutEditorPlayerComponent));
 		if (!editorPlayerComponent)
 			return;
@@ -415,9 +379,12 @@ modded class SCR_ArsenalManagerComponent : SCR_BaseGameModeComponent
 		if (!playerUID)
 			return;
 
+		// Create new mapping
 		m_mS7RPlayerLoadoutSlots.Set(playerUID, new map<string, ref map<string, ref S7R_ArsenalPlayerLoadout>>());
 		auto playerLoadoutsByFaction = m_mS7RPlayerLoadoutSlots.Get(playerUID);
 
+		// Load previous loadouts for faction (for reconnects)
+		// See if this carries over between missions persistent
 		const map<string, ref array<ref SCR_PlayerLoadoutData>> playerLoadoutsDataByFaction = new map<string, ref array<ref SCR_PlayerLoadoutData>>();
 		const array<ref S7R_ArsenalPlayerLoadout> loadouts = S7R_ArsenalPlayerLoadout.LoadAllFromFolder(playerUID);
 		foreach(S7R_ArsenalPlayerLoadout loadout : loadouts)

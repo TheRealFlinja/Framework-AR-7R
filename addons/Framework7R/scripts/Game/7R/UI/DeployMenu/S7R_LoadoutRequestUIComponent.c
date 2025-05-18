@@ -1,4 +1,12 @@
 //! Component responsible for requesting and visualization of available loadouts in deploy menu.
+
+/*
+
+TO DO:
+
+	- Find hardcoded default for the base loadout
+
+*/
 modded class SCR_LoadoutRequestUIComponent : SCR_DeployRequestUIBaseComponent
 {
 	//------------------------------------------------------------------------------------------------
@@ -16,7 +24,22 @@ modded class SCR_LoadoutRequestUIComponent : SCR_DeployRequestUIBaseComponent
 		m_LoadoutSelector.ClearAll();
 
 		array<ref SCR_BasePlayerLoadout> availableLoadouts = {};
-		m_LoadoutManager.GetPlayerLoadoutsByFaction(faction, availableLoadouts);
+		SCR_BasePlayerLoadout baseLoadout = m_LoadoutManager.GetBase7RArsenalLoadout();
+		
+		// Add hardcoded default
+		if (!baseLoadout)
+		{
+			return;
+		}
+		
+		// Load assigned loadout if available
+		if (m_PlyLoadoutComp.GetAssignedLoadout() && baseLoadout != m_PlyLoadoutComp.GetAssignedLoadout())
+		{
+			availableLoadouts.Insert(m_PlyLoadoutComp.GetAssignedLoadout())
+		}
+		
+		// Set Base Loadout
+		availableLoadouts.Insert(baseLoadout);
 
 		SCR_PlayerArsenalLoadout arsenalLoadout = null;
 		foreach (SCR_BasePlayerLoadout loadout : availableLoadouts)
@@ -26,9 +49,6 @@ modded class SCR_LoadoutRequestUIComponent : SCR_DeployRequestUIBaseComponent
 
 			if (loadout.IsInherited(SCR_PlayerArsenalLoadout))
 				arsenalLoadout = SCR_PlayerArsenalLoadout.Cast(loadout);
-			
-			if(arsenalLoadout.GetSlotID() != "Base7R")
-				continue;
 
 			m_LoadoutSelector.AddItem(loadout, loadout.IsLoadoutAvailableClient());
 		}
@@ -43,17 +63,5 @@ modded class SCR_LoadoutRequestUIComponent : SCR_DeployRequestUIBaseComponent
 
 		GetGame().GetCallqueue().CallLater(RefreshLoadoutPreview, 0, false); // delayed refresh call helps with performance
 	}
-
-	//------------------------------------------------------------------------------------------------
-	override protected void UpdateLoadouts(int playerID, bool hasValidLoadout)
-	{
-		array<ref SCR_BasePlayerLoadout> availableLoadouts = {};
-		m_LoadoutManager.GetPlayerLoadoutsByFaction(m_PlyFactionAffilComp.GetAffiliatedFaction(), availableLoadouts);
-		foreach (SCR_BasePlayerLoadout loadout : availableLoadouts)
-		{
-			SCR_LoadoutButton loadoutBtn = m_LoadoutSelector.GetButtonForLoadout(loadout);
-			if (loadoutBtn)
-				loadoutBtn.SetEnabled(loadout.IsLoadoutAvailableClient());
-		}
-	}
+	
 };

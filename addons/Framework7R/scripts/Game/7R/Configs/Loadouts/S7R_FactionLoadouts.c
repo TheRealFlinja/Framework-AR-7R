@@ -1,5 +1,5 @@
 [BaseContainerProps(description: "7R All Loadouts combined", configRoot: true)]
-class SCR_Loadouts7R: ScriptAndConfig
+class S7R_FactionLoadouts: ScriptAndConfig
 {
 	[Attribute("", UIWidgets.ComboBox, enumType: ELoadouts7R)]
 	protected ELoadouts7R m_7RFaction;

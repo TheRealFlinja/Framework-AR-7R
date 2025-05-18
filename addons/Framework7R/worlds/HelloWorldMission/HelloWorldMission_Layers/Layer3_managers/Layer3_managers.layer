@@ -11045,29 +11045,9 @@ SCR_BaseTaskManager {
   }
  }
 }
-SCR_LoadoutManager LoadoutManager {
- components {
-  S7R_LoadoutsComponent "{6548784BE1D4AF51}" {
-   m_7RLoadout USVanilla
-   m_7RLoadoutImports SCR_LoadoutMasterConfig7R "{655B1E2D897B15B9}" : "{D62C5282351D0F14}Configs/Loadouts/7R/LoadoutMasterConfig7R.conf" {
-   }
-  }
-  RplComponent "{652ABCF2235FA928}" {
-  }
- }
- Flags 0
- coords 3912.337 15.344 8439.015
- m_aPlayerLoadouts {
-  SCR_PlayerLoadout "{652ABCF2235FA9CE}" {
-   m_sLoadoutName "BasePlayerLoadout"
-   m_sLoadoutResource "{DB862612A6CB4A6D}Prefabs/Characters/7R/Character_Base_7R.et"
-   m_sLoadoutImage "{FDC43816C7ABFBC9}UI/7R/7R.edds"
-  }
-  SCR_FactionPlayerLoadout "{652ABCF2235FA9C0}" {
-   m_sLoadoutName "Base7R"
-   m_sLoadoutResource "{DB862612A6CB4A6D}Prefabs/Characters/7R/Character_Base_7R.et"
-   m_sLoadoutImage "{047ABB4F19374DB4}UI/Textures/EditorPreviews/Characters/BLUFOR/US_Army/Character_US_Unarmed.edds"
-   m_sAffiliatedFaction "7R"
-  }
+SCR_LoadoutManager {
+ coords 3910.112 15.281 8430.718
+ m_7RFactionLoadoutKey USVanilla
+ m_7RLoadoutImports S7R_LoadoutMasterConfig "{6564FC755C0CAB31}" : "{EC84B7A42C193057}Configs/Loadouts/7R/S7R_LoadoutMasterConfig.conf" {
  }
 }

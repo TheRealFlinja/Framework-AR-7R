@@ -230,7 +230,7 @@ $grp GenericEntity {
       }
       "Sort Priority" 20
       m_bAllowGetFactionOfParent 1
-      m_eRole Rifleman
+      m_eRole SquadLeader
      }
      SCR_SetLoadoutAction "{655B1E2F17571AAD}" {
       ParentContextList {
@@ -242,7 +242,7 @@ $grp GenericEntity {
       }
       "Sort Priority" 20
       m_bAllowGetFactionOfParent 1
-      m_eRole SquadLeader
+      m_eRole SquadRifleman
      }
      S7R_LoadArsenalLoadout "{655487EAF0A300D4}" {
       ParentContextList {
@@ -256,7 +256,7 @@ $grp GenericEntity {
       m_bAllowGetFactionOfParent 1
       m_bAllowGetArsenalFromParent 1
       m_sS7RSlotId "1"
-      m_sS7RLoadoutLabel "Loadout 1"
+      m_sS7RLoadoutLabel "Loadout7R"
      }
      SCR_SaveArsenalLoadout "{65268B148697296D}" {
       ParentContextList {
@@ -269,6 +269,7 @@ $grp GenericEntity {
       "Sort Priority" 1000
       m_bAllowGetFactionOfParent 1
       m_bAllowGetArsenalFromParent 1
+      m_sS7RLoadoutLabel "Loadout7R"
      }
     }
    }
@@ -599,7 +600,7 @@ $grp GenericEntity {
        Icon "{FDC43816C7ABFBC9}UI/7R/7R.edds"
       }
       "Sort Priority" 30
-      m_eRole Rifleman
+      m_eRole Base
      }
      S7R_LoadArsenalLoadout "{655487EAF0A300D4}" {
       ParentContextList {
