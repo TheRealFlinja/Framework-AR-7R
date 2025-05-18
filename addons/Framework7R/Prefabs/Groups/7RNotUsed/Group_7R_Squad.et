@@ -1,0 +1,8 @@
+SCR_AIGroup : "{A9E0C3C81AA5CB72}Prefabs/Groups/7R/Group_7R_Base.et" {
+ ID "56FC873F6D4EEACC"
+ m_aUnitPrefabSlots {
+  "{DB862612A6CB4A6D}Prefabs/Characters/7R/Character_Base_7R.et" "{DB862612A6CB4A6D}Prefabs/Characters/7R/Character_Base_7R.et" "{DB862612A6CB4A6D}Prefabs/Characters/7R/Character_Base_7R.et" "{DB862612A6CB4A6D}Prefabs/Characters/7R/Character_Base_7R.et" "{DB862612A6CB4A6D}Prefabs/Characters/7R/Character_Base_7R.et" "{DB862612A6CB4A6D}Prefabs/Characters/7R/Character_Base_7R.et" "{DB862612A6CB4A6D}Prefabs/Characters/7R/Character_Base_7R.et" "{DB862612A6CB4A6D}Prefabs/Characters/7R/Character_Base_7R.et"
+ }
+ m_bSpawnImmediately 0
+ m_fMemberSpawnDelay 5
+}

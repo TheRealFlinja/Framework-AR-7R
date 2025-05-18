@@ -1,0 +1,41 @@
+ScriptedChatEntity {
+ ID "6536D266D2A13EA6"
+ components {
+  RplComponent "{6536D266E3722599}" {
+  }
+ }
+ coords 3914.533 15.312 8447.634
+ "Base style" BaseChatChannelStyle "{6536D266E5CC0D73}" {
+ }
+ Channels {
+  BaseChatChannel "{6536D266E37225BD}" {
+   "Channel name" "Global"
+  }
+  FactionChatChannel "{6536D266E37225BB}" {
+   "Channel name" "Faction"
+   Style BaseChatChannelStyle "{6536D266FE2EB3B6}" {
+   }
+  }
+  GroupChatChannel "{6536D266E3722641}" {
+   "Channel name" "Group"
+   Style BaseChatChannelStyle "{6536D266FC48E91B}" {
+   }
+  }
+  SCR_VehicleChatChannel "{6536D266E372264C}" {
+   "Channel name" "Vehicle"
+   Style BaseChatChannelStyle "{6536D266F0347174}" {
+   }
+  }
+  LocalChatChannel "{6536D266E3722651}" {
+   "Channel name" "Local"
+   Style BaseChatChannelStyle "{6536D266F7849E4F}" {
+   }
+  }
+ }
+ "Whisper channel" PrivateMessageChannel "{6536D266E372265A}" {
+  "Channel name" "Whisper"
+  Style BaseChatChannelStyle "{6536D266F51EC20F}" {
+  }
+ }
+ "Default channel" "Faction"
+}

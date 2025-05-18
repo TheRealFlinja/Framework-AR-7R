@@ -1,0 +1,126 @@
+RadioManagerEntity RadioManagerEntity7R_Base {
+ components {
+  RplComponent "{651A92454873178D}" {
+   Streamable Disabled
+  }
+ }
+ Flags 0
+ coords 0 0 0
+}
+SCR_Gamemode7R SCR_Gamemode7R_Base {
+ components {
+  SCR_AdditionalGameModeSettingsComponent "{6519020DBA8C328F}" {
+   m_bEnableTeamKillPunishment 0
+   m_bAllowEntityRefundingAction 0
+  }
+  SCR_ArsenalManagerComponent "{6519020D93F71575}" {
+  }
+  SCR_CallsignManagerComponent "{6519020D96333709}" {
+  }
+  SCR_DataCollectorComponent "{6519020DEB8733E2}" {
+  }
+  SCR_EntityCatalogManagerComponent "{6519020DD3DFEB26}" {
+   m_aEntityCatalogs {
+    SCR_EntityCatalog "{651A926677D8C5DE}" {
+     m_eEntityCatalogType CHARACTER
+    }
+    SCR_EntityCatalog "{651A9266A886A920}" {
+     m_eEntityCatalogType RESPAWN_LOADOUT
+    }
+    SCR_EntityCatalog "{651A9266E468B05F}" {
+     m_eEntityCatalogType GROUP
+    }
+   }
+  }
+  SCR_GameModeHUDComponent "{6519020C2F710460}" {
+  }
+  SCR_GameModeHealthSettings "{6519020DD41075BD}" {
+  }
+  SCR_GameOverScreenManagerComponent "{6519020C033F54EE}" {
+  }
+  SCR_IdentityManagerComponent "{6519020C1F7D701F}" {
+  }
+  SCR_MapConfigComponent "{6519020C1222F34E}" {
+  }
+  SCR_NametagConfigComponent "{6519020C11A23287}" {
+  }
+  SCR_NightModeGameModeComponent "{6519020C14C3398B}" {
+  }
+  SCR_NotificationSenderComponent "{6519020C6BC02647}" {
+  }
+  SCR_PlayerListedAdminManagerComponent "{6519020C53C92D2B}" {
+  }
+  SCR_PlayerSpawnPointManagerComponent "{6519020CA86C9842}" {
+   m_bDeployableSpawnPointsEnabled 0
+   m_eDeployableSpawnPointBudgetType NONE
+   m_iDeployableSpawnPointTicketAmount 0
+  }
+  SCR_RadialMenuItemsComponent "{6519020C8455B1FA}" {
+  }
+  SCR_ReconnectComponent "{6519020CEA4E186A}" {
+  }
+  SCR_RespawnSystemComponent "{6519020CF3483237}" {
+  }
+  SCR_SpawnerAIGroupManagerComponent "{6519020F27B42B2B}" {
+  }
+  SCR_TimeAndWeatherHandlerComponent "{6519020F00A8B779}" {
+   m_aStartingWeatherAndTime {
+    SCR_TimeAndWeatherState "{6519020F98302DB4}" {
+     m_iStartingHour 10
+    }
+   }
+  }
+  SCR_WelcomeScreenComponent "{6519020F7BBBB2BF}" {
+   m_sHeaderSubtitle "7R Mission"
+  }
+  SerializerInventoryStorageManagerComponent "{6519020F5B47943E}" {
+  }
+  RplComponent "{6519020F522154F7}" {
+   Streamable Disabled
+  }
+ }
+ m_bAllowFactionChange 0
+ m_fAutoReloadTime -1
+ m_aDisabledResourceTypes {
+  0 1
+ }
+ m_sBLUFORFactionKey "7R"
+ m_sOPFORFactionKey "OPFOR"
+ m_sINDFORFactionKey "INDFOR"
+}
+ScriptedChatEntity ScriptedChatEntity7R_Base {
+ components {
+  RplComponent "{651A924535C1E80E}" {
+   Streamable Disabled
+  }
+ }
+ Channels {
+  BaseChatChannel "{651A924535C1E86F}" {
+   "Channel name" "Global"
+  }
+  FactionChatChannel "{651A924535C1E870}" {
+   "Channel name" "Faction"
+   Style BaseChatChannelStyle "{651A9241CFA4E49B}" {
+   }
+  }
+  GroupChatChannel "{651A924535C1E878}" {
+   "Channel name" "Group"
+   Style BaseChatChannelStyle "{651A9241C9C52642}" {
+   }
+  }
+  SCR_VehicleChatChannel "{651A924535C1E847}" {
+   "Channel name" "Vehicle"
+   Style BaseChatChannelStyle "{651A9241C4C7D0C8}" {
+   }
+  }
+  LocalChatChannel "{651A924535C1E84B}" {
+   "Channel name" "Local"
+   Style BaseChatChannelStyle "{651A9241C64C3773}" {
+   }
+  }
+ }
+ "Whisper channel" PrivateMessageChannel "{651A924535C1E859}" {
+  "Channel name" "Whisper"
+ }
+ "Default channel" "Faction"
+}

@@ -1,0 +1,408 @@
+SCR_BaseGameMode {
+ components {
+  SignalsManagerComponent "{6548D9988925640E}" {
+  }
+  SCR_CommunicationSoundComponent "{6548D998801D2323}" {
+  }
+  ACE_LoadtimeEntityManager "{6521539A7DFA3E8B}" {
+  }
+  CSI_AuthorityComponent "{65297658C693E839}" {
+  }
+  S7R_AISpawnHandlerComponent "{6542BB3525D9AA8B}" {
+  }
+  S7R_MissionManagerComponent "{6542BB24CB3BB8BB}" {
+   m_AIGroupTemplates {
+    "{E552DABF3636C2AD}Prefabs/Groups/OPFOR/Group_USSR_RifleSquad.et" "{43C7A28EEB660FF8}Prefabs/Groups/OPFOR/Group_USSR_Team_GL.et" "{CB58D90EA14430AD}Prefabs/Groups/OPFOR/Group_USSR_SentryTeam.et" "{A2F75E45C66B1C0A}Prefabs/Groups/OPFOR/Group_USSR_MachineGunTeam.et" "{1C0502B5729E7231}Prefabs/Groups/OPFOR/Group_USSR_Team_Suppress.et"
+   }
+   m_aMissionPhases {
+    S7R_MissionPhase "{65487848FD4E2BFD}" {
+     m_sMissionPhaseName "Mission start"
+     _missionPhaseNumber 0
+     m_missionPhaseEvents {
+      SpawnTemplate "{65487848F5379DC9}" {
+       m_iTemplate 2
+       m_sSpawnpoint "s_0_1"
+       m_aWaypoints {
+        "p_0_1"
+       }
+      }
+      SpawnTemplate "{6548784D597FBEC7}" {
+       m_iTemplate 2
+       m_sSpawnpoint "s_0_2"
+       m_aWaypoints {
+        "p_0_1"
+       }
+      }
+      SpawnTemplate "{6548784D4C65102B}" {
+       m_iTemplate 2
+       m_sSpawnpoint "s_0_3"
+       m_aWaypoints {
+        "p_0_1"
+       }
+      }
+      SpawnTemplate "{6548785321C4A6C9}" {
+       m_iTemplate 2
+       m_sSpawnpoint "s_0_4"
+       m_aWaypoints {
+        "p_0_1"
+       }
+      }
+      SpawnTemplate "{6548D995F44DD8D1}" {
+       m_iTemplate 2
+       m_sSpawnpoint "s_0_5"
+       m_aWaypoints {
+        "gin_0_1"
+       }
+      }
+      SpawnTemplate "{6548D994A9194BC1}" {
+       m_sSpawnpoint "s_0_7"
+       m_aWaypoints {
+        "p_0_1"
+       }
+      }
+      SpawnTemplate "{6548D994B72D7195}" {
+       m_iTemplate 2
+       m_sSpawnpoint "s_0_6"
+       m_aWaypoints {
+        "p_0_1"
+       }
+      }
+     }
+    }
+    S7R_MissionPhase "{6542BB48D20C5DB9}" {
+     m_sMissionPhaseName "Mission Phase 1"
+     m_missionPhaseEvents {
+      SpawnTemplate "{6542BB4DBA95D49C}" {
+       m_iExecutionDelay 60
+       m_sSpawnpoint "s_1_1"
+       m_aWaypoints {
+        "w_1_1" "sd_1_1"
+       }
+      }
+      SpawnTemplate "{65487841A5161C44}" {
+       m_iExecutionDelay 5
+       m_iTemplate 1
+       m_sSpawnpoint "s_1_2"
+       m_aWaypoints {
+        "w_1_1" "sd_1_1"
+       }
+      }
+      SpawnTemplate "{65487849CB213039}" {
+       m_sSpawnpoint "s_1_3"
+       m_aWaypoints {
+        "w_1_1" "sd_1_1"
+       }
+      }
+      SpawnTemplate "{65487853604A2FEB}" {
+       m_iExecutionDelay 120
+       m_sSpawnpoint "s_1_4"
+       m_aWaypoints {
+        "w_1_1" "sd_1_1"
+       }
+      }
+      SpawnTemplate "{65487853798B717F}" {
+       m_sSpawnpoint "s_1_5"
+       m_aWaypoints {
+        "w_1_1" "sd_1_1"
+       }
+      }
+      SpawnTemplate "{6548785340802A05}" {
+       m_iExecutionDelay 30
+       m_sSpawnpoint "s_1_6"
+       m_aWaypoints {
+        "w_1_1" "sd_1_1"
+       }
+      }
+      SpawnTemplate "{65487855372850E1}" {
+       m_iExecutionDelay 10
+       m_sSpawnpoint "s_1_7"
+       m_aWaypoints {
+        "w_1_1" "sd_1_1"
+       }
+      }
+     }
+    }
+    S7R_MissionPhase "{6548D9907824637D}" {
+     m_sMissionPhaseName "Mission Phase 2"
+     _missionPhaseNumber 2
+     m_missionPhaseEvents {
+      SpawnTemplate "{6548D9907DFA7419}" {
+       m_iTemplate 2
+       m_sSpawnpoint "s_2_1"
+       m_aWaypoints {
+        "gin_2_1"
+       }
+      }
+      SpawnTemplate "{6548D990ADA1C32C}" {
+       m_iTemplate 4
+       m_sSpawnpoint "s_2_2"
+       m_aWaypoints {
+        "d_2_1"
+       }
+      }
+      SpawnTemplate "{6548D990BB8D058C}" {
+       m_iTemplate 4
+       m_sSpawnpoint "s_2_3"
+       m_aWaypoints {
+        "d_2_1"
+       }
+      }
+      SpawnTemplate "{6548D9908D6AFBD0}" {
+       m_sSpawnpoint "s_2_4"
+       m_aWaypoints {
+        "d_2_2"
+       }
+      }
+      SpawnTemplate "{6548D990E804DFEB}" {
+       m_sSpawnpoint "s_2_5"
+       m_aWaypoints {
+        "d_2_2"
+       }
+      }
+      SpawnTemplate "{6548D990E68C57F2}" {
+       m_sSpawnpoint "s_2_6"
+       m_aWaypoints {
+        "d_2_2"
+       }
+      }
+      SpawnTemplate "{6548D990F411E6DF}" {
+       m_iTemplate 2
+       m_sSpawnpoint "s_2_7"
+       m_aWaypoints {
+        "d_2_2"
+       }
+      }
+     }
+    }
+   }
+  }
+  S7R_ResourceHandlerComponent "{6542BB3AC3AD4B27}" {
+  }
+  SCR_AdditionalGameModeSettingsComponent "{6523010B4170073B}" {
+   m_bEnableTeamKillPunishment 0
+  }
+  SCR_ArsenalManagerComponent "{6523010B5288F708}" {
+  }
+  SCR_CallsignManagerComponent "{6523010B8F2E1A46}" {
+  }
+  SCR_CompositionSlotManagerComponent "{651F0CEC0BB2B5BB}" {
+  }
+  SCR_DataCollectorComponent "{6523010BC1B4AC5D}" {
+   m_aModules {
+    SCR_DataCollectorCrimesModule "{6523010A200D09E8}" {
+    }
+   }
+  }
+  SCR_DebriefingScreenComponent "{651F0CEC06FA1099}" {
+   m_sHeaderSubtitle "7R - Mission"
+   m_BaseLayout SCR_DebriefingScreenUnevenFourTiles "{65211281D4D2B085}" {
+    m_TopLeftTile SCR_DebriefingScreenBigImageContent "{652112862BCBA848}" {
+     m_sContentImage "{FDC43816C7ABFBC9}UI/7R/7R.edds"
+    }
+    m_TopRightTile SCR_DebriefingScreenFinishedObjectivesContent "{652112862EBC46CB}" {
+    }
+    m_BottomLeftTile SCR_DebriefingScreenStatisticsContent "{652112862C9C43A6}" {
+     m_aStatistics {
+      SCR_DebriefingScreenStatisticKills "{65211292156C77F8}" {
+      }
+      SCR_DebriefingScreenStatisticDeaths "{65211292693E5695}" {
+      }
+     }
+    }
+    m_BottomRightTile SCR_DebriefingScreenSummaryContent "{652112862D223EB8}" {
+     m_sSubtitleText "7R - Mission"
+     m_sSubtitleLostText "7R - Mission"
+    }
+   }
+  }
+  SCR_DeployMenuBaseScreenComponent "{651F0CC663E62FD7}" {
+   m_sHeaderSubtitle "7R - Mission"
+   m_BaseLayout SCR_WelcomeScreenThreeHorizontalColumns "{651F0CC663E62FD6}" {
+    m_LeftColumn SCR_WelcomeScreenFactionContent "{651F0CE8AAFD6671}" {
+    }
+    m_MiddleColumn SCR_WelcomeScreenMissionObjectivesContent "{651F0CE8AFED0527}" {
+     m_aMissionObjectives {
+      SCR_WelcomeScreenMissionObjectives "{6548D992C8148742}" {
+       m_sObjectiveQuadName "Seize"
+       m_sDescription "Seize Meaux"
+      }
+      SCR_WelcomeScreenMissionObjectives "{6548D99D247A0606}" {
+       m_sObjectiveQuadName "Seize"
+       m_sDescription "Capture the HQ outpost in the factory"
+      }
+      SCR_WelcomeScreenMissionObjectives "{6548D99D675AEF75}" {
+       m_sObjectiveQuadName "Sabotage"
+       m_sDescription "Destroy military equipment"
+      }
+     }
+    }
+    m_RightColumn SCR_WelcomeScreenIntroductionContent "{651F0CE8A2050B5F}" {
+    }
+   }
+  }
+  SCR_DestructionManagerComponent "{651F0CECCDF8707B}" {
+  }
+  SCR_EntityCatalogManagerComponent "{651F0CC663E62FA4}" {
+   m_aEntityCatalogs {
+    SCR_EntityCatalogMultiList "{651F0CC663E62FBA}" {
+     m_eEntityCatalogType OBJECT
+    }
+    SCR_EntityCatalogMultiList "{651F0CC663E62FB9}" {
+     m_eEntityCatalogType CHARACTER
+    }
+    SCR_EntityCatalogMultiList "{651F0CC663E62FBD}" {
+     m_eEntityCatalogType VEHICLE
+    }
+    SCR_EntityCatalogMultiList "{651F0CC663E62FB3}" {
+     m_eEntityCatalogType GROUP
+    }
+    SCR_EntityCatalogMultiList "{651F0CC663E62FB1}" {
+     m_eEntityCatalogType COMPOSITION
+    }
+    SCR_EntityCatalogMultiList "{651F0CC663E62FB4}" {
+     m_eEntityCatalogType ITEM
+    }
+    SCR_EntityCatalogMultiList "{651F0CC663E62FAA}" {
+     m_eEntityCatalogType SYSTEM
+    }
+    SCR_EntityCatalogMultiList "{651F0CC663E62FA8}" {
+     m_eEntityCatalogType WEAPONS_TRIPOD
+    }
+    SCR_EntityCatalogMultiList "{651F0CC663E62FAE}" {
+     m_eEntityCatalogType RESPAWN_LOADOUT
+    }
+    SCR_EntityCatalog "{65230108C915674F}" {
+     m_eEntityCatalogType SUPPLY_CONTAINER_ITEM
+    }
+   }
+  }
+  SCR_GameModeHealthSettings "{651F0CC663E62F9F}" {
+   m_bPermitUnconsciousVON 1
+  }
+  SCR_GameModeSFManager "{6548D99B2E524936}" {
+   m_iMaxNumberOfTasks 5
+  }
+  SCR_GameOverScreenManagerComponent "{651F0CC663E62F9D}" {
+   m_GameOverScreenConfig SCR_GameOverScreenConfig "{651F0CC7CF671264}" {
+    m_aGameOverScreens {
+     SCR_BaseGameOverScreenInfo "{651F0CC7C362602E}" {
+      m_GameOverScreenId VICTORY
+      m_GameOverContentLayout "{B8E6EEFD3EDEEC1C}UI/layouts/Menus/RoleSelection/BriefingVictoryCondition.layout"
+      m_OptionalParams SCR_BaseGameOverScreenInfoOptional "{652112928E77D93F}" {
+       m_sIcon "{FDC43816C7ABFBC9}UI/7R/7R.edds"
+      }
+     }
+    }
+   }
+  }
+  SCR_GroupsManagerComponent "{651F0CC663E62F97}" {
+   m_sDefaultGroupPrefab "{9B0635D70430D6E4}Prefabs/Groups/7R/Group_7R_Squad.et"
+   m_iPlayableGroupFrequencyOffset 10000
+   m_iPlayableGroupFrequencyMin 10000
+   m_iPlayableGroupFrequencyMax 80000
+   m_aGroupFlags {
+    "{0045DBB27B03121E}UI/7R/7RHighRes.edds"
+   }
+  }
+  SCR_HintManagerComponent "{6548D99BA633DCFF}" {
+  }
+  SCR_IdentityManagerComponent "{651F0CC663E62F6A}" {
+   Enabled 1
+   m_eIdentityItemGenerationType ON_DEATH
+   m_ExtendedIdentityHints SCR_GeneralHintStorage "{651F0CE8E308036F}" {
+   }
+  }
+  SCR_MapConfigComponent "{6523010A753C3B8A}" {
+  }
+  SCR_MapMarkerManagerComponent "{651F0CED096ED48F}" {
+  }
+  SCR_NightModeGameModeComponent "{6526085E341B7FA9}" {
+   m_bAllowGlobalNightMode 1
+  }
+  SCR_NotificationSenderComponent "{651F0CC663E62F61}" {
+   m_iKillFeedType DISABLED
+   m_PlayerKickReasonsConfig SCR_ConfigurableDialogUiPresets "{651F0CC14DFF0D33}" {
+   }
+  }
+  SCR_PerceivedFactionManagerComponent "{651F0CED1A695541}" {
+   m_PerceivedFactionHints SCR_GeneralHintStorage "{651F0CEB661F12C9}" {
+   }
+  }
+  SCR_PlayerListedAdminManagerComponent "{6523010A5C143662}" {
+  }
+  SCR_PossessingManagerComponent "{651F0CED514CC376}" {
+  }
+  SCR_RadialMenuItemsComponent "{65268B1D13B16B1D}" {
+   Enabled 0
+  }
+  SCR_ReconnectComponent "{6526085E1DF0EB68}" {
+  }
+  SCR_RespawnBriefingComponent "{651F0CEDAC18BC62}" {
+   m_Info SCR_UIInfo "{651F0CE6D537E9DE}" {
+    Name "7R - Mission"
+    Icon "{FDC43816C7ABFBC9}UI/7R/7R.edds"
+   }
+  }
+  SCR_RespawnSystemComponent "{651F0CC663E62F08}" {
+   components {
+    SCR_FreeSpawnHandlerComponent "{6523010AB4A998C9}" {
+    }
+    SCR_PossessSpawnHandlerComponent "{6523010A8CF49CFC}" {
+    }
+    SCR_SpawnPointSpawnHandlerComponent "{65251EC9680F00CA}" {
+    }
+   }
+   m_SpawnLogic SCR_MenuSpawnLogic "{651F0CC663E62F19}" {
+    m_sForcedFaction ""
+    m_bWaitForSpawnPoints 0
+   }
+  }
+  SCR_RespawnTimerComponent "{651F0CED82E3A3CE}" {
+  }
+  SCR_SpawnerAIGroupManagerComponent "{6523010A9141F7CE}" {
+  }
+  SCR_SupportStationManagerComponent "{651F0CC663E62F02}" {
+  }
+  SCR_TimeAndWeatherHandlerComponent "{6523010AE1C61964}" {
+  }
+  SCR_TimedSpawnPointComponent "{6523010AE4DC5835}" {
+   m_fRespawnTime 60
+  }
+  SCR_WelcomeScreenComponent "{651F0CC663E6FBA5}" {
+   m_sHeaderTitle "[7R] Mission Name"
+   m_BaseLayout SCR_WelcomeScreenThreeHorizontalColumns "{651F0CC663E6FBA3}" {
+    m_LeftColumn SCR_WelcomeScreenIntroductionContent "{651F0CC663E6D8C4}" {
+     m_sTitleText ""
+     m_aIntroduction {
+      SCR_WelcomeScreenIntroduction "{65211293DC8A6725}" {
+       m_sContentImage "{FDC43816C7ABFBC9}UI/7R/7R.edds"
+       m_sContentTitleText "[7R] Mission name"
+       m_sContentDescriptionText "Short Mission Description"
+      }
+     }
+    }
+    m_MiddleColumn SCR_WelcomeScreenMissionObjectivesContent "{651F0CC663E6D8D8}" {
+     m_sTitleText "Mission Objectives"
+    }
+    m_RightColumn SCR_WelcomeScreenFactionContent "{651F0CC663E6D8D3}" {
+     m_bIsInteractible 1
+    }
+   }
+  }
+  SerializerInventoryStorageManagerComponent "{6523010ACAA90883}" {
+  }
+  RplComponent "{6523010AC8B7F5FA}" {
+  }
+ }
+ coords 3914.341 15.344 8442.233
+ PlayerControllerPrefab "{CD2B8EF361478648}Prefabs/Characters/Core/DefaultPlayerControllerMP_ScenarioFramework.et"
+ {
+  SCR_EditorSettingsEntity SCR_EditorSettingsEntity_1 {
+   coords 2.277 0.028 -30.176
+   m_EditorManagerPrefab "{788933FFDC706A68}Prefabs/Editor/EditorManager.et"
+   m_SkipStreamingRules {
+    2
+   }
+  }
+ }
+}

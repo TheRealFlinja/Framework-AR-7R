@@ -1,0 +1,126 @@
+PerceptionManager {
+ ID "653750AC009CA641"
+ coords 3901.036 15.298 8456.479
+ SunDirectLightElevCurve {
+  CurvePoint "{653750AC3EFD604C}" {
+   X -4.4
+   Y -16.6
+  }
+  CurvePoint "{653750AC3EFD6045}" {
+   X 0.5
+   Y -3.1
+  }
+  CurvePoint "{653750AC3EFD6042}" {
+   X 6.9
+   Y 5.5
+  }
+  CurvePoint "{653750AC3EFD6058}" {
+   X 15
+   Y 6.36
+  }
+  CurvePoint "{653750AC3EFD6051}" {
+   X 23.4
+   Y 7.26
+  }
+ }
+ SunAmbientLightElevCurve {
+  CurvePoint "{653750AC3EFD606E}" {
+   X -12.9
+   Y -7.87
+  }
+  CurvePoint "{653750AC3EFD6065}" {
+   X -5.1
+   Y -6.2
+  }
+  CurvePoint "{653750AC3EFD6060}" {
+   X -2.3
+   Y -2.8
+  }
+  CurvePoint "{653750AC3EFD6062}" {
+   X 0.5
+   Y -0.55
+  }
+  CurvePoint "{653750AC3EFD6078}" {
+   X 11.7
+   Y 1.6
+  }
+  CurvePoint "{653750AC3EFD6074}" {
+   X 23.4
+   Y 2.31
+  }
+ }
+ MoonDirectLightElevCurve {
+  CurvePoint "{653750AC3EFD600C}" {
+   Y -16.6
+  }
+  CurvePoint "{653750AC3EFD600A}" {
+   X 0.8
+   Y -8.6
+  }
+  CurvePoint "{653750AC3EFD6006}" {
+   X 2.7
+   Y -6.1
+  }
+  CurvePoint "{653750AC3EFD6002}" {
+   X 6.3
+   Y -4.4
+  }
+  CurvePoint "{653750AC3EFD601E}" {
+   X 12.2
+   Y -3.6
+  }
+ }
+ MoonAmbientLightElevCurve {
+  CurvePoint "{653750AC3EFD6014}" {
+   X -0.9
+   Y -7.8
+  }
+  CurvePoint "{653750AC3EFD6011}" {
+   X 3.7
+   Y -7.5
+  }
+  CurvePoint "{653750AC3EFD602D}" {
+   X 12.2
+   Y -7.1
+  }
+ }
+ DirectLightCloudAttenuation {
+  CurvePoint "{653750AC3EFD6025}" {
+   Modifier 10
+  }
+  CurvePoint "{653750AC3EFD6020}" {
+   X 0.2
+   Y -1.5
+  }
+ }
+ AmbientLightCloudAttenuation {
+  CurvePoint "{653750AC3EFD603C}" {
+  }
+  CurvePoint "{653750AC3EFD6038}" {
+   X 0.2
+   Y -1.5
+  }
+ }
+ IlluminationFactorCurve {
+  CurvePoint "{653750AC3EFD6030}" {
+   X -7.8
+   Y 0.0758
+  }
+  CurvePoint "{653750AC3EFD60CC}" {
+   X -7
+   Y 0.2
+  }
+  CurvePoint "{653750AC3EFD60C9}" {
+   X -4.4
+   Y 0.35
+  }
+  CurvePoint "{653750AC3EFD60C7}" {
+   X -2.8
+   Y 0.90267
+  }
+  CurvePoint "{653750AC3EFD60C3}" {
+   X -1
+   Y 1
+  }
+ }
+}

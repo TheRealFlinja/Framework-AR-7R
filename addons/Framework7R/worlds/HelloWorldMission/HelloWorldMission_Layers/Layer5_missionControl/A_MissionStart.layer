@@ -1,0 +1,68 @@
+$grp GenericEntity {
+ s_0_1 {
+  coords 4480.578 7.813 9347.436
+ }
+ s_0_2 {
+  coords 4539.593 14.306 9450.736
+ }
+ s_0_3 {
+  coords 4392.526 6.074 9664.481
+ }
+ s_0_4 {
+  coords 4589.112 21.23 9613.244
+ }
+ s_0_5 {
+  coords 4454.217 10.268 9430.49
+ }
+ s_0_6 {
+  coords 4540.678 18.271 9553.154
+ }
+ s_0_7 {
+  coords 4528.987 14.749 9427.157
+ }
+}
+S7R_FactionControlTriggerEntity B_phase0_missionstart {
+ coords 3948.733 12.874 8599.305
+ TriggerShapeType "Oriented Bounding Box"
+ SphereRadius 250
+ BoxMins -500 -20 -50
+ BoxMaxs 500 200 50
+ TriggerActivationType "First change"
+ PeriodicQueries 1
+ UpdatePeriod 1
+ RunDefaultQueryFirst 0
+ m_sOwnerFactionKey "7R"
+ m_iActivateMissionPhase 0
+ m_iRatioMethod "More than"
+ m_fFriendlyRatioLimit 0.1
+}
+SCR_AIWaypoint p_0_1 {
+ coords 4501.137 16.617 9524.159
+ Type "Patrol"
+ Title "Like simple move only different move type"
+ AIBehaviorTreeMoveTo "{62D36413D46F02A6}AI/BehaviorTrees/Waypoints/WP_Patrol.bt"
+ CompletionRadius 250
+ CompletionType Any
+}
+SCR_BoardingTimedWaypoint gin_0_1 {
+ coords 4450.828 10.07 9428.064
+ angleY -177.526
+ Type "GetInNearest"
+ Title "GetInNearestWaypoint"
+ AIBehaviorTree "{55C11C7187131760}AI/BehaviorTrees/Waypoints/WP_GetInNearest.bt"
+ AIBehaviorTreeMoveTo "{A3755C1F88DED8D6}AI/BehaviorTrees/Waypoints/WP_Move.bt"
+ CompletionRadius 20
+ Autocomplete 0
+ m_BoardingParameters SCR_AIBoardingWaypointParameters "{6548785DB6EE5DEF}" {
+  m_bIsDriverAllowed 1
+  m_bIsGunnerAllowed 1
+  m_bIsCargoAllowed 1
+ }
+ m_TimedWaypointParameters SCR_AITimedWaypointParameters "{6548785DB6EE5DE3}" {
+  m_holdingTime 5
+ }
+}
+GenericEntity : "{114DE81321786CD9}Prefabs/Compositions/Slotted/SlotFlatSmall/MachineGunNest_S_USSR_01_PKM.et" {
+ coords 4451.194 10.107 9421.745
+ angleY 176.184
+}

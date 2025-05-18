@@ -1,0 +1,22 @@
+SCR_ChimeraCharacter : "{36170B3D1BD398BE}Prefabs/Characters/7R/US_Vanilla/Character_US_Vanilla_Rifleman_7R.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_CharacterRankComponent "{528E6D4286AA2D8F}" {
+   m_iRank SERGEANT
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFB7}" {
+   WeaponTemplate "{9C5C20FB0E01E64F}Prefabs/Weapons/Launchers/M72/Launcher_M72A3.et"
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{65257694014102C7}" {
+    }
+    ItemsInitConfigurationItem "{652ABCEFCCCCFD82}" {
+     PrefabsToSpawn + {
+      "{73950FBA2D7DB5C5}Prefabs/Items/Equipment/Radios/Radio_ANPRC68.et"
+     }
+    }
+   }
+  }
+ }
+}

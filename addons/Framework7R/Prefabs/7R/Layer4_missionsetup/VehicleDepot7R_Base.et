@@ -1,0 +1,89 @@
+GenericEntity {
+ ID "6548785B6BC1B96D"
+ components {
+  MapDescriptorComponent "{652883681EE86754}" {
+   DisplayName "Vehicle Depot"
+   MapItemDescriptor 1
+   MainType Spawnpoint
+   UnitType Vehicle
+  }
+  MeshObject "{6527561D6C3C97A2}" {
+   Object "{2F6237318749D8A4}Assets/Props/Military/InteractionPoints/VehicleService/VehicleService_Barrels_US_01.xob"
+   LODFactors {
+    5 2 1.5 1 1 1
+   }
+  }
+  RigidBody "{6527561D6C3C9667}" {
+   ResponseIndex "TinyDestructible"
+   ModelGeometry 1
+   Static 1
+  }
+  SCR_CatalogEntitySpawnerComponent "{6527561D6C3D0B31}" {
+   m_fMaxSlotDistance 50
+   m_iVehicleLockedDuration 0
+   m_eType LIGHT_VEHICLE_DEPOT
+   m_eBuildingLabel SERVICE_VEHICLE_DEPOT_LIGHT
+   m_sDelegatePrefab "{5B423F7ACE06881D}Prefabs/Systems/Services/ServicePointDelegate_VehicleDepotLight.et"
+   m_aCatalogTypes {
+    30
+   }
+   m_aAllowedLabels {
+    50 54 3
+   }
+   m_bNeedAllLabels 0
+   m_iCustomSupplies 1000000
+   m_fGracePeriodTime 60
+   m_fGracePeriodAreaRange 250
+   m_fPostGracePeriodRefundMultiplier 0.25
+  }
+  SCR_FactionAffiliationComponent "{6527561D6C3D0AB9}" {
+   "faction affiliation" "7R"
+  }
+  ActionsManagerComponent "{6527561D6C3DB47A}" {
+   ActionContexts {
+    UserActionContext "{6528831A6AB9BAC9}" {
+     UIInfo SCR_ActionContextUIInfo "{652D547192594AD3}" {
+     }
+     ContextName "default"
+     Position PointInfo "{6528831A6F306443}" {
+      Offset 0 0.8 0.1
+     }
+     Radius 1.5
+    }
+   }
+   additionalActions {
+    SCR_SpawnVehicleAction_7R "{65288317072FC624}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo SCR_ActionUIInfo "{652883689AB0989B}" {
+      Name "Spawn M151A2"
+     }
+     VisibilityRange 5
+     m_sVehiclePrefab "{F649585ABB3706C4}Prefabs/Vehicles/Wheeled/M151A2/M151A2.et"
+     m_sNameSpawnLocation "vic_spawn_1"
+    }
+   }
+  }
+  RplComponent "{6527561D6C3DB40E}" {
+   Enabled 1
+  }
+  Hierarchy "{6527561D6C3DB405}" {
+   Enabled 1
+  }
+ }
+ Flags 1027
+ coords 3920.599 14.648 8489.249
+ angleY -86.041
+ {
+  GenericEntity vic_spawn_1 {
+   ID "6548785B6BC1B96C"
+   components {
+    RplComponent "{6536D264FDE7AC41}" {
+    }
+   }
+   coords -1.002 0.053 5
+   angleY 86.041
+  }
+ }
+}
