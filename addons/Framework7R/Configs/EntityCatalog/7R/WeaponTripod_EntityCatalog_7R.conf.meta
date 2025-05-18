@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{B1CD878A696A5C8F}Configs/EntityCatalog/US/WeaponTripod_EntityCatalog_7R.conf"
+ Configurations {
+  CONFResourceClass PC {
+  }
+  CONFResourceClass XBOX_ONE : PC {
+  }
+  CONFResourceClass XBOX_SERIES : PC {
+  }
+  CONFResourceClass PS4 : PC {
+  }
+  CONFResourceClass PS5 : PC {
+  }
+  CONFResourceClass HEADLESS : PC {
+  }
+ }
+}

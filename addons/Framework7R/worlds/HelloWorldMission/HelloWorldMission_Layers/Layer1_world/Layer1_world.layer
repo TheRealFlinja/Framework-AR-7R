@@ -1,0 +1,453 @@
+SCR_AIWorld SCR_AIWorld_1 {
+ components {
+  AIBirdManagerComponent "{654878425A29AF3F}" {
+   AnimalPrefabsToUse {
+    AIAnimalData "{654878425A29AF19}" {
+     PrefabToUse "{BF8A3171E5AF74E7}Prefabs/Animals/Birds/Columba_livia_domestica/BirdFlock_DomesticPigeon.et"
+     Tags {
+      1 2 3
+     }
+    }
+    AIAnimalData "{654878425A29AF28}" {
+     PrefabToUse "{0D55D10CD196EA77}Prefabs/Animals/Birds/Columba_livia_domestica/BirdFlock_WoodPigeon.et"
+     Tags {
+      2
+     }
+     Weight 0.5
+    }
+    AIAnimalData "{654878425A29AF27}" {
+     PrefabToUse "{EB419793F72FCE41}Prefabs/Animals/Birds/Larus_argentatus/BirdFlock_Seagull.et"
+     Tags {
+      0
+     }
+    }
+    AIAnimalData "{654878425A29AF3D}" {
+     PrefabToUse "{0D55D10CD196EA77}Prefabs/Animals/Birds/Columba_livia_domestica/BirdFlock_WoodPigeon.et"
+     Tags {
+      1 3
+     }
+     Weight 3
+    }
+   }
+   AnimalToAnimalSpawnRange 180
+   CheckAnimalTime 5
+   TreeHeightThreshold 8.72
+  }
+  ChimeraCoverManagerComponent "{654878425A29AFCC}" {
+   MinDistanceBetweenCovers 1.25
+   CoverLineProbeStep 0.625
+   FilterVisibility 1
+   VisibilityCheckVerticalOffset 0.35
+   VisibilityCheckLayers 32768
+   QueryMaxNodes 4096
+  }
+  NavmeshWorldComponent "{654878425A29AD4E}" {
+   WorldSettings NavmeshWorldParams "{654878425A29AE94}" {
+    TileSize 51
+   }
+   NavmeshSettings NavmeshWorld "{654878425A29AEB2}" {
+    NavmeshFilesConfig BaseNavmeshFilesConfig "{5C90BD0EC793647D}" {
+     NavmeshFile "{5E19E60F26327356}worlds/MP/Navmeshes/LowResEden.nmn"
+    }
+    RecastConfig NavmeshRecastConfig "{654878425A29AEA9}" {
+     CellSize 0.15
+     WalkableHeight 3
+    }
+    NavmeshProject "LowRes"
+    AbsoluteAreas {
+     "Water"
+    }
+    FilterObjectDuringGeneration 1
+   }
+  }
+  NavmeshWorldComponent "{654878425A29AE9F}" {
+   WorldSettings NavmeshWorldParams "{654878425A29AEDD}" {
+    TileSize 24
+   }
+   NavmeshSettings ChimeraNavmeshWorld "{654878425A29AE82}" {
+    NavmeshFilesConfig BaseNavmeshFilesConfig "{60B8A297F3B4EE8A}" {
+     NavmeshFile "{3D08F0F26F771347}worlds/MP/Navmeshes/CTI_Campaign_Eden_vehicles.nmn"
+    }
+    RecastConfig NavmeshRecastConfig "{654878425A29AEEE}" {
+     CellSize 0.2
+     WalkableSlopeAngle 25
+     WalkableHeight 3
+     WalkableClimb 0.2
+     WalkableRadius 2.6
+     MaxSimplificationError 1.5
+     MinRegionSize 40
+     MergeRegionSize 360
+    }
+    UsePathSmoothing 0
+    NavmeshProject "BTRlike"
+    AbsoluteAreas {
+     "Water"
+    }
+    "Navmesh edge path cost coefficient" 3
+    UseNavmeshStreaming 1
+    LowResolutionNavmesh "LowRes"
+    "Destructible Area Type" "Destructible"
+   }
+  }
+  NavmeshWorldComponent "{654878425A29AECA}" {
+   WorldSettings NavmeshWorldParams "{654878425A29AFD4}" {
+    TileSize 24
+   }
+   NavmeshSettings NavmeshWorld "{654878425A29AECC}" {
+    NavmeshFilesConfig BaseNavmeshFilesConfig "{60B8A297F9E52831}" {
+     NavmeshFile "{A07353FE17EB2C49}worlds/MP/Navmeshes/CTI_Campaign_Eden.nmn"
+    }
+    RecastConfig NavmeshRecastConfig "{654878425A29AE5A}" {
+     CellSize 0.075
+     WalkableSlopeAngle 50
+     WalkableClimb 0.2
+     MinRegionSize 20
+     MergeRegionSize 60
+    }
+    UsePathSmoothing 0
+    NavmeshProject "Soldiers"
+    AbsoluteAreas {
+     "Water"
+    }
+    UseNavmeshStreaming 1
+    LowResolutionNavmesh "LowRes"
+    GenerateCoverPoints 1
+   }
+  }
+  SCR_AISettingsComponent "{654878425A29AD46}" {
+   Enabled 1
+  }
+  RplComponent "{654878425A29AD5B}" {
+   "Rpl State Override" None
+   SpatialRelevancy 0
+   Streamable Disabled
+  }
+ }
+ coords 3902.858 15.17 8462.987
+ Formations {
+  AIFormationDefinition "{654878425A29AD62}" {
+   Name "Line"
+   Offsets {
+    0 0 0 3 0 0 -3 0 0 6 0 0 -6 0 0 9 0 0 -9 0 0 12 0 0 -12 0 0 15 0 0 -15 0 0
+   }
+  }
+  AIFormationDefinition "{654878425A29AD7F}" {
+   Name "StaggeredColumn"
+   Offsets {
+    0 0 0 3 0 -3 0 0 -6 3 0 -9 0 0 -12 3 0 -15 0 0 -18 3 0 -21 0 0 -24 3 0 -27 0 0 -30
+   }
+  }
+  AIFormationDefinition "{654878425A29AD7A}" {
+   Name "Wedge"
+   Offsets {
+    0 0 0 3 0 -3 -3 0 -3 6 0 -6 -6 0 -6 9 0 -9 -9 0 -9 12 0 -12 -12 0 -12 15 0 -15 -15 0 -15
+   }
+  }
+  AIFormationDefinition "{654878425A29AD76}" {
+   Name "Column"
+   Offsets {
+    0 0 0 0 0 -3 0 0 -6 0 0 -9 0 0 -12 0 0 -15 0 0 -18 0 0 -21 0 0 -24 0 0 -27 0 0 -30
+   }
+  }
+ }
+ LimitOfSpawnedAIAgents 1500
+ "Active AI limit" 256
+ "Allowed Link Navmesh Types" {
+  "BTRlike"
+ }
+ "Navmesh For Off Roads" "BTRlike"
+ "Price of crossroad on Road network" 0.1
+ "Price of roadnetwork paths" 0.3
+ "Accepted Road Types" 14
+ "Collision detection layers" 8388608
+ "Actual road width percentage" 0.8
+ "Min Road Width" 2
+ m_aGoalMessages {
+  SCR_AIMessage_Attack "{654878425A29AD07}" {
+   m_eUIType ATTACK
+  }
+  SCR_AIMessage_Flee "{654878425A29AD03}" {
+   m_eUIType FLEE
+  }
+  SCR_AIMessage_GetIn "{654878425A29AD19}" {
+   m_eUIType GET_IN_VEHICLE
+  }
+  SCR_AIMessage_GetOut "{654878425A29AD1A}" {
+   m_eUIType GET_OUT_VEHICLE
+  }
+  SCR_AIMessage_Heal "{654878425A29AD13}" {
+   m_eUIType HEAL
+  }
+  SCR_AIMessage_HealWait "{654878425A29AD2F}" {
+   m_eUIType HEAL_WAIT
+  }
+  SCR_AIMessage_KeepFormation "{654878425A29AD2B}" {
+   m_eUIType MOVE_IN_FORMATION
+  }
+  SCR_AIMessage_Move "{654878425A29AD24}" {
+   m_eUIType MOVE
+  }
+  SCR_AIMessage_SeekAndDestroy "{654878425A29AD21}" {
+   m_eUIType SEEK_DESTROY
+  }
+  SCR_AIMessage_Defend "{654878425A29AD3E}" {
+   m_eUIType DEFEND
+  }
+  SCR_AIMessage_Cancel "{654878425A29AD3B}" {
+   m_eUIType CANCEL
+  }
+  SCR_AIMessage_PerformAction "{654878425A29AD36}" {
+   m_eUIType PERFORM_ACTION
+  }
+  SCR_AIMessage_Follow "{654878425A29AD32}" {
+   m_eUIType FOLLOW
+  }
+  SCR_AIMessage_Investigate "{654878425A29ADCE}" {
+   m_eUIType INVESTIGATE
+  }
+  SCR_AIMessage_Retreat "{654878425A29ADCA}" {
+   m_eUIType RETREAT
+  }
+  SCR_AIMessage_ThrowGrenadeTo "{654878425A29ADC6}" {
+   m_eUIType THROW_GRENADE_TO
+  }
+  SCR_AIMessage_Suppress "{654878425A29ADC2}" {
+   m_eUIType SUPPRESS
+  }
+  SCR_AIMessage_ProvideAmmo "{654878425A29ADDF}" {
+   m_eUIType PROVIDE_AMMO
+  }
+  SCR_AIMessage_PickupInventoryItems "{654878425A29ADD5}" {
+   m_eUIType PICKUP_INVENTORY_ITEMS
+  }
+  SCR_AIMessage_OpenNavlinkDoor "{654878425A29ADE9}" {
+   m_eUIType OPEN_NAVLINK_DOOR
+  }
+  SCR_AIMessage_Animate "{654878425A29ADEA}" {
+   m_eUIType ANIMATE
+  }
+  SCR_AIMessage_ArtillerySupport "{654878425A29ADE2}" {
+   m_eUIType ARTILLERY_SUPPORT
+  }
+ }
+ m_aInfoMessages {
+  SCR_AIMessage_FoundCorpse "{654878425A29ADFB}" {
+   m_eUIType FOUND_CORPSE
+  }
+  SCR_AIMessage_NoAmmo "{654878425A29ADF4}" {
+   m_eUIType NO_AMMO
+  }
+  SCR_AIMessage_SitRep "{654878425A29ADF2}" {
+   m_eUIType SIT_REP
+  }
+  SCR_AIMessage_UnderFire "{654878425A29AD8C}" {
+   m_eUIType UNDER_FIRE
+  }
+  SCR_AIMessage_Wounded "{654878425A29AD8A}" {
+   m_eUIType WOUNDED
+  }
+  SCR_AIMessage_ActionFailed "{654878425A29AD86}" {
+   m_eUIType ACTION_FAILED
+  }
+  SCR_AIMessage_HealFailed "{654878425A29AD80}" {
+   m_eUIType HEAL_FAILED
+  }
+ }
+ m_aOrders {
+  SCR_AIOrder_AIState "{654878425A29AD99}" {
+   m_eUIType AI_STATE
+  }
+  SCR_AIOrder_MovementType "{654878425A29AD9A}" {
+   m_eUIType MOVEMENT_TYPE
+  }
+  SCR_AIOrder_ReturnToDefault "{654878425A29AD97}" {
+   m_eUIType BACK_TO_DEFAULT
+  }
+  SCR_AIOrder_Stance "{654878425A29AD90}" {
+   m_eUIType STANCE
+  }
+  SCR_AIOrder_Unit_State "{654878425A29ADAC}" {
+   m_eUIType UNIT_STATE
+  }
+  SCR_AIOrder_WeaponRaised "{654878425A29ADA5}" {
+   m_eUIType WEAPON_RAISED
+  }
+  SCR_AIOrder_WeaponType "{654878425A29ADA6}" {
+   m_eUIType WEAPON_TYPE
+  }
+ }
+}
+PerceptionManager PerceptionManager1 {
+ coords 3901.036 15.298 8456.479
+ SunDirectLightElevCurve {
+  CurvePoint "{653750AC3EFD604C}" {
+   X -4.4
+   Y -16.6
+  }
+  CurvePoint "{653750AC3EFD6045}" {
+   X 0.5
+   Y -3.1
+  }
+  CurvePoint "{653750AC3EFD6042}" {
+   X 6.9
+   Y 5.5
+  }
+  CurvePoint "{653750AC3EFD6058}" {
+   X 15
+   Y 6.36
+  }
+  CurvePoint "{653750AC3EFD6051}" {
+   X 23.4
+   Y 7.26
+  }
+ }
+ SunAmbientLightElevCurve {
+  CurvePoint "{653750AC3EFD606E}" {
+   X -12.9
+   Y -7.87
+  }
+  CurvePoint "{653750AC3EFD6065}" {
+   X -5.1
+   Y -6.2
+  }
+  CurvePoint "{653750AC3EFD6060}" {
+   X -2.3
+   Y -2.8
+  }
+  CurvePoint "{653750AC3EFD6062}" {
+   X 0.5
+   Y -0.55
+  }
+  CurvePoint "{653750AC3EFD6078}" {
+   X 11.7
+   Y 1.6
+  }
+  CurvePoint "{653750AC3EFD6074}" {
+   X 23.4
+   Y 2.31
+  }
+ }
+ MoonDirectLightElevCurve {
+  CurvePoint "{653750AC3EFD600C}" {
+   Y -16.6
+  }
+  CurvePoint "{653750AC3EFD600A}" {
+   X 0.8
+   Y -8.6
+  }
+  CurvePoint "{653750AC3EFD6006}" {
+   X 2.7
+   Y -6.1
+  }
+  CurvePoint "{653750AC3EFD6002}" {
+   X 6.3
+   Y -4.4
+  }
+  CurvePoint "{653750AC3EFD601E}" {
+   X 12.2
+   Y -3.6
+  }
+ }
+ MoonAmbientLightElevCurve {
+  CurvePoint "{653750AC3EFD6014}" {
+   X -0.9
+   Y -7.8
+  }
+  CurvePoint "{653750AC3EFD6011}" {
+   X 3.7
+   Y -7.5
+  }
+  CurvePoint "{653750AC3EFD602D}" {
+   X 12.2
+   Y -7.1
+  }
+ }
+ DirectLightCloudAttenuation {
+  CurvePoint "{653750AC3EFD6025}" {
+   Modifier 10
+  }
+  CurvePoint "{653750AC3EFD6020}" {
+   X 0.2
+   Y -1.5
+  }
+ }
+ AmbientLightCloudAttenuation {
+  CurvePoint "{653750AC3EFD603C}" {
+  }
+  CurvePoint "{653750AC3EFD6038}" {
+   X 0.2
+   Y -1.5
+  }
+ }
+ IlluminationFactorCurve {
+  CurvePoint "{653750AC3EFD6030}" {
+   X -7.8
+   Y 0.0758
+  }
+  CurvePoint "{653750AC3EFD60CC}" {
+   X -7
+   Y 0.2
+  }
+  CurvePoint "{653750AC3EFD60C9}" {
+   X -4.4
+   Y 0.35
+  }
+  CurvePoint "{653750AC3EFD60C7}" {
+   X -2.8
+   Y 0.90267
+  }
+  CurvePoint "{653750AC3EFD60C3}" {
+   X -1
+   Y 1
+  }
+ }
+}
+RadioManagerEntity {
+ components {
+  RplComponent "{6536D267264AAC8A}" {
+   Streamable Disabled
+  }
+ }
+ Flags 0
+ coords 3916.217 15.313 8447.256
+}
+ScriptedChatEntity {
+ components {
+  RplComponent "{6536D266E3722599}" {
+  }
+ }
+ coords 3914.533 15.312 8447.634
+ "Base style" BaseChatChannelStyle "{6536D266E5CC0D73}" {
+ }
+ Channels {
+  BaseChatChannel "{6536D266E37225BD}" {
+   "Channel name" "Global"
+  }
+  FactionChatChannel "{6536D266E37225BB}" {
+   "Channel name" "Faction"
+   Style BaseChatChannelStyle "{6536D266FE2EB3B6}" {
+   }
+  }
+  GroupChatChannel "{6536D266E3722641}" {
+   "Channel name" "Group"
+   Style BaseChatChannelStyle "{6536D266FC48E91B}" {
+   }
+  }
+  SCR_VehicleChatChannel "{6536D266E372264C}" {
+   "Channel name" "Vehicle"
+   Style BaseChatChannelStyle "{6536D266F0347174}" {
+   }
+  }
+  LocalChatChannel "{6536D266E3722651}" {
+   "Channel name" "Local"
+   Style BaseChatChannelStyle "{6536D266F7849E4F}" {
+   }
+  }
+ }
+ "Whisper channel" PrivateMessageChannel "{6536D266E372265A}" {
+  "Channel name" "Whisper"
+  Style BaseChatChannelStyle "{6536D266F51EC20F}" {
+  }
+ }
+ "Default channel" "Faction"
+}

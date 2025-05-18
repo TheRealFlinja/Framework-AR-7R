@@ -1,0 +1,27 @@
+SCR_SpawnPoint {
+ ID "65257696C2FBF00D"
+ components {
+  MapDescriptorComponent "{652576964FC0BBEE}" {
+   DisplayName "7R Base"
+   ImagesetQuadElement "respawn"
+   MapItemDescriptor 1
+   MainType Spawnpoint
+   UnitType Infantry
+   ForceGroupType Undefined
+  }
+  RplComponent "{652576964FC0BBE7}" {
+  }
+  Hierarchy "{652576964FC0BC1A}" {
+  }
+ }
+ coords 3902.883 15.295 8441.74
+ m_fSpawnRadius 50
+ m_sFaction "7R"
+ m_bTimedSpawnPoint 0
+ m_Info SCR_UIInfo "{652576965186FAB6}" {
+  Name "7R Base"
+  Description "7R Main Base"
+  Icon "{C9D19DBFDE7AD72D}UI/Imagesets/Conflict/conflict-icons.imageset"
+  IconSetName "US_Base"
+ }
+}

@@ -1,0 +1,52 @@
+SCR_AIGroup : "{8B4D49A9F324E7D5}Prefabs/Groups/PlayableGroup.et" {
+ ID "56FC873F6D4EEACC"
+ components {
+  AIPathfindingComponent "{6548786EC1C6AA2D}" {
+   NavmeshProject "Soldiers"
+  }
+  SCR_AIConfigComponent "{6548D9956B1E980C}" {
+  }
+  SCR_AIGroupInfoComponent "{6548D99549E10464}" {
+  }
+  SCR_AIGroupMovementComponent "{6548D995AC020ECD}" {
+  }
+  SCR_AIGroupSettingsComponent "{6548D9954D7A4DA8}" {
+  }
+  SCR_AIGroupUtilityComponent "{6548D9954167E52D}" {
+  }
+  SCR_EditableGroupComponent "{65487868D18C1524}" {
+   m_EntityType GROUP
+   m_UIInfo SCR_EditableGroupUIInfo "{6548786F33BC4316}" {
+    Name "Group7RBase"
+    m_Image "{0045DBB27B03121E}UI/7R/7RHighRes.edds"
+    m_sFaction "7R"
+    m_aAuthoredLabels {
+     4
+    }
+    m_MilitarySymbol SCR_MilitarySymbol "{6548786FB38293CF}" {
+     m_Identity BLUFOR
+     m_Icons INFANTRY
+    }
+   }
+   m_bAutoRegister ALWAYS
+   m_AccessKey KEY_1
+   m_Flags 14340
+  }
+  SCR_GroupIdentityComponent "{65487868303D24D1}" {
+   m_MilitarySymbol SCR_MilitarySymbol "{6548786836BE1C81}" {
+    m_Identity BLUFOR
+    m_Icons INFANTRY
+    m_Amplifier SQUAD
+   }
+  }
+  SCR_MailboxComponent "{65487868CE4A4DC6}" {
+  }
+  SCR_PreviewEntityComponent "{6548786FFB63A748}" {
+   m_PreviewPrefab "{DB862612A6CB4A6D}Prefabs/Characters/7R/Character_Base_7R.et"
+  }
+ }
+ m_faction "7R"
+ m_iGroupRadioFrequency 10000
+ m_iMaxMembers 8
+ m_bDeleteIfNoPlayer 0
+}

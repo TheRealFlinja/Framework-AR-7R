@@ -1,0 +1,10 @@
+RadioManagerEntity {
+ ID "6536D267344D4F04"
+ components {
+  RplComponent "{6536D267264AAC8A}" {
+   Streamable Disabled
+  }
+ }
+ Flags 0
+ coords 3916.217 15.313 8447.256
+}

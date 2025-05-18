@@ -1,0 +1,139 @@
+SCR_TaskDestroyObject task_4 {
+ components {
+  SCR_MapDescriptorComponent "{65492B89432C809E}" {
+   DisplayName "#AR-CombatScenario_DestroyTask_B_Title"
+   VisibleOnMap 0
+   MainType Task
+   Faction 2
+  }
+ }
+ coords 4930.648 28.775 11761.216
+ m_sName "#AR-Commanding_Command_SaD"
+ m_sDescription "#AR-Editor_ContextAction_NeutralizeEntity_Description"
+ m_sMapIconName "Task_Sabotage"
+ m_sTaskListIconName "Task_Sabotage"
+ m_bNotifyAssignment 1
+}
+$grp SCR_TriggerTask {
+ task_1 {
+  components {
+   SCR_MapDescriptorComponent "{55D072570E7E8AB7}" {
+    DisplayName ""
+    MapItemDescriptor 1
+    MainType Task
+    Scale 0
+   }
+  }
+  coords 4492.846 16.675 9490.419
+  m_sName "Meaux"
+  m_sDescription "Capture and defend Meaux"
+  m_sTaskListIconName "Task_Seize"
+  m_bNotifyAssignment 1
+  m_TextType ATTACK
+  m_iTextIndex 3
+  {
+   SCR_FactionControlTriggerEntity {
+    components {
+     SCR_TriggerAreaMeshComponent "{55CEBEA62909C00A}" {
+      m_vResolution 48
+      m_bStretchMaterial 1
+      m_Material "{E65E61D1541003E2}Assets/Editor/VirtualArea/VirtualArea.emat"
+     }
+     Hierarchy "{55D072570E7E8ADA}" {
+     }
+    }
+    Flags 2
+    coords 6.116 0 -13.438
+    TriggerShapeType Sphere
+    SphereRadius 150
+    TriggerActivationType "All changes"
+    PeriodicQueries 1
+    ClassesFilter {
+     "ChimeraCharacter"
+    }
+    m_sOwnerFactionKey "7R"
+    m_iRatioMethod "More than"
+    m_fFriendlyRatioLimit 0.8
+   }
+  }
+ }
+ task_2 {
+  components {
+   SCR_MapDescriptorComponent "{55D072570E7E8AB7}" {
+    DisplayName ""
+    MapItemDescriptor 1
+    MainType Task
+    Scale 0
+   }
+  }
+  coords 4555.462 16.247 10450.931
+  m_sName "Factory"
+  m_sDescription "Capture the factory near St Philippe"
+  m_sTaskListIconName "Task_Seize"
+  m_bNotifyAssignment 1
+  m_TextType ATTACK
+  {
+   SCR_FactionControlTriggerEntity {
+    components {
+     SCR_TriggerAreaMeshComponent "{55CEBEA62909C00A}" {
+      m_vResolution 48
+      m_bStretchMaterial 1
+      m_Material "{E65E61D1541003E2}Assets/Editor/VirtualArea/VirtualArea.emat"
+     }
+     Hierarchy "{55D072570E7E8ADA}" {
+     }
+    }
+    Flags 2
+    coords 6.116 0 47.532
+    TriggerShapeType Sphere
+    SphereRadius 30
+    TriggerActivationType "All changes"
+    PeriodicQueries 1
+    ClassesFilter {
+     "ChimeraCharacter"
+    }
+    m_sOwnerFactionKey "7R"
+    m_fFriendlyRatioLimit 1
+   }
+  }
+ }
+ task_3 {
+  components {
+   SCR_MapDescriptorComponent "{55D072570E7E8AB7}" {
+    DisplayName "Task"
+    MainType "Radio/ Tower"
+   }
+  }
+  coords 4421.438 3.99 11089.206
+  m_sName "#AR-Editor_AttackTask_0_Name"
+  m_sDescription "#AR-Editor_AttackTask_0_Description"
+  m_sTaskListIconName "Task_Seize"
+  m_bNotifyAssignment 1
+  m_TextType ATTACK
+  m_bOnTriggerDeactivate 1
+  {
+   SCR_FactionPlayerTriggerEntity {
+    components {
+     SCR_TriggerAreaMeshComponent "{55CEBEA62909C00A}" {
+      m_vResolution 48
+      m_bStretchMaterial 1
+      m_Material "{E65E61D1541003E2}Assets/Editor/VirtualArea/VirtualArea.emat"
+     }
+     Hierarchy "{55D072570E7E8ADA}" {
+     }
+    }
+    Flags 2
+    coords 32.83 0 142.993
+    TriggerShapeType Sphere
+    SphereRadius 20
+    DrawShape 1
+    TriggerActivationType "All changes"
+    PeriodicQueries 1
+    ClassesFilter {
+     "ChimeraCharacter"
+    }
+    m_sOwnerFactionKey "7R"
+   }
+  }
+ }
+}

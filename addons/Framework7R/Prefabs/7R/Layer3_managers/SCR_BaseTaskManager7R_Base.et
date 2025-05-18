@@ -1,0 +1,12 @@
+SCR_BaseTaskManager {
+ ID "6525769988CB6347"
+ components {
+  SCR_TextsTaskManagerComponent "{65257699BDDF8789}" {
+  }
+  SCR_UITaskManagerComponent "{65257699BDDF8780}" {
+  }
+  RplComponent "{65257699BDDF8787}" {
+  }
+ }
+ coords 3910.581 15.312 8454.254
+}

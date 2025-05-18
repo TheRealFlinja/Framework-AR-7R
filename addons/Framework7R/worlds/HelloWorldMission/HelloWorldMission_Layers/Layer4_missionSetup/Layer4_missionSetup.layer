@@ -1,0 +1,652 @@
+$grp GenericEntity {
+ {
+  components {
+   ClimbingDataComponent "{65268B124C9D3E98}" {
+   }
+   MeshObject "{65268B147778BA96}" {
+    Object "{A54671D8C8F9B8D9}Assets/Props/Military/AmmoBox/ArsenalBox_01/ArsenalBox_01_US_weapons_ammo.xob"
+   }
+   RigidBody "{65268B12439D1BF5}" {
+   }
+   SCR_ArsenalComponent "{65268B1258B36B40}" {
+    m_eSupportedArsenalItemTypes 1442622
+    m_eSupportedArsenalItemModes 254
+    m_eEditableAttributeGroups 30
+    m_bAllowGetFactionFromParent 1
+    m_eArsenalSaveType NO_RESTRICTIONS
+   }
+   SCR_FactionAffiliationComponent "{65268B125DB949AF}" {
+    "faction affiliation" "7R"
+   }
+   SCR_SlotCompositionComponent "{65268B12CAB39481}" {
+    m_SlotPrefab "{D7EE0FF05FB54E4C}Prefabs/Vehicles/Core/VirtualSlots/BaseVirtualArsenalSlot.et"
+   }
+   SCR_SoundDataComponent "{65268B12B0BA9DA1}" {
+   }
+   UniversalInventoryStorageComponent "{65268B10A37C7289}" {
+    Attributes SCR_ItemAttributeCollection "{65268B10A5E3A2FB}" {
+     ItemDisplayName SCR_InventoryUIInfo "{65268B10BD4B1AB0}" {
+      Name "EditableEntity_ArsenalEquipment_01_US_Name"
+      Description "#AR-Arsenal_Description"
+     }
+     ItemPhysAttributes ItemPhysicalAttributes "{65268B109AABBAFD}" {
+      Weight 5
+     }
+     CustomAttributes {
+      PreviewRenderAttributes "{65268B10ED4B447A}" {
+       CameraOrbitAngles 330 30 0
+       CameraDistanceToItem 2
+      }
+     }
+     m_Size SLOT_2x2
+     m_SlotType SLOT_WEAPONS_STORAGE
+     m_bDraggable 0
+    }
+    Priority 1000
+   }
+   SCR_ArsenalInventoryStorageManagerComponent "{65268B12443D28E1}" {
+   }
+   ActionsManagerComponent "{65268B12FDF460FD}" {
+    ActionContexts {
+     UserActionContext "{65268B100033E290}" {
+      ContextName "default"
+      Position PointInfo "{65268B100555E3A5}" {
+       Offset 0 0.464 0
+      }
+      Radius 1.5
+     }
+    }
+    additionalActions {
+     SCR_OpenStorageAction "{65268B11899F727D}" {
+      ParentContextList {
+       "default"
+      }
+      UIInfo UIInfo "{65268B119C07F69C}" {
+       Name "#AR-Inventory_OpenArsenalStorage"
+      }
+     }
+     SCR_SaveArsenalLoadout "{65268B11BF0D060F}" {
+      ParentContextList {
+       "default"
+      }
+      UIInfo UIInfo "{65268B11E1D29575}" {
+       Name "#AR-Loadout_Action_SaveLoadout"
+      }
+      "Sort Priority" 10
+     }
+    }
+   }
+   RplComponent "{65268B12E05E102E}" {
+   }
+   Hierarchy "{65268B12FAD9BEBE}" {
+   }
+  }
+  coords 3905 15.219 8423
+ }
+ {
+  components {
+   ClimbingDataComponent "{65268B1486967FEC}" {
+    CanClimbOver 0
+   }
+   MeshObject "{65268B1486967E00}" {
+    Object "{56326B665211D386}Assets/Props/Military/AmmoBox/ArsenalBox_01/ArsenalBox_01.xob"
+    Materials {
+     MaterialAssignClass "{65268B1486967F8F}" {
+      SourceMaterial "ArsenalBox_01_Decal"
+      AssignedMaterial "{4723E10801CC64A0}Assets/Props/Military/AmmoBox/ArsenalBox_01/Data/ArsenalBox_01_Decal_US_general.emat"
+     }
+     MaterialAssignClass "{65268B1486967F85}" {
+      SourceMaterial "ArsenalBox_01_MLOD"
+      AssignedMaterial "{A105104FC646098C}Assets/Props/Military/AmmoBox/ArsenalBox_01/Data/ArsenalBox_01_US_MLOD.emat"
+     }
+     MaterialAssignClass "{65268B1486967F80}" {
+      SourceMaterial "explosive_0A0A9C1C7B189A8B"
+      AssignedMaterial "{F422577A111BA80D}Assets/Props/Military/AmmoBox/EquipmentBoxWooden_01/Data/EquipmentBoxWooden_Explosives_01_US.emat"
+     }
+     MaterialAssignClass "{65268B1486967F9F}" {
+      SourceMaterial "tarp_EBFB69929B4DE0C6"
+      AssignedMaterial "{57B0CA33C76D1944}Assets/Props/Military/AmmoBox/EquipmentBoxStack/Data/EquipmentBoxStack_01_cover_US.emat"
+     }
+     MaterialAssignClass "{65268B1486967F9A}" {
+      SourceMaterial "weapon_box_6864083D30F4F63D"
+      AssignedMaterial "{897E26EB40E12FB3}Assets/Props/Military/AmmoBox/EquipmentBoxWooden_01/Data/EquipmentBoxWooden_Weapon_01_US.emat"
+     }
+     MaterialAssignClass "{65268B1486967F93}" {
+      SourceMaterial "ArsenalBox_01_Decal"
+      AssignedMaterial "{453DCC8BE28B35F8}Assets/Props/Military/AmmoBox/ArsenalBox_01/Data/ArsenalBox_01_Decal_US_equip.emat"
+     }
+    }
+   }
+   RigidBody "{65268B1486967E1A}" {
+    Mass 10
+    ModelGeometry 1
+    Static 1
+   }
+   SCR_ArsenalComponent "{65268B1486967EDE}" {
+    m_eSupportedArsenalItemTypes 654528
+    m_eSupportedArsenalItemModes 254
+    m_eEditableAttributeGroups 30
+    m_bGetDefaultIfNoFaction 0
+    m_bAllowGetFactionFromParent 1
+    m_eArsenalSaveType NO_RESTRICTIONS
+    m_eArsenalTypes GADGETS
+   }
+   SCR_CatalogEntitySpawnerComponent "{652D35F0E1C753CD}" {
+    m_sDelegatePrefab "{13EB5465CA676A60}Prefabs/Systems/Services/ServicePointDelegate_Armory.et"
+    m_aCatalogTypes {
+     20
+    }
+    m_aAllowedLabels {
+     2
+    }
+    m_bNeedAllLabels 0
+    m_iCustomSupplies 10000
+    m_fGracePeriodTime 60
+    m_fGracePeriodAreaRange 250
+    m_fPostGracePeriodRefundMultiplier 0.25
+   }
+   SCR_FactionAffiliationComponent "{65268B1486967ED3}" {
+    "faction affiliation" "7R"
+   }
+   SCR_SlotCompositionComponent "{65268B148697C5B5}" {
+    m_SlotPrefab "{D7EE0FF05FB54E4C}Prefabs/Vehicles/Core/VirtualSlots/BaseVirtualArsenalSlot.et"
+   }
+   SCR_SoundDataComponent "{65268B148697287D}" {
+    m_aAudioSourceConfiguration {
+     SCR_AudioSourceConfiguration "{65268B148697C5A8}" {
+      m_sSoundProject "{A73D28179B395F19}Sounds/Props/Military/AmmoBoxes/AmmoBox_Big_Wooden/Props_AmmoBox_Big_Wooden.acp"
+      m_sSoundEventName "SOUND_CONTAINER_OPEN"
+     }
+     SCR_AudioSourceConfiguration "{65268B148697C5A4}" {
+      m_sSoundProject "{A73D28179B395F19}Sounds/Props/Military/AmmoBoxes/AmmoBox_Big_Wooden/Props_AmmoBox_Big_Wooden.acp"
+      m_sSoundEventName "SOUND_CONTAINER_CLOSE"
+     }
+    }
+   }
+   UniversalInventoryStorageComponent "{65268B1486972999}" {
+    Attributes SCR_ItemAttributeCollection "{65268B14869729F8}" {
+     ItemDisplayName SCR_InventoryUIInfo "{65268B14869729C4}" {
+      Name "#AR-EditableEntity_ArsenalEquipment_01_US_Name"
+      Description "#AR-Arsenal_Description"
+      m_aItemHints {
+       SCR_SupplyAvailableItemHintUIInfo "{65268B148697283C}" {
+        Name "#AR-Item_SupplyConsumer_Hint1"
+        Icon "{8EB808BFA227C080}UI/Textures/Icons/InventoryHints/InventoryHint_SuppliesStored.edds"
+        m_bHideInArsenal 1
+       }
+      }
+     }
+     ItemPhysAttributes ItemPhysicalAttributes "{65268B14869729D7}" {
+      Weight 5
+      DimensionScaler 0.9
+     }
+     CustomAttributes {
+      PreviewRenderAttributes "{65268B14869729E6}" {
+       CameraOrbitAngles 330 30 0
+       CameraDistanceToItem 2
+       CameraOffset 0 0 0
+      }
+     }
+     CommonItemType "BANDAGE"
+     m_Size SLOT_2x2
+     m_SlotType SLOT_LOADOUT_STORAGE
+     m_bDraggable 0
+    }
+    Priority 1000
+    StoragePurpose 111
+   }
+   SCR_ArsenalInventoryStorageManagerComponent "{65268B14869729A5}" {
+   }
+   ActionsManagerComponent "{65268B1486973064}" {
+    Enabled 1
+    ActionContexts {
+     UserActionContext "{65268B1486972945}" {
+      UIInfo SCR_ActionContextUIInfo "{652D35F3630E87C5}" {
+       Name "Context"
+      }
+      ContextName "default"
+      Position PointInfo "{65268B14869729B9}" {
+       Offset 0 0.464 0
+      }
+      Radius 1.5
+     }
+    }
+    additionalActions {
+     SCR_OpenStorageAction "{65268B148697295E}" {
+      ParentContextList {
+       "default"
+      }
+      UIInfo UIInfo "{65268B1486972950}" {
+       Name "#AR-Inventory_OpenArsenalStorage"
+      }
+     }
+     SCR_SetLoadoutAction "{652D547312726AA1}" {
+      ParentContextList {
+       "default"
+      }
+      UIInfo SCR_ActionUIInfo "{652D547315EAE9B4}" {
+       Name "Pick Rifleman Loadout"
+       Icon "{FDC43816C7ABFBC9}UI/7R/7R.edds"
+      }
+      "Sort Priority" 20
+      m_bAllowGetFactionOfParent 1
+      m_eRole Rifleman
+     }
+     SCR_SetLoadoutAction "{655B1E2F17571AAD}" {
+      ParentContextList {
+       "default"
+      }
+      UIInfo SCR_ActionUIInfo "{655B1E2F17571967}" {
+       Name "Pick Squad Leader Loadout"
+       Icon "{FDC43816C7ABFBC9}UI/7R/7R.edds"
+      }
+      "Sort Priority" 20
+      m_bAllowGetFactionOfParent 1
+      m_eRole SquadLeader
+     }
+     S7R_LoadArsenalLoadout "{655487EAF0A300D4}" {
+      ParentContextList {
+       "default"
+      }
+      UIInfo SCR_ActionUIInfo "{655487EAF43F2DD8}" {
+       Name "Load Loadout"
+      }
+      Duration 1
+      "Sort Priority" 999
+      m_bAllowGetFactionOfParent 1
+      m_bAllowGetArsenalFromParent 1
+      m_sS7RSlotId "1"
+      m_sS7RLoadoutLabel "Loadout 1"
+     }
+     SCR_SaveArsenalLoadout "{65268B148697296D}" {
+      ParentContextList {
+       "default"
+      }
+      UIInfo UIInfo "{65268B148697296F}" {
+       Name "#AR-Loadout_Action_SaveLoadout"
+      }
+      Duration 0.5
+      "Sort Priority" 1000
+      m_bAllowGetFactionOfParent 1
+      m_bAllowGetArsenalFromParent 1
+     }
+    }
+   }
+   RplComponent "{65268B148697306F}" {
+    Enabled 1
+   }
+   Hierarchy "{65268B1486973094}" {
+    Enabled 1
+   }
+  }
+  Flags 1027
+  coords 3908 15.22 8422.8
+  angleY -185.4
+ }
+ {
+  components {
+   MapDescriptorComponent "{652883681EE86754}" {
+    DisplayName "Vehicle Depot"
+    MapItemDescriptor 1
+    MainType Spawnpoint
+    UnitType Vehicle
+   }
+   MeshObject "{6527561D6C3C97A2}" {
+    Object "{2F6237318749D8A4}Assets/Props/Military/InteractionPoints/VehicleService/VehicleService_Barrels_US_01.xob"
+    LODFactors {
+     5 2 1.5 1 1 1
+    }
+   }
+   RigidBody "{6527561D6C3C9667}" {
+    ResponseIndex "TinyDestructible"
+    ModelGeometry 1
+    Static 1
+   }
+   SCR_CatalogEntitySpawnerComponent "{6527561D6C3D0B31}" {
+    m_fMaxSlotDistance 50
+    m_iVehicleLockedDuration 0
+    m_eType LIGHT_VEHICLE_DEPOT
+    m_eBuildingLabel SERVICE_VEHICLE_DEPOT_LIGHT
+    m_sDelegatePrefab "{5B423F7ACE06881D}Prefabs/Systems/Services/ServicePointDelegate_VehicleDepotLight.et"
+    m_aCatalogTypes {
+     30
+    }
+    m_aAllowedLabels {
+     50 54 3
+    }
+    m_bNeedAllLabels 0
+    m_iCustomSupplies 1000000
+    m_fGracePeriodTime 60
+    m_fGracePeriodAreaRange 250
+    m_fPostGracePeriodRefundMultiplier 0.25
+   }
+   SCR_FactionAffiliationComponent "{6527561D6C3D0AB9}" {
+    "faction affiliation" "7R"
+   }
+   ActionsManagerComponent "{6527561D6C3DB47A}" {
+    ActionContexts {
+     UserActionContext "{6528831A6AB9BAC9}" {
+      UIInfo SCR_ActionContextUIInfo "{652D547192594AD3}" {
+      }
+      ContextName "default"
+      Position PointInfo "{6528831A6F306443}" {
+       Offset 0 0.8 0.1
+      }
+      Radius 1.5
+     }
+    }
+    additionalActions {
+     SCR_SpawnVehicleAction_7R "{65288317072FC624}" {
+      ParentContextList {
+       "default"
+      }
+      UIInfo SCR_ActionUIInfo "{652883689AB0989B}" {
+       Name "Spawn M151A2"
+      }
+      VisibilityRange 5
+      m_sVehiclePrefab "{F649585ABB3706C4}Prefabs/Vehicles/Wheeled/M151A2/M151A2.et"
+      m_sNameSpawnLocation "vic_spawn_1"
+     }
+    }
+   }
+   RplComponent "{6527561D6C3DB40E}" {
+    Enabled 1
+   }
+   Hierarchy "{6527561D6C3DB405}" {
+    Enabled 1
+   }
+  }
+  Flags 1027
+  coords 3920.599 14.648 8489.249
+  angleY -86.041
+  {
+   GenericEntity vic_spawn_1 {
+    components {
+     RplComponent "{6536D264FDE7AC41}" {
+     }
+    }
+    coords -1.002 0.053 5
+    angleY 86.041
+   }
+  }
+ }
+ {
+  components {
+   MeshObject "{65275612CD930CA7}" {
+    Object "{C41BFB78E6FFFBCB}Assets/Structures/Military/Flags/FlagPole_01/FlagPole_01.xob"
+   }
+   RigidBody "{65275612CD930C63}" {
+    ResponseIndex "TinyDestructible"
+    ModelGeometry 1
+    Static 1
+   }
+   SCR_FactionAffiliationComponent "{6527561706F73AA9}" {
+    "faction affiliation" "7R"
+   }
+   SCR_FlagComponent "{65275612CD930D88}" {
+    m_sDefaultMaterial "{5A1B3B1C76F584C8}Assets/Props/Fabric/Flags/Data/Flag_1_2_Blue.emat"
+   }
+   SlotManagerComponent "{65275612CD930D9A}" {
+    Slots {
+     EntitySlotInfo Flag {
+      Offset 0 5.406 -0.083
+      Prefab "{9A8AE4E1D90840AC}Prefabs/Props/Fabric/Flags/Flag_1_2_Blue_01.et"
+     }
+    }
+   }
+   ActionsManagerComponent "{65275611531D3BBD}" {
+    ActionContexts {
+     UserActionContext "{65275611FD5874AC}" {
+      UIInfo SCR_ActionContextUIInfo "{652D5470EA165B07}" {
+      }
+      ContextName "default"
+      Position PointInfo "{65275611C7DBFE13}" {
+       Offset 0 0.5 0
+      }
+      Radius 1.5
+     }
+    }
+    additionalActions {
+     SCR_ShowDeployableSpawnPointInfo "{6528836967D91E13}" {
+      ParentContextList {
+       "default"
+      }
+      UIInfo SCR_ActionUIInfo "{65288368305A9BA9}" {
+       Name "Deploy"
+      }
+      VisibilityRange 10
+      Duration 1
+      "Sort Priority" 10
+     }
+     SCR_FastTravelAction "{652D5470C7C26163}" {
+      ParentContextList {
+       "default"
+      }
+      UIInfo SCR_ActionUIInfo "{652D5470DED50C4B}" {
+      }
+     }
+    }
+   }
+  }
+  Flags 1027
+  coords 3901 15.219 8424
+ }
+ {
+  components {
+   ClimbingDataComponent "{65268B1486967FEC}" {
+    CanClimbOver 0
+   }
+   MeshObject "{65268B1486967E00}" {
+    Object "{56326B665211D386}Assets/Props/Military/AmmoBox/ArsenalBox_01/ArsenalBox_01.xob"
+    Materials {
+     MaterialAssignClass "{65268B1486967F8F}" {
+      SourceMaterial "ArsenalBox_01_Decal"
+      AssignedMaterial "{4723E10801CC64A0}Assets/Props/Military/AmmoBox/ArsenalBox_01/Data/ArsenalBox_01_Decal_US_general.emat"
+     }
+     MaterialAssignClass "{65268B1486967F85}" {
+      SourceMaterial "ArsenalBox_01_MLOD"
+      AssignedMaterial "{A105104FC646098C}Assets/Props/Military/AmmoBox/ArsenalBox_01/Data/ArsenalBox_01_US_MLOD.emat"
+     }
+     MaterialAssignClass "{65268B1486967F80}" {
+      SourceMaterial "explosive_0A0A9C1C7B189A8B"
+      AssignedMaterial "{F422577A111BA80D}Assets/Props/Military/AmmoBox/EquipmentBoxWooden_01/Data/EquipmentBoxWooden_Explosives_01_US.emat"
+     }
+     MaterialAssignClass "{65268B1486967F9F}" {
+      SourceMaterial "tarp_EBFB69929B4DE0C6"
+      AssignedMaterial "{57B0CA33C76D1944}Assets/Props/Military/AmmoBox/EquipmentBoxStack/Data/EquipmentBoxStack_01_cover_US.emat"
+     }
+     MaterialAssignClass "{65268B1486967F9A}" {
+      SourceMaterial "weapon_box_6864083D30F4F63D"
+      AssignedMaterial "{897E26EB40E12FB3}Assets/Props/Military/AmmoBox/EquipmentBoxWooden_01/Data/EquipmentBoxWooden_Weapon_01_US.emat"
+     }
+     MaterialAssignClass "{65268B1486967F93}" {
+      SourceMaterial "ArsenalBox_01_Decal"
+      AssignedMaterial "{453DCC8BE28B35F8}Assets/Props/Military/AmmoBox/ArsenalBox_01/Data/ArsenalBox_01_Decal_US_equip.emat"
+     }
+    }
+   }
+   RigidBody "{65268B1486967E1A}" {
+    Mass 10
+    ModelGeometry 1
+    Static 1
+   }
+   SCR_ArsenalComponent "{65268B1486967EDE}" {
+    m_eSupportedArsenalItemTypes 654528
+    m_eSupportedArsenalItemModes 254
+    m_eEditableAttributeGroups 30
+    m_bGetDefaultIfNoFaction 0
+    m_bAllowGetFactionFromParent 1
+    m_eArsenalSaveType NO_RESTRICTIONS
+    m_eArsenalTypes GADGETS
+   }
+   SCR_CatalogEntitySpawnerComponent "{652D35F0E1C753CD}" {
+    m_sDelegatePrefab "{13EB5465CA676A60}Prefabs/Systems/Services/ServicePointDelegate_Armory.et"
+    m_aCatalogTypes {
+     20
+    }
+    m_aAllowedLabels {
+     2
+    }
+    m_bNeedAllLabels 0
+    m_iCustomSupplies 10000
+    m_fGracePeriodTime 60
+    m_fGracePeriodAreaRange 250
+    m_fPostGracePeriodRefundMultiplier 0.25
+   }
+   SCR_FactionAffiliationComponent "{65268B1486967ED3}" {
+    "faction affiliation" "7R"
+   }
+   SCR_SlotCompositionComponent "{65268B148697C5B5}" {
+    m_SlotPrefab "{D7EE0FF05FB54E4C}Prefabs/Vehicles/Core/VirtualSlots/BaseVirtualArsenalSlot.et"
+   }
+   SCR_SoundDataComponent "{65268B148697287D}" {
+    m_aAudioSourceConfiguration {
+     SCR_AudioSourceConfiguration "{65268B148697C5A8}" {
+      m_sSoundProject "{A73D28179B395F19}Sounds/Props/Military/AmmoBoxes/AmmoBox_Big_Wooden/Props_AmmoBox_Big_Wooden.acp"
+      m_sSoundEventName "SOUND_CONTAINER_OPEN"
+     }
+     SCR_AudioSourceConfiguration "{65268B148697C5A4}" {
+      m_sSoundProject "{A73D28179B395F19}Sounds/Props/Military/AmmoBoxes/AmmoBox_Big_Wooden/Props_AmmoBox_Big_Wooden.acp"
+      m_sSoundEventName "SOUND_CONTAINER_CLOSE"
+     }
+    }
+   }
+   UniversalInventoryStorageComponent "{65268B1486972999}" {
+    Attributes SCR_ItemAttributeCollection "{65268B14869729F8}" {
+     ItemDisplayName SCR_InventoryUIInfo "{65268B14869729C4}" {
+      Name "#AR-EditableEntity_ArsenalEquipment_01_US_Name"
+      Description "#AR-Arsenal_Description"
+      m_aItemHints {
+       SCR_SupplyAvailableItemHintUIInfo "{65268B148697283C}" {
+        Name "#AR-Item_SupplyConsumer_Hint1"
+        Icon "{8EB808BFA227C080}UI/Textures/Icons/InventoryHints/InventoryHint_SuppliesStored.edds"
+        m_bHideInArsenal 1
+       }
+      }
+     }
+     ItemPhysAttributes ItemPhysicalAttributes "{65268B14869729D7}" {
+      Weight 5
+      DimensionScaler 0.9
+     }
+     CustomAttributes {
+      PreviewRenderAttributes "{65268B14869729E6}" {
+       CameraOrbitAngles 330 30 0
+       CameraDistanceToItem 2
+       CameraOffset 0 0 0
+      }
+     }
+     CommonItemType "BANDAGE"
+     m_Size SLOT_2x2
+     m_SlotType SLOT_LOADOUT_STORAGE
+     m_bDraggable 0
+    }
+    Priority 1000
+    StoragePurpose 111
+   }
+   SCR_ArsenalInventoryStorageManagerComponent "{65268B14869729A5}" {
+   }
+   ActionsManagerComponent "{65268B1486973064}" {
+    Enabled 1
+    ActionContexts {
+     UserActionContext "{65268B1486972945}" {
+      UIInfo SCR_ActionContextUIInfo "{652D35F3630E87C5}" {
+       Name "Context"
+      }
+      ContextName "default"
+      Position PointInfo "{65268B14869729B9}" {
+       Offset 0 0.464 0
+      }
+      Radius 1.5
+     }
+    }
+    additionalActions {
+     SCR_OpenStorageAction "{65268B148697295E}" {
+      ParentContextList {
+       "default"
+      }
+      UIInfo UIInfo "{65268B1486972950}" {
+       Name "#AR-Inventory_OpenArsenalStorage"
+      }
+     }
+     SCR_SetLoadoutAction "{652D547312726AA1}" {
+      ParentContextList {
+       "default"
+      }
+      UIInfo SCR_ActionUIInfo "{652D547315EAE9B4}" {
+       Name "Pick Rifleman Loadout"
+       Icon "{FDC43816C7ABFBC9}UI/7R/7R.edds"
+      }
+      "Sort Priority" 20
+      m_eRole SquadLeader
+     }
+     SCR_SetLoadoutAction "{65552905989D19E3}" {
+      ParentContextList {
+       "default"
+      }
+      UIInfo SCR_ActionUIInfo "{65552905989D19A5}" {
+       Name "Pick Rifleman Loadout"
+       Icon "{FDC43816C7ABFBC9}UI/7R/7R.edds"
+      }
+      "Sort Priority" 21
+      m_eRole SquadMedic
+     }
+     SCR_SetLoadoutAction "{65552905B1949E14}" {
+      ParentContextList {
+       "default"
+      }
+      UIInfo SCR_ActionUIInfo "{65552905B1949EDF}" {
+       Name "Pick Rifleman Loadout"
+       Icon "{FDC43816C7ABFBC9}UI/7R/7R.edds"
+      }
+      "Sort Priority" 30
+      m_eRole Rifleman
+     }
+     S7R_LoadArsenalLoadout "{655487EAF0A300D4}" {
+      ParentContextList {
+       "default"
+      }
+      UIInfo SCR_ActionUIInfo "{655487EAF43F2DD8}" {
+       Name "Load Loadout"
+      }
+      Duration 1
+      "Sort Priority" 999
+      m_bAllowGetFactionOfParent 1
+      m_bAllowGetArsenalFromParent 1
+      m_sS7RSlotId "1"
+      m_sS7RLoadoutLabel "Loadout 1"
+     }
+     SCR_SaveArsenalLoadout "{65268B148697296D}" {
+      ParentContextList {
+       "default"
+      }
+      UIInfo UIInfo "{65268B148697296F}" {
+       Name "#AR-Loadout_Action_SaveLoadout"
+      }
+      Duration 0.5
+      "Sort Priority" 1000
+      m_bAllowGetFactionOfParent 1
+      m_bAllowGetArsenalFromParent 1
+     }
+    }
+   }
+   RplComponent "{65268B148697306F}" {
+    Enabled 1
+   }
+   Hierarchy "{65268B1486973094}" {
+    Enabled 1
+   }
+  }
+  Flags 1027
+  coords 3897.802 15.219 8418.69
+  angleY -185.4
+ }
+}
+SCR_SpawnPoint : "{F31238D86AB86447}Prefabs/7R/Layer4_missionsetup/SCR_SpawnPoint7R.et" {
+ components {
+  MapDescriptorComponent "{652576964FC0BBEE}" {
+   ImagesetQuadElement "US_Base"
+  }
+ }
+ coords 3908 15.302 8430
+ angleY 180
+}

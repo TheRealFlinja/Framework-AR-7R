@@ -1,0 +1,116 @@
+$grp GenericEntity {
+ s_2_1 {
+  coords 4567.563 27.929 10491.319
+ }
+ s_2_2 {
+  coords 4569.712 22.014 10511.972
+ }
+ s_2_3 {
+  coords 4559.077 15.924 10506.658
+ }
+ s_2_4 {
+  coords 4563.565 15.997 10449.113
+ }
+ s_2_5 {
+  coords 4553.907 16.687 10563.492
+ }
+ s_2_6 {
+  coords 4540.229 14.573 10394.662
+ }
+ s_2_7 {
+  coords 4525.573 14.158 10377.01
+ }
+}
+S7R_FactionControlTriggerEntity B_phase2_trigger {
+ coords 4560.828 17.222 9824.646
+ TriggerShapeType "Oriented Bounding Box"
+ SphereRadius 250
+ BoxMins -1000 -50 -80
+ BoxMaxs 1000 100 160
+ DrawShape 1
+ TriggerActivationType "First change"
+ PeriodicQueries 1
+ UpdatePeriod 1
+ RunDefaultQueryFirst 0
+ m_sOwnerFactionKey "7R"
+ m_iActivateMissionPhase 2
+ m_iRatioMethod "More than"
+ m_fFriendlyRatioLimit 0.01
+}
+SCR_BoardingTimedWaypoint gin_2_1 {
+ coords 4567.648 27.989 10491.09
+ Type "GetInNearest"
+ Title "GetInNearestWaypoint"
+ AIBehaviorTree "{55C11C7187131760}AI/BehaviorTrees/Waypoints/WP_GetInNearest.bt"
+ AIBehaviorTreeMoveTo "{A3755C1F88DED8D6}AI/BehaviorTrees/Waypoints/WP_Move.bt"
+ CompletionRadius 8
+ Autocomplete 0
+ m_BoardingParameters SCR_AIBoardingWaypointParameters "{6548D9960B1AEC58}" {
+  m_bIsDriverAllowed 1
+  m_bIsGunnerAllowed 1
+  m_bIsCargoAllowed 1
+ }
+ m_TimedWaypointParameters SCR_AITimedWaypointParameters "{6548D9960B1AEC6D}" {
+  m_holdingTime 30
+ }
+}
+$grp SCR_DefendWaypoint {
+ d_2_1 {
+  coords 4561.547 15.924 10505.149
+  Type "Defend"
+  Title "Defend waypoint"
+  AIBehaviorTree "{53C0853FB44E73E9}AI/BehaviorTrees/Waypoints/WP_Defend.bt"
+  AIBehaviorTreeMoveTo "{A3755C1F88DED8D6}AI/BehaviorTrees/Waypoints/WP_Move.bt"
+  CompletionRadius 20
+  Autocomplete 0
+  m_TimedWaypointParameters SCR_AITimedWaypointParameters "{6548D99672AD10BC}" {
+   m_holdingTime -1
+  }
+  m_aDefendPresets {
+   SCR_DefendWaypointPreset "{6548D99672AD1747}" {
+    m_sName "Guarding"
+    m_fFractionOfSA 0.6
+    m_aTagsForSearch {
+     "ObservationPost" "GatePost" "LoiterPost"
+    }
+   }
+   SCR_DefendWaypointPreset "{6548D99672AD175F}" {
+    m_sName "Defending"
+    m_aTagsForSearch {
+     "CoverPost"
+    }
+   }
+  }
+ }
+ d_2_2 {
+  coords 4572.183 16.159 10466.204
+  Type "Defend"
+  Title "Defend waypoint"
+  AIBehaviorTree "{53C0853FB44E73E9}AI/BehaviorTrees/Waypoints/WP_Defend.bt"
+  AIBehaviorTreeMoveTo "{A3755C1F88DED8D6}AI/BehaviorTrees/Waypoints/WP_Move.bt"
+  CompletionRadius 120
+  Autocomplete 0
+  m_TimedWaypointParameters SCR_AITimedWaypointParameters "{6548D99672AD10BC}" {
+   m_holdingTime -1
+  }
+  m_aDefendPresets {
+   SCR_DefendWaypointPreset "{6548D99672AD1747}" {
+    m_sName "Guarding"
+    m_fFractionOfSA 0.6
+    m_aTagsForSearch {
+     "ObservationPost" "GatePost" "LoiterPost"
+    }
+   }
+   SCR_DefendWaypointPreset "{6548D99672AD175F}" {
+    m_sName "Defending"
+    m_aTagsForSearch {
+     "CoverPost"
+    }
+   }
+  }
+ }
+}
+GenericEntity mmg_2 : "{114DE81321786CD9}Prefabs/Compositions/Slotted/SlotFlatSmall/MachineGunNest_S_USSR_01_PKM.et" {
+ coords 4566.991 27.886 10488.559
+ angleY 171.823
+}

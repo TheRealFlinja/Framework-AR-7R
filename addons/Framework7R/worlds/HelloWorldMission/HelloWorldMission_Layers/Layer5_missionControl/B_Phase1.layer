@@ -1,0 +1,58 @@
+$grp GenericEntity {
+ s_1_1 {
+  coords 4510 23.542 10119.521
+ }
+ s_1_2 {
+  coords 4375.098 24.661 10154.918
+ }
+ s_1_3 {
+  coords 4195.375 35.047 10035.861
+ }
+ s_1_4 {
+  coords 5228.909 37.362 9702.458
+ }
+ s_1_5 {
+  coords 5155.934 50.387 9814.786
+ }
+ s_1_7 {
+  coords 4728.695 12.185 10050.728
+ }
+ s_1_6 {
+  coords 4995.778 25.766 9931.597
+ }
+}
+S7R_FactionControlTriggerEntity B_phase1_trigger {
+ coords 4492.568 12.777 9440.216
+ TriggerShapeType Sphere
+ SphereRadius 250
+ TriggerActivationType "First change"
+ PeriodicQueries 1
+ UpdatePeriod 1
+ RunDefaultQueryFirst 0
+ m_sOwnerFactionKey "7R"
+ m_iRatioMethod "More than"
+ m_fFriendlyRatioLimit 0.1
+}
+SCR_EntityWaypoint w_1_1 {
+ coords 4520.696 13.917 9449.521
+ Type "Attack"
+ Title "AttackWaypoint"
+ AIBehaviorTree "{730E239133C66A2A}AI/BehaviorTrees/Waypoints/WP_Attack.bt"
+ AIBehaviorTreeMoveTo "{A3755C1F88DED8D6}AI/BehaviorTrees/Waypoints/WP_Move.bt"
+ CompletionRadius 80
+ Autocomplete 0
+ CompletionType Any
+}
+SCR_SearchAndDestroyWaypoint sd_1_1 {
+ coords 4515.696 13.808 9447.521
+ Type "SearchAndDestroy"
+ Title "SearchAndDestroy Waypoint"
+ AIBehaviorTree "{573614D962C311BB}AI/BehaviorTrees/Waypoints/WP_SearchAndDestroy.bt"
+ AIBehaviorTreeMoveTo "{A3755C1F88DED8D6}AI/BehaviorTrees/Waypoints/WP_Move.bt"
+ CompletionRadius 200
+ Autocomplete 0
+ CompletionType Any
+ m_TimedWaypointParameters SCR_AITimedWaypointParameters "{6548784B8E7C5EF0}" {
+  m_holdingTime 600
+ }
+}

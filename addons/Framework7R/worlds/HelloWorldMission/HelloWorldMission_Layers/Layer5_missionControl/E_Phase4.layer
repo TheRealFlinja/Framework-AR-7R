@@ -1,0 +1,175 @@
+GenericEntity sandbags_1 {
+ components {
+  FactionAffiliationComponent "{65492B8BADA70C8C}" {
+   "faction affiliation" "USSR"
+  }
+  RigidBody "{65492B8BADA70368}" {
+   ResponseIndex "NoCollision"
+   Geometries {
+    PhysicsBoxGeometry UserAction {
+     LayerPreset "Interaction"
+     Extents 10 0.5 5
+    }
+   }
+   Static 1
+  }
+  SCR_CampaignBuildingCompositionComponent "{65492B8BADA70332}" {
+   m_AudioSourceConfigurationSpawn SCR_AudioSourceConfiguration "{65492B8BADA70316}" {
+    m_sSoundProject "{F76981ECA6DC2674}Sounds/Editor/BaseBuilding/Editor_BaseBuilding.acp"
+    m_sSoundEventName "SOUND_BUILD_SANDBAG_BARBWIRE"
+   }
+   m_AudioSourceConfigurationDespawn SCR_AudioSourceConfiguration "{65492B8BADA70334}" {
+    m_sSoundProject "{F76981ECA6DC2674}Sounds/Editor/BaseBuilding/Editor_BaseBuilding.acp"
+    m_sSoundEventName "SOUND_DESTROY_SANDBAG"
+    m_eFlags 5
+   }
+  }
+  SCR_SlotCompositionComponent "{65492B8BADA703CE}" {
+  }
+  ActionsManagerComponent "{65492B8BADA703A7}" {
+   ActionContexts {
+    UserActionContext "{65492B8BADA703E2}" {
+     ContextName "Disassembly"
+     Position PointInfo "{65492B8BADA703EF}" {
+      Offset 0 0.5 0
+     }
+     Radius 5
+     "Display UI At Reference Point" 1
+    }
+   }
+   additionalActions {
+    SCR_CampaignBuildingDisassemblyUserAction "{65492B8BADA703AF}" {
+     ParentContextList {
+      "Disassembly"
+     }
+     UIInfo UIInfo "{65492B8BADA7038B}" {
+      Name "#AR-FreeRoamBuilding_Action_Disassembly"
+     }
+     VisibilityRange 10
+     Duration 20
+    }
+   }
+  }
+  RplComponent "{65492B8BADA703B7}" {
+  }
+  Hierarchy "{65492B8BADA703B3}" {
+  }
+ }
+ Flags 1027
+ coords 4434.825 10.079 11025.536
+ angleY 118.533
+ {
+  GenericEntity : "{21D83950DF36F250}Prefabs/Props/Military/Sandbags/Sandbag_01_long_burlap.et" {
+   components {
+    Hierarchy "{5CCCBEF0E3441395}" {
+     Enabled 1
+    }
+   }
+   coords 0.001 0 1.42
+   angleY -0.696
+  }
+  GenericEntity : "{894A1AFDCB71CD0D}Prefabs/Compositions/Misc/CustomEntities/CompositionDecals/CompositionDecal_Dirt_Patch_02.et" {
+   coords 0.287 0 0.835
+  }
+  $grp GenericEntity : "{B547CF929FCC6BB7}Prefabs/Props/Military/Sandbags/Sandbag_01_end_high_burlap.et" {
+   {
+    components {
+     Hierarchy "{5CCCBEF0E35226F3}" {
+      Enabled 1
+     }
+    }
+    coords 3.102 0 1.372
+    angleY 4.389
+   }
+   {
+    components {
+     Hierarchy "{5CCCBEF0E356B4DF}" {
+      Enabled 1
+     }
+    }
+    coords -2.969 0 1.475
+    angleY -174.759
+   }
+   {
+    components {
+     Hierarchy "{5CCCBEF0E3593EFA}" {
+      Enabled 1
+     }
+    }
+    coords 1.607 0 1.428
+    angleY 180
+   }
+   {
+    components {
+     Hierarchy "{5CCCBEF0E35DC0F9}" {
+      Enabled 1
+     }
+    }
+    coords -1.578 0 1.412
+   }
+  }
+  GenericEntity : "{C599195C442D7125}Prefabs/Compositions/Misc/CustomEntities/CompositionDecals/CompositionDecal_CigarButts_01.et" {
+   coords 0.504 0 0.299
+   angleY -30.178
+  }
+  $grp GenericEntity : "{CC5453CCC311603B}Prefabs/Props/Military/Sandbags/Sandbag_01_end_burlap.et" {
+   {
+    components {
+     Hierarchy "{5CCCBEF0E3A885B5}" {
+      Enabled 1
+     }
+    }
+    coords 4.125 0 1.202
+    angleY 7.888
+   }
+   {
+    components {
+     Hierarchy "{5CCCBEF0E3AB31A5}" {
+      Enabled 1
+     }
+    }
+    coords -3.76 0 1.534
+    angleY -175.592
+   }
+  }
+  GenericEntity : "{CC66836BF4E211F9}Prefabs/Props/Military/Camps/Duckboard_01.et" {
+   components {
+    Hierarchy "{5CCCBEF0E3B251AE}" {
+     Enabled 1
+    }
+   }
+   coords -2.461 -0.583 0.348
+   angleY -93.313
+  }
+  $grp GenericEntity : "{E51E2E1D77B54223}Prefabs/Compositions/Misc/CustomEntities/CompositionDecals/CompositionDecal_Dirt_Patch_01.et" {
+   {
+    coords -3.92 0 0.593
+    angleY 18.156
+   }
+   {
+    coords 3.404 0 0.477
+    angleY 18.156
+   }
+  }
+  $grp GenericEntity : "{F76BD5785C7FE191}Prefabs/Systems/Compositions/PatrolPoint/PatrolPoint_ObservationPoint.et" {
+   {
+    components {
+     Hierarchy "{5CD2B8224753E153}" {
+      Enabled 1
+     }
+    }
+    coords -0.051 0 -0.172
+    angleY -85.79
+   }
+   {
+    components {
+     Hierarchy "{5CD2B8224728D40F}" {
+      Enabled 1
+     }
+    }
+    coords 3.831 0 -0.465
+    angleY -60.917
+   }
+  }
+ }
+}
