@@ -1,0 +1,7 @@
+SCR_LoadoutManager {
+ ID "6567159687A1CD21"
+ coords 3910.112 15.281 8430.718
+ m_7RFactionLoadoutKey USVanilla
+ m_7RLoadoutImports S7R_LoadoutMasterConfig "{6564FC755C0CAB31}" : "{EC84B7A42C193057}Configs/Loadouts/7R/S7R_LoadoutMasterConfig.conf" {
+ }
+}

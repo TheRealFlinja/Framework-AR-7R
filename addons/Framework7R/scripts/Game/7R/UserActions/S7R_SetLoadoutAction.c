@@ -78,8 +78,28 @@ class SCR_SetLoadoutAction : SCR_BaseFactionCheckUserAction
 			Print("[SCR_SetLoadoutAction_7R: PerformAction] playerController not present", LogLevel.ERROR);
 			return;
 		}
+		
+		if (!m_OwnerFactionAffiliation)
+		{
+			Print("[SCR_SetLoadoutAction_7R: PerformAction] No faction found", LogLevel.ERROR);
+			return;
+		}
 
-		FactionKey factionKey = m_OwnerFactionAffiliation.GetAffiliatedFaction().GetFactionKey();
+		Faction faction = m_OwnerFactionAffiliation.GetAffiliatedFaction();
+		FactionKey factionKey;
+		if (faction)
+			factionKey = faction.GetFactionKey();
+		
+		if (!factionKey)
+		{
+			CharacterEntity character = CharacterEntity.Cast(playerController.GetControlledEntity());
+			if (!character)
+				return;
+			factionKey = FactionAffiliationComponent.Cast(character.FindComponent(FactionAffiliationComponent)).GetAffiliatedFactionKey();
+			if (!factionKey)
+				return;
+		}
+		
 		
 		// Get LoadoutEditor Component
 		S7R_LoadoutEditorPlayerComponent editorPlayerComponent = S7R_LoadoutEditorPlayerComponent.Cast(playerController.FindComponent(S7R_LoadoutEditorPlayerComponent));

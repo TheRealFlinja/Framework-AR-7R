@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{A070D4BB7797D4D2}Prefabs/7R/Layer4_missionsetup/LoadoutBox7R_Base.et"
+ Name "{7330E421D111D4C5}Prefabs/7R/Layer4_missionsetup/PlatoonLoadoutBox.et"
  Configurations {
   EntityTemplateResourceClass PC {
   }
