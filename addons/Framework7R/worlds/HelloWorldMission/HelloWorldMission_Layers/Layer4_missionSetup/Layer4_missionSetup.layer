@@ -221,7 +221,11 @@ $grp GenericEntity {
        Icon "{FDC43816C7ABFBC9}UI/7R/7R.edds"
       }
       m_bAllowGetFactionOfParent 1
+<<<<<<< HEAD
       m_eRole PlatoonLeader
+=======
+      m_eRole SquadLeader
+>>>>>>> main
      }
      SCR_SetLoadoutAction "{655B1E2F17571AAD}" {
       ParentContextList {
@@ -281,6 +285,7 @@ $grp GenericEntity {
       }
       "Sort Priority" 20
       m_bAllowGetFactionOfParent 1
+<<<<<<< HEAD
       m_eRole PlatoonEngDemo
      }
      SCR_SetLoadoutAction "{656715896851E4E8}" {
@@ -414,6 +419,9 @@ $grp GenericEntity {
       "Sort Priority" 45
       m_bAllowGetFactionOfParent 1
       m_eRole PlatoonUAV
+=======
+      m_eRole SquadRifleman
+>>>>>>> main
      }
      S7R_LoadArsenalLoadout "{655487EAF0A300D4}" {
       ParentContextList {
@@ -426,8 +434,13 @@ $grp GenericEntity {
       "Sort Priority" 999
       m_bAllowGetFactionOfParent 1
       m_bAllowGetArsenalFromParent 1
+<<<<<<< HEAD
       m_sS7RSlotId "Loadout7R"
       m_sS7RLoadoutLabel "Saved Loadout"
+=======
+      m_sS7RSlotId "1"
+      m_sS7RLoadoutLabel "Loadout7R"
+>>>>>>> main
      }
      SCR_SaveArsenalLoadout "{65268B148697296D}" {
       ParentContextList {
@@ -440,8 +453,12 @@ $grp GenericEntity {
       "Sort Priority" 1000
       m_bAllowGetFactionOfParent 1
       m_bAllowGetArsenalFromParent 1
+<<<<<<< HEAD
       m_sS7RSlotId "Loadout7R"
       m_sS7RLoadoutLabel "Saved Loadout"
+=======
+      m_sS7RLoadoutLabel "Loadout7R"
+>>>>>>> main
      }
     }
    }
