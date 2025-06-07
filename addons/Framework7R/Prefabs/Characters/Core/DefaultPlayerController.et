@@ -3,5 +3,9 @@ SCR_PlayerController {
  components {
   S7R_LoadoutEditorPlayerComponent "{6555290173345015}" {
   }
+  SCR_FastTravelComponent "{5DAA74121E45C2EB}" {
+   m_iCooldown 60
+   m_iDistanceToTarget 25
+  }
  }
 }

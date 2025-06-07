@@ -296,7 +296,7 @@ SCR_BaseGameMode {
    }
   }
   SCR_GroupsManagerComponent "{651F0CC663E62F97}" {
-   m_sDefaultGroupPrefab "{9B0635D70430D6E4}Prefabs/Groups/7R/Group_7R_Squad.et"
+   m_sDefaultGroupPrefab "{9B0635D70430D6E4}Prefabs/Groups/7RNotUsed/Group_7R_Squad.et"
    m_iPlayableGroupFrequencyOffset 10000
    m_iPlayableGroupFrequencyMin 10000
    m_iPlayableGroupFrequencyMax 80000
@@ -334,6 +334,8 @@ SCR_BaseGameMode {
   }
   SCR_RadialMenuItemsComponent "{65268B1D13B16B1D}" {
    Enabled 0
+   m_MenuController SCR_RadialMenuController "{658510D26A4B3D1D}" {
+   }
   }
   SCR_ReconnectComponent "{6526085E1DF0EB68}" {
   }

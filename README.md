@@ -3,7 +3,29 @@
 
 7R Mission Framework for Arma Reforger
 
-WIP
+## Status
+### Current Features
+
+* 7R Mission Manager
+    - AI Group Template
+    - 7R Phase Triggers
+* 7R Premade loadout boxes
+    - Loadout selection
+* 7R Vehicle spawner
+* 7R Basic Respawn system
+    - Respawn with loadout
+
+### Planned Features
+
+* 7R Briefing set up
+* 7R Create ActionContextMenuLayout for Loadouts
+* 7R Better Respawn System
+* 7R Reinsertion system
+* 7R Resupply system
+* 7R Fire Support System
+* 7R Objectives
+* 7R Warcrime Tracker
+* Pushing everything into seperate addons
 
 ## Import addons into Arma Reforger Tools
 

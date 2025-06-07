@@ -88,15 +88,10 @@ class S7R_MissionManagerComponent: ScriptComponent
 		if (!GetGame().InPlayMode())
 			return;
 		
-		// Does not happen before everything is loaded, find where this can be added so it runs properly
-		if (!ValidateMissionPhases())
-		{
-			Print("[S7R_MissionManagerComponent] Validation of phases failed", LogLevel.ERROR);
-		}
-		
+		GetGame().GetCallqueue().CallLater(ValidateMissionPhases, 5000);
 	}
 	
-	protected bool ValidateMissionPhases()
+	protected void ValidateMissionPhases()
 	{
 		m_bValidated = false;
 		foreach(S7R_MissionPhase missionPhase: this.m_aMissionPhases)
@@ -107,6 +102,5 @@ class S7R_MissionManagerComponent: ScriptComponent
 				break;
 			}
 		}
-		return m_bValidated;
 	}
 }

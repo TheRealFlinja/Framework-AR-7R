@@ -203,6 +203,7 @@ $grp GenericEntity {
      UserActionContext "{6567158A00F7986D}" {
       UIInfo SCR_ActionContextUIInfo "{6567158A04D18AC9}" {
        m_sIconName "weapons"
+       m_sLayoutName "{32CC3705C3A64A18}UI/layouts/HUD/InteractionSystem/ContextBlipRoot.layout"
       }
       ContextName "Platoon Loadouts"
       Position PointInfo "{6567158A60EA53EF}" {
@@ -216,16 +217,13 @@ $grp GenericEntity {
       ParentContextList {
        "Platoon Loadouts"
       }
-      UIInfo SCR_ActionUIInfo "{652D547315EAE9B4}" {
+      UIInfo SCR_ActionContextUIInfo "{652D547315EAE9B4}" {
        Name "Platoon Leader"
        Icon "{FDC43816C7ABFBC9}UI/7R/7R.edds"
+       m_sLayoutName "{A604FB23656D64C7}UI/layouts/HUD/InteractionSystem/ContextBlipElement.layout"
       }
       m_bAllowGetFactionOfParent 1
-<<<<<<< HEAD
-      m_eRole PlatoonLeader
-=======
       m_eRole SquadLeader
->>>>>>> main
      }
      SCR_SetLoadoutAction "{655B1E2F17571AAD}" {
       ParentContextList {
@@ -285,7 +283,6 @@ $grp GenericEntity {
       }
       "Sort Priority" 20
       m_bAllowGetFactionOfParent 1
-<<<<<<< HEAD
       m_eRole PlatoonEngDemo
      }
      SCR_SetLoadoutAction "{656715896851E4E8}" {
@@ -418,10 +415,7 @@ $grp GenericEntity {
       }
       "Sort Priority" 45
       m_bAllowGetFactionOfParent 1
-      m_eRole PlatoonUAV
-=======
       m_eRole SquadRifleman
->>>>>>> main
      }
      S7R_LoadArsenalLoadout "{655487EAF0A300D4}" {
       ParentContextList {
@@ -434,13 +428,8 @@ $grp GenericEntity {
       "Sort Priority" 999
       m_bAllowGetFactionOfParent 1
       m_bAllowGetArsenalFromParent 1
-<<<<<<< HEAD
-      m_sS7RSlotId "Loadout7R"
-      m_sS7RLoadoutLabel "Saved Loadout"
-=======
       m_sS7RSlotId "1"
       m_sS7RLoadoutLabel "Loadout7R"
->>>>>>> main
      }
      SCR_SaveArsenalLoadout "{65268B148697296D}" {
       ParentContextList {
@@ -453,12 +442,8 @@ $grp GenericEntity {
       "Sort Priority" 1000
       m_bAllowGetFactionOfParent 1
       m_bAllowGetArsenalFromParent 1
-<<<<<<< HEAD
       m_sS7RSlotId "Loadout7R"
-      m_sS7RLoadoutLabel "Saved Loadout"
-=======
       m_sS7RLoadoutLabel "Loadout7R"
->>>>>>> main
      }
     }
    }
@@ -526,14 +511,11 @@ $grp GenericEntity {
      }
     }
     additionalActions {
-     SCR_SpawnVehicleAction_7R "{65288317072FC624}" {
+     S7R_SpawnVehicleAction "{65829538FA904004}" {
       ParentContextList {
        "default"
       }
-      UIInfo SCR_ActionUIInfo "{652883689AB0989B}" {
-       Name "Spawn M151A2"
-      }
-      VisibilityRange 5
+      ActionTitle "Spawn Vehicle"
       m_sVehiclePrefab "{F649585ABB3706C4}Prefabs/Vehicles/Wheeled/M151A2/M151A2.et"
       m_sNameSpawnLocation "vic_spawn_1"
      }
@@ -597,25 +579,98 @@ $grp GenericEntity {
      }
     }
     additionalActions {
-     SCR_ShowDeployableSpawnPointInfo "{6528836967D91E13}" {
+     S7R_TeleportPlayerToRally "{658742A7ED7C8C1D}" {
       ParentContextList {
        "default"
       }
-      UIInfo SCR_ActionUIInfo "{65288368305A9BA9}" {
-       Name "Deploy"
+      UIInfo SCR_ActionUIInfo "{658742A7E7BD5EA4}" {
       }
-      VisibilityRange 10
-      Duration 1
-      "Sort Priority" 10
      }
-     SCR_FastTravelAction "{652D5470C7C26163}" {
+     S7R_TeleportPlayerToFOB "{658E998BD18715F0}" {
       ParentContextList {
        "default"
       }
-      UIInfo SCR_ActionUIInfo "{652D5470DED50C4B}" {
+      UIInfo SCR_ActionUIInfo "{658E998BD18715BA}" {
       }
+      m_iFOBNumber 1
+     }
+     S7R_TeleportPlayerToFOB "{658E99882755EC85}" {
+      ParentContextList {
+       "default"
+      }
+      UIInfo SCR_ActionUIInfo "{658E99882755E34D}" {
+      }
+      m_iFOBNumber 2
+     }
+     S7R_TeleportPlayerToFOB "{658E9988398B6FFB}" {
+      ParentContextList {
+       "default"
+      }
+      UIInfo SCR_ActionUIInfo "{658E9988398B6FA6}" {
+      }
+      m_iFOBNumber 3
+     }
+     S7R_TeleportPlayerToFOB "{658E9988305A8EF8}" {
+      ParentContextList {
+       "default"
+      }
+      UIInfo SCR_ActionUIInfo "{658E9988305A8EA2}" {
+      }
+      m_iFOBNumber 4
+     }
+     S7R_TeleportPlayerToFOB "{658E99880A558636}" {
+      ParentContextList {
+       "default"
+      }
+      UIInfo SCR_ActionUIInfo "{658E99880A5586FF}" {
+      }
+      m_iFOBNumber 5
+     }
+     S7R_TeleportPlayerToFOB "{658E998805C8C2D9}" {
+      ParentContextList {
+       "default"
+      }
+      UIInfo SCR_ActionUIInfo "{658E998805C8C29E}" {
+      }
+      m_iFOBNumber 6
+     }
+     S7R_TeleportPlayerToFOB "{658E99881E5ED5F3}" {
+      ParentContextList {
+       "default"
+      }
+      UIInfo SCR_ActionUIInfo "{658E99881E5ED5BF}" {
+      }
+      m_iFOBNumber 7
+     }
+     S7R_TeleportPlayerToFOB "{658E99881D485310}" {
+      ParentContextList {
+       "default"
+      }
+      UIInfo SCR_ActionUIInfo "{658E99881D4853D5}" {
+      }
+      m_iFOBNumber 8
+     }
+     S7R_TeleportPlayerToFOB "{658E99881661A4EB}" {
+      ParentContextList {
+       "default"
+      }
+      UIInfo SCR_ActionUIInfo "{658E99881661A4AC}" {
+      }
+      m_iFOBNumber 9
+     }
+     S7R_TeleportPlayerToFOB "{658E99886A756B19}" {
+      ParentContextList {
+       "default"
+      }
+      UIInfo SCR_ActionUIInfo "{658E99886A756BC1}" {
+      }
+      m_iFOBNumber 10
      }
     }
+   }
+   RplComponent "{658742A2AE22F0F2}" {
+   }
+   Hierarchy "{658742A2BACA414E}" {
    }
   }
   Flags 1027
