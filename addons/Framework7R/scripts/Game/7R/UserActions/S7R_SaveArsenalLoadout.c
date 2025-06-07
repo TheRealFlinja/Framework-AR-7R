@@ -1,13 +1,13 @@
+[BaseContainerProps(description: "7R Save Current Loadout Action", configRoot: true)]
 modded class SCR_SaveArsenalLoadout : SCR_BaseFactionCheckUserAction
 {
-	[Attribute("1", desc: "")]
+	[Attribute("Loadout7R", desc: "")]
 	protected string m_sS7RSlotId;
 
 	[Attribute("Loadout 1", desc: "")]
 	protected string m_sS7RLoadoutLabel;
 
 	protected RplComponent m_S7RRplComp;
-
 	
 	//------------------------------------------------------------------------------------------------
 	override void Init(IEntity pOwnerEntity, GenericComponent pManagerComponent)
