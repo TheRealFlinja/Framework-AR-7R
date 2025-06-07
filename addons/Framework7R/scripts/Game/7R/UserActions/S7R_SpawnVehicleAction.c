@@ -5,8 +5,8 @@ TO DO:
 	Add a check if surrounding area is free of players and vehicles
 
 */
-
-class SCR_SpawnVehicleAction_7R : ScriptedUserAction
+[BaseContainerProps(description: "7R Vehicle Spawn Action", configRoot: true)]
+class S7R_SpawnVehicleAction : SCR_ScriptedUserAction
 {
 	[Attribute("", UIWidgets.ResourceNamePicker, category: "Vehicle Spawn")]
 	protected ResourceName m_sVehiclePrefab;
@@ -57,7 +57,7 @@ class SCR_SpawnVehicleAction_7R : ScriptedUserAction
 		
 		if (!m_AISpawner)
 		{
-			Print("[SCR_SpawnVehicleAction_7R: PerformAction] No SCR_AISpawnHandler7RComponent found", LogLevel.ERROR);
+			Print("[S7R_SpawnVehicleAction: PerformAction] No SCR_AISpawnHandler7RComponent found", LogLevel.ERROR);
 			return;
 		}
 		
@@ -67,7 +67,7 @@ class SCR_SpawnVehicleAction_7R : ScriptedUserAction
 			return;
 		
 		m_iAmountOfVehicleAvailable -= 1;
-		Print("[SCR_SpawnVehicleAction_7R: PerformAction] Vehicle spawned", LogLevel.DEBUG);
+		Print("[S7R_SpawnVehicleAction: PerformAction] Vehicle spawned", LogLevel.DEBUG);
  	}
 	
 	//------------------------------------------------------------------------------------------------
@@ -112,15 +112,14 @@ class SCR_SpawnVehicleAction_7R : ScriptedUserAction
 		IEntity owner = GetOwner();
 		if (!owner)
 			return;
-
-		//AISpawnHandlerComponent should be added as component for this, atm this is just a component for gamemode for easy access
-		//Might move all functions to the resourcehandler and use AIHandler as an access point, software design is pain
-		//m_AISpawner = S7R_AISpawnHandlerComponent.Cast(owner.FindComponent(S7R_AISpawnHandlerComponent));
+		
+		if (!GetGame().InPlayMode())
+			return;
 		
 		m_AISpawner = S7R_AISpawnHandlerComponent.Cast(GetGame().GetGameMode().FindComponent(S7R_AISpawnHandlerComponent));
 		
 		if (!m_AISpawner)
-			Print("[SCR_SpawnVehicleAction_7R: Init] No SCR_AISpawnHandler7RComponent found", LogLevel.ERROR);
+			Print("[S7R_SpawnVehicleAction: Init] No S7R_AISpawnHandlerComponent found", LogLevel.ERROR);
 		
 		m_RplComp = RplComponent.Cast(owner.FindComponent(RplComponent));
 	}

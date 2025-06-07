@@ -24,6 +24,12 @@ modded class SCR_LoadoutManager : GenericEntity
 	protected ref S7R_FactionLoadouts m_Loadouts7R;
 	
 	//------------------------------------------------------------------------------------------------
+	//! Get all 7R Loadouts
+	protected ref S7R_FactionLoadouts Get7RLoadouts()
+	{
+	}
+	
+	//------------------------------------------------------------------------------------------------
 	//! Get selected 7R Faction Key for this mission
 	ELoadouts7R Get7RLoadoutKey()
 	{

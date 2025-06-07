@@ -1,11 +1,4 @@
-/*
-
-TO DO:
-
-	Test
-
-*/
-
+[BaseContainerProps(description: "7R Set a premade Loadout Action", configRoot: true)]
 class SCR_SetLoadoutAction : SCR_BaseFactionCheckUserAction
 {	
 	[Attribute("", UIWidgets.ComboBox, enumType: ERoles7R, category: "Role selection")]
@@ -32,8 +25,10 @@ class SCR_SetLoadoutAction : SCR_BaseFactionCheckUserAction
 			return false;
 		}
 		
-		if (!m_eRole)
+		if (!m_LoadoutManager.GetLoadoutByRole(m_eRole))
+		{
 			return false;
+		}
 		
 		return true;
 	}
