@@ -34,6 +34,7 @@ class S7R_ResourceHandlerComponent: ScriptComponent
 		// Return the resource
 		return resource;
 	}
+
 	//------------------------------------------------------------------------------------------------
 	EntitySpawnParams GenerateSpawnParameters(vector spawnPosition)
 	{
@@ -46,5 +47,26 @@ class S7R_ResourceHandlerComponent: ScriptComponent
 		
 		// Return this set of spawn parameters
 		return params;
+	}
+	
+	//------------------------------------------------------------------------------------------------
+	IEntity SpawnEntityOnPosition(ResourceName resourceToSpawn, vector spawnPosition)
+	{
+		// Generate template
+		Resource resource = this.GenerateAndValidateResource(resourceToSpawn);
+		
+		if (!resource)
+		{
+			Print(("[S7R_ResourceHandlerComponent: SpawnEntityOnPosition] Unable to Load Resource " + resourceToSpawn), LogLevel.ERROR);
+			return null;
+		}
+
+		//Generate spawn parameters and spawn group
+		IEntity ent = GetGame().SpawnEntityPrefab(resource, null, this.GenerateSpawnParameters(spawnPosition));
+		
+		if (!ent)
+			Print(("[S7R_ResourceHandlerComponent: SpawnEntityOnPosition] Unable to Spawn Resource " + resourceToSpawn), LogLevel.ERROR);
+		
+		return ent;
 	}
 }

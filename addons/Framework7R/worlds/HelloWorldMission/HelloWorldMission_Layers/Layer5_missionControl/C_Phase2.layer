@@ -109,14 +109,3 @@ $grp SCR_DefendWaypoint {
   }
  }
 }
-GenericEntity mmg_2 : "{114DE81321786CD9}Prefabs/Compositions/Slotted/SlotFlatSmall/MachineGunNest_S_USSR_01_PKM.et" {
- components {
-  RigidBody "{5E96A067A67C5029}" {
-   Active Active
-   SimState Collision
-   ResponseIndex "SmallDestructible"
-  }
- }
- coords 4566.991 28 10488
- angleY 172
-}

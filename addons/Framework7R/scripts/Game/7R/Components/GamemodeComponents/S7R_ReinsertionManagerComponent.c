@@ -16,12 +16,17 @@ class S7R_ReinsertionManagerComponent: ScriptComponent
 	[Attribute(defvalue: "120")]
 	protected int m_iRallyLifetime;
 	
-	protected map<string, IEntity> m_mFOBEntities;
+	protected ref map<string, IEntity> m_mFOBEntities = new map<string, IEntity>;
 	protected IEntity m_RallyEntity;
 	
 	//------------------------------------------------------------------------------------------------
 	bool GetFOB(int i, out string key, out IEntity fob)
 	{
+		if (m_mFOBEntities.Count() < i)
+		{
+			return false;
+		}
+		
 		key = m_mFOBEntities.GetKey(i);
 		if (!key)
 			return false;
@@ -81,9 +86,8 @@ class S7R_ReinsertionManagerComponent: ScriptComponent
 		
 		m_RallyEntity = rally;
 		
-		// Delete rally after 
+		// Delete rally after lifetime
 		GetGame().GetCallqueue().CallLater(UnregisterRally, m_iRallyLifetime*1000);
-		
 		return true;
 	}
 	
@@ -106,6 +110,16 @@ class S7R_ReinsertionManagerComponent: ScriptComponent
 		{
 			return false;
 		}
+	}
+	
+	bool CanRegisterRally()
+	{
+		if (m_RallyEntity)
+		{
+			return false;
+		}
+		
+		return true;
 	}
 	
 	//------------------------------------------------------------------------------------------------
