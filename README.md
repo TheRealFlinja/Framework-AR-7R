@@ -9,6 +9,7 @@
 * 7R Mission Manager
     - AI Group Template
     - 7R Phase Triggers
+* 7R Custom Actions menu
 * 7R Premade loadout boxes
     - Loadout selection
 * 7R Vehicle spawner
@@ -17,13 +18,13 @@
 
 ### Planned Features
 
+* 7R Resupply system
+* 7R Fire Support System
+* 7R Objectives
 * 7R Briefing set up
 * 7R Create ActionContextMenuLayout for Loadouts
 * 7R Better Respawn System
 * 7R Reinsertion system
-* 7R Resupply system
-* 7R Fire Support System
-* 7R Objectives
 * 7R Warcrime Tracker
 * Pushing everything into seperate addons
 

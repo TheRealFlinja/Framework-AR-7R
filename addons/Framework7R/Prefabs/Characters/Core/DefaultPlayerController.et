@@ -3,9 +3,18 @@ SCR_PlayerController {
  components {
   S7R_LoadoutEditorPlayerComponent "{6555290173345015}" {
   }
+  S7R_MenuPlayerComponent "{659297611C6F9E10}" {
+   m_sMenuConfigActionPair "{E573DE52DDE7083E}Configs/Menu7R/Menu7RActionConfigPairs.conf"
+   m_RadialMenuController SCR_RadialMenuController "{659297611496D5E5}" {
+    m_RMControls SCR_RadialMenuControllerInputs "{659297616A98B7BD}" {
+    }
+    m_Data SCR_SelectionMenuData "{6592E11F38C905A2}" {
+    }
+   }
+  }
   SCR_FastTravelComponent "{5DAA74121E45C2EB}" {
    m_iCooldown 60
-   m_iDistanceToTarget 25
+   m_iDistanceToTarget 10
   }
  }
 }
