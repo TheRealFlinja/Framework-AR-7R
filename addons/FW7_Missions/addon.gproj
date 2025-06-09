@@ -1,0 +1,22 @@
+GameProject {
+ ID "FW7_Missions"
+ GUID "6593511C38FEB338"
+ TITLE "FW-7R Missions"
+ Dependencies {
+  "58D0FB3206B6F859" "659316203DEDE703" "659317E90BFDAE1D" "6593195C23BD1CFE"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}

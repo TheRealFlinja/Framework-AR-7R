@@ -1,18 +1,18 @@
 GameProject {
- ID "FW7_FullFramework"
- GUID "651548023B37FD7C"
- TITLE "FW-7R All In One"
+ ID "FW7_Core"
+ GUID "659316203DEDE703"
+ TITLE "FW-7R Core"
  Dependencies {
-  "58D0FB3206B6F859" "659316203DEDE703" "659317E90BFDAE1D" "6593195C23BD1CFE" "6593511C38FEB338"
+  "58D0FB3206B6F859"
  }
  Configurations {
   GameProjectConfig PC {
    WidgetManagerSettings WidgetManagerSettings "{AC4BE58770485E02}" {
     StringTables {
-     StringTableDefinition "{65929745F33C1772}" {
+     StringTableDefinition "{659322B0A4F506E7}" {
       StringTableSource "{FA8C59CA5CE7B387}languages/S7R.st"
       Languages {
-       LanguageDefinition "{65929745F6E26C62}" {
+       LanguageDefinition "{659322B0BA8ABE6C}" {
         Code "en_us"
         StringTableRuntime "{B5658907F3BEFA59}languages/S7R.en_us.conf"
        }

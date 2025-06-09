@@ -1,20 +1,20 @@
 GameProject {
- ID "FW7_FullFramework"
- GUID "651548023B37FD7C"
- TITLE "FW-7R All In One"
+ ID "FW7_Reinsertion"
+ GUID "659317E90BFDAE1D"
+ TITLE "FW-7R Reinsertion"
  Dependencies {
-  "58D0FB3206B6F859" "659316203DEDE703" "659317E90BFDAE1D" "6593195C23BD1CFE" "6593511C38FEB338"
+  "659316203DEDE703" "58D0FB3206B6F859"
  }
  Configurations {
   GameProjectConfig PC {
    WidgetManagerSettings WidgetManagerSettings "{AC4BE58770485E02}" {
     StringTables {
-     StringTableDefinition "{65929745F33C1772}" {
-      StringTableSource "{FA8C59CA5CE7B387}languages/S7R.st"
+     StringTableDefinition "{659322B0ADEB370A}" {
+      StringTableSource "{C8DA0D3B27D0302F}languages/S7R-Reinsertion.st"
       Languages {
-       LanguageDefinition "{65929745F6E26C62}" {
+       LanguageDefinition "{659322B0A3A5E879}" {
         Code "en_us"
-        StringTableRuntime "{B5658907F3BEFA59}languages/S7R.en_us.conf"
+        StringTableRuntime "{A6F1BD9925F9036D}languages/S7R-Reinsertion.en_us.conf"
        }
       }
      }
