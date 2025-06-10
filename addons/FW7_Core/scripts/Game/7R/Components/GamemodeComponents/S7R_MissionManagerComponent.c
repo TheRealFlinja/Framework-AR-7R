@@ -1,4 +1,4 @@
-[EntityEditorProps(category: "Framework7R/Components/GameMode", description: "7R MissionManager Component to the gamemode")]
+[EntityEditorProps(category: "7R/Components/GameMode", description: "7R MissionManager Component to the gamemode")]
 class S7R_MissionManagerComponentClass: ScriptComponentClass
 {
 }
