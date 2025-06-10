@@ -1,0 +1,22 @@
+GameProject {
+ ID "FW7_SupplySystem"
+ GUID "6595172E0DC4642D"
+ TITLE "FW7-7R SupplySystem"
+ Dependencies {
+  "659316203DEDE703" "58D0FB3206B6F859"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}
