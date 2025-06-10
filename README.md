@@ -7,7 +7,7 @@
 ### Current Features
 
 * 7R Mission Manager
-    - AI Group Template
+    - AI Group Templates
     - 7R Phase Triggers
 * 7R Custom Actions menu
 * 7R Premade loadout boxes
@@ -15,6 +15,8 @@
 * 7R Vehicle spawner
 * 7R Basic Respawn system
     - Respawn with loadout
+* 7R Reinsertion system
+    - Rally deployment
 
 ### Planned Features
 
@@ -24,7 +26,6 @@
 * 7R Briefing set up
 * 7R Create ActionContextMenuLayout for Loadouts
 * 7R Better Respawn System
-* 7R Reinsertion system
 * 7R Warcrime Tracker
 * Pushing everything into seperate addons
 
@@ -50,9 +51,10 @@ Several prefabs are made for the 7R Mission Gamemode
 
 Scripts folder contains several scripts that define:
 
-- Config file attributes
-- Modded classes
+- Config files layout
+- Components
 - Entities
+- Modded classes
 
 ### UI
 
@@ -60,4 +62,4 @@ All custom UI elements can be found here.
 
 ### Worlds
 
-Pre-made missions can be saved in here until the framework can be used inside the game as a mod for mission making
+Pre-made missions can be saved in here until the framework can be used inside the game as an add-on for mission making
