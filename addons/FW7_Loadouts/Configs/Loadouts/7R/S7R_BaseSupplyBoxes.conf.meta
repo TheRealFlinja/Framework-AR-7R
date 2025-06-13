@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{5A6D38BF8888D700}Configs/Loadouts/7R/S7R_BaseSupplyBoxes.conf"
+ Configurations {
+  CONFResourceClass PC {
+  }
+  CONFResourceClass XBOX_ONE : PC {
+  }
+  CONFResourceClass XBOX_SERIES : PC {
+  }
+  CONFResourceClass PS4 : PC {
+  }
+  CONFResourceClass PS5 : PC {
+  }
+  CONFResourceClass HEADLESS : PC {
+  }
+ }
+}

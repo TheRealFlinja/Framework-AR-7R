@@ -1,0 +1,22 @@
+GameProject {
+ ID "FW7_SupportSystems"
+ GUID "6595172E0DC4642D"
+ TITLE "FW-7R SupportSystems"
+ Dependencies {
+  "58D0FB3206B6F859" "659316203DEDE703" "6593195C23BD1CFE"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}

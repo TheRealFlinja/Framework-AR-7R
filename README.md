@@ -4,30 +4,42 @@
 7R Mission Framework for Arma Reforger
 
 ## Status
-### Current Features
+### Current Add-ons
 
-* 7R Mission Manager
-    - AI Group Templates
-    - 7R Phase Triggers
-* 7R Custom Actions menu
-* 7R Premade loadout boxes
+* 7R Core
+    - Mission Manager
+    - Custom Actions menu for 7R (default keybind: H)
+    - Vehicle spawner
+* 7R Full
+    - Empty add-on containing all dependencies
+    - All in one subscribe
+* 7R Loadouts
     - Loadout selection
-* 7R Vehicle spawner
+    - US Vanilla loadouts
+    - Supply loadouts
+* 7R Missions
+    - Add-on for storing missions
+* 7R Reinsertion
+    - Rally deployment
+* 7R Support System
+    - Supplies
+    - IDF
 * 7R Basic Respawn system
     - Respawn with loadout
-* 7R Reinsertion system
-    - Rally deployment
 
 ### Planned Features
 
-* 7R Resupply system
-* 7R Fire Support System
-* 7R Objectives
-* 7R Briefing set up
-* 7R Create ActionContextMenuLayout for Loadouts
+* 7R Core
+    - Triggers
+    - Custom Objectives
+    - Briefing
+* 7R Loadouts
+    - ActionContextMenu
+* 7R Support System
+    - CAS
+    - UAV
 * 7R Better Respawn System
 * 7R Warcrime Tracker
-* Pushing everything into seperate addons
 
 ## Import addons into Arma Reforger Tools
 
@@ -35,11 +47,15 @@
 2. Press 'Add Project' > 'Add Existing Project'
 3. Find the 'addon.gproj' in the desired addon folder
 
-## Folder Structure
+## Folder Structure for Arma Reforger
 
 ### Configs
 
-Contains Config files that can be imported into the game.
+Contains Config files that can be imported into slots.
+
+### languages
+
+String table for localization
 
 ### Prefabs
 

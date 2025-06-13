@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{5622D5FA157E6FC7}Configs/UserActions/SquadRoleActions/SetSquadBattlerifleRoleAction.conf"
+ Configurations {
+  CONFResourceClass PC {
+  }
+  CONFResourceClass XBOX_ONE : PC {
+  }
+  CONFResourceClass XBOX_SERIES : PC {
+  }
+  CONFResourceClass PS4 : PC {
+  }
+  CONFResourceClass PS5 : PC {
+  }
+  CONFResourceClass HEADLESS : PC {
+  }
+ }
+}

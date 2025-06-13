@@ -1,6 +1,7 @@
 [BaseContainerProps(configRoot: true), BaseContainerCustomTitleField("m_sLoadoutName")]
 modded class SCR_PlayerArsenalLoadout : SCR_FactionPlayerLoadout
-{	
+{
+	// Only needs to be changed for the Base7R probably should hardcode this
 	[Attribute("Loadout7R")]
 	string m_sS7RSlotId;
 	

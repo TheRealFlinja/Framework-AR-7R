@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{EC2C5F995DB49D9D}Configs/Loadouts/7R/S7R_BaseLoadout7R.conf"
+ Configurations {
+  CONFResourceClass PC {
+  }
+  CONFResourceClass XBOX_ONE : PC {
+  }
+  CONFResourceClass XBOX_SERIES : PC {
+  }
+  CONFResourceClass PS4 : PC {
+  }
+  CONFResourceClass PS5 : PC {
+  }
+  CONFResourceClass HEADLESS : PC {
+  }
+ }
+}
