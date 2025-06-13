@@ -472,7 +472,7 @@ class S7R_MenuPlayerComponent : ScriptComponent
 		if (!menuManager)
 			return;
 
-		S7R_BaseMenuAction action = S7R_BaseMenuAction.Cast(menuManager.FindAction(m_sSelectedActionEntry));
+		S7R_BaseMenuAction action = menuManager.FindAction(m_sSelectedActionEntry);
 		if (!action || !action.CanShowPreview())
 			return;
 
@@ -672,7 +672,7 @@ class S7R_MenuPlayerComponent : ScriptComponent
 		if (mapEntity && mapEntity.IsOpen())
 			return;
 
-		S7R_BaseMenuAction action = S7R_BaseMenuAction.Cast(m_MenuManager.FindAction(m_MenuManager.FindActionNameFromIndex(actionIndex)));
+		S7R_BaseMenuAction action = m_MenuManager.FindAction(m_MenuManager.FindActionNameFromIndex(actionIndex));
 		if (!action)
 			return;
 

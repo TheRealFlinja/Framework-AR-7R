@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{D1E82EB4711C0485}Configs/UserActions/SquadRoleActions/SetSquadDMRRoleAction.conf"
+ Configurations {
+  CONFResourceClass PC {
+  }
+  CONFResourceClass XBOX_ONE : PC {
+  }
+  CONFResourceClass XBOX_SERIES : PC {
+  }
+  CONFResourceClass PS4 : PC {
+  }
+  CONFResourceClass PS5 : PC {
+  }
+  CONFResourceClass HEADLESS : PC {
+  }
+ }
+}

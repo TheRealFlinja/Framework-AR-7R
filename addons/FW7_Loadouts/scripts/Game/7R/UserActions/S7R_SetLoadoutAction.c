@@ -1,14 +1,20 @@
+/*
+
+TO DO:
+
+	Turn m_Loadout into ResourceName and make as configurable action
+
+*/
+
+
 [BaseContainerProps(description: "7R Set a premade Loadout Action", configRoot: true)]
-class SCR_SetLoadoutAction : SCR_BaseFactionCheckUserAction
-{	
-	[Attribute("", UIWidgets.ComboBox, enumType: ERoles7R, category: "Role selection")]
-	protected ERoles7R m_eRole;
-	
-	//~ Ref
-	protected S7R_ResourceHandlerComponent m_ResourceHandler;
-	protected SCR_LoadoutManager m_LoadoutManager;
+class S7R_SetLoadoutAction : SCR_BaseFactionCheckUserAction
+{
+	protected ref SCR_PlayerArsenalLoadout m_Loadout;
+
+	// protected SCR_LoadoutManager m_LoadoutManager;
+
 	protected SCR_ArsenalManagerComponent m_ArsenalManager;
-	protected SCR_ArsenalComponent m_ArsenalComponent;
 	protected RplComponent m_RplComp;
 	
 	protected bool m_bActionStarted;
@@ -16,16 +22,7 @@ class SCR_SetLoadoutAction : SCR_BaseFactionCheckUserAction
 	//------------------------------------------------------------------------------------------------
 	override bool CanBeShownScript(IEntity user)
 	{
-		//~ Added this here cause in Init it is not found, maybe delayed call?
-		m_LoadoutManager = GetGame().GetLoadoutManager();
-
-		if (!m_LoadoutManager)
-		{
-			Print("[SCR_SetLoadoutAction_7R: CanBeShownScript] No loadoutmanager found ", LogLevel.ERROR);
-			return false;
-		}
-		
-		if (!m_LoadoutManager.GetLoadoutByRole(m_eRole))
+		if (!m_ArsenalManager)
 		{
 			return false;
 		}
@@ -36,29 +33,20 @@ class SCR_SetLoadoutAction : SCR_BaseFactionCheckUserAction
 	//------------------------------------------------------------------------------------------------
 	override bool CanBePerformedScript(IEntity user)
 	{
-		if (!m_eRole || !m_LoadoutManager || !m_ArsenalManager)
+		if (!m_Loadout)
 		{
-			m_sCannotPerformReason = "Role not available";
+			m_sCannotPerformReason = "Loadout not found";
 			return false;
 		}
 		
 		return true;
-	}
+	} 
 	
  	//------------------------------------------------------------------------------------------------
  	override void PerformAction(IEntity pOwnerEntity, IEntity pUserEntity) 
  	{
 		if (!m_ArsenalManager || !m_RplComp || m_RplComp.IsProxy())
 			return;
-		
-		// Find loadout data
-		SCR_PlayerArsenalLoadout loadout = m_LoadoutManager.GetLoadoutByRole(m_eRole);
-		
-		if(!loadout)
-		{
-			Print(("[SCR_SetLoadoutAction_7R: PerformAction] No loadout found for role " + m_eRole), LogLevel.WARNING);
-			return;
-		}
 
 		// Find player id
 		int playerId = GetGame().GetPlayerManager().GetPlayerIdFromControlledEntity(pUserEntity);
@@ -70,42 +58,26 @@ class SCR_SetLoadoutAction : SCR_BaseFactionCheckUserAction
 		
 		if (!playerController)
 		{
-			Print("[SCR_SetLoadoutAction_7R: PerformAction] playerController not present", LogLevel.ERROR);
+			Print("[S7R_SetLoadoutAction: PerformAction] playerController not present", LogLevel.ERROR);
 			return;
 		}
 		
 		if (!m_OwnerFactionAffiliation)
 		{
-			Print("[SCR_SetLoadoutAction_7R: PerformAction] No faction found", LogLevel.ERROR);
+			Print("[S7R_SetLoadoutAction: PerformAction] No faction found", LogLevel.ERROR);
 			return;
 		}
-
-		Faction faction = m_OwnerFactionAffiliation.GetAffiliatedFaction();
-		FactionKey factionKey;
-		if (faction)
-			factionKey = faction.GetFactionKey();
-		
-		if (!factionKey)
-		{
-			CharacterEntity character = CharacterEntity.Cast(playerController.GetControlledEntity());
-			if (!character)
-				return;
-			factionKey = FactionAffiliationComponent.Cast(character.FindComponent(FactionAffiliationComponent)).GetAffiliatedFactionKey();
-			if (!factionKey)
-				return;
-		}
-		
 		
 		// Get LoadoutEditor Component
 		S7R_LoadoutEditorPlayerComponent editorPlayerComponent = S7R_LoadoutEditorPlayerComponent.Cast(playerController.FindComponent(S7R_LoadoutEditorPlayerComponent));
 		if (!editorPlayerComponent)
 		{
-			Print("[SCR_SetLoadoutAction_7R: PerformAction] editorPlayerComponent not present", LogLevel.ERROR);
+			Print("[S7R_SetLoadoutAction: PerformAction] editorPlayerComponent not present", LogLevel.ERROR);
 			return;
 		}
 		
-		// Set as official loadout
-		m_ArsenalManager.S7R_TrySetPlayerArsenalLoadout_S("Loadout7R", playerId, loadout, m_ArsenalComponent, SCR_EArsenalSupplyCostType.DEFAULT);
+		// Set as saved loadout
+		m_ArsenalManager.S7R_TrySetPlayerArsenalLoadout_S("Loadout7R", playerId, m_Loadout, null, SCR_EArsenalSupplyCostType.DEFAULT);
 		
 		// Load loadout
 		m_ArsenalManager.S7R_LoadPlayerArsenalLoadout_S("Loadout7R", playerId, GameEntity.Cast(pUserEntity))
@@ -114,7 +86,7 @@ class SCR_SetLoadoutAction : SCR_BaseFactionCheckUserAction
 	//------------------------------------------------------------------------------------------------
 	override void OnActionStart(IEntity pUserEntity)
 	{
-		if (!m_eRole)
+		if (!m_Loadout)
 			return;
 		
 		PlayerController playerController = GetGame().GetPlayerController();
@@ -132,7 +104,7 @@ class SCR_SetLoadoutAction : SCR_BaseFactionCheckUserAction
 	//------------------------------------------------------------------------------------------------
 	override void OnActionCanceled(IEntity pOwnerEntity, IEntity pUserEntity)
 	{
-		if (!m_eRole)
+		if (!m_Loadout)
 			return;
 		
 		PlayerController playerController = GetGame().GetPlayerController();
@@ -154,24 +126,30 @@ class SCR_SetLoadoutAction : SCR_BaseFactionCheckUserAction
 		
 		if(!GetGame().InPlayMode())
 			return;
-		
-		m_ArsenalComponent = SCR_ArsenalComponent.Cast(GetOwner().FindComponent(SCR_ArsenalComponent));
+
 		SCR_ArsenalManagerComponent.GetArsenalManager(m_ArsenalManager);
 
-		if (!m_ArsenalManager || !m_ArsenalComponent)
+		if (!m_ArsenalManager)
 		{
-			Print("[SCR_SetLoadoutAction_7R: Init] No arsenalmanager or arsenalcomponent found ", LogLevel.ERROR);
+			Print("[SCR_SetLoadoutAction_7R: Init] No arsenalmanager found", LogLevel.ERROR);
 			return;
 		}
 		
-		m_ResourceHandler = S7R_ResourceHandlerComponent.Cast(GetGame().GetGameMode().FindComponent(S7R_ResourceHandlerComponent));
-		
-		if (!m_ResourceHandler)
+		m_RplComp = RplComponent.Cast(pOwnerEntity.FindComponent(RplComponent));
+	}
+	
+	//------------------------------------------------------------------------------------------------
+	void CustomInit(SCR_PlayerArsenalLoadout loadout, IEntity pOwnerEntity, GenericComponent pManagerComponent)
+	{
+		SCR_ArsenalManagerComponent.GetArsenalManager(m_ArsenalManager);
+
+		if (!m_ArsenalManager)
 		{
-			Print("[SCR_SetLoadoutAction_7R: Init] No Resourcehandler found ", LogLevel.ERROR);
+			Print("[S7R_SetLoadoutAction: CustomInit] Failed configuration", LogLevel.ERROR);
 			return;
 		}
 		
+		m_Loadout = loadout;
 		m_RplComp = RplComponent.Cast(pOwnerEntity.FindComponent(RplComponent));
 	}
 }

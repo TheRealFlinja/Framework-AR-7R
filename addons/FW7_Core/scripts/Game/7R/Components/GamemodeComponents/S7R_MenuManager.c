@@ -1,4 +1,4 @@
-[EntityEditorProps(category: "GameScripted/Actioning", description: "Actioning manager, attach to game mode entity!.")]
+[EntityEditorProps(category: "7R/Components", description: "Menu manager for the 7R Gamemode")]
 class S7R_MenuManagerComponentClass : SCR_BaseGameModeComponentClass
 {
 }
@@ -73,7 +73,7 @@ class S7R_MenuManagerComponent : SCR_BaseGameModeComponent
 	void RequestActionExecution(int actionIndex, RplId cursorTargetID, vector targetPosition, int playerID, float seed)
 	{
 		//find entity of AI that will be responding to actions
-		S7R_BaseMenuAction action = S7R_BaseMenuAction.Cast(FindAction(FindActionNameFromIndex(actionIndex)));
+		S7R_BaseMenuAction action = FindAction(FindActionNameFromIndex(actionIndex));
 		RplId responderRplId;
 		
 		//check if the passed arguments are valid, if yes, send a callback RPC to actioners playercontroller so he can make a gesture.			

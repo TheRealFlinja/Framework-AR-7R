@@ -1,0 +1,133 @@
+GenericEntity {
+ ID "659E982CB27435DD"
+ components {
+  ClimbingDataComponent "{659E98473040A7A3}" {
+   CanClimbOver 1
+  }
+  MeshObject "{659E98473040A669}" {
+   Object "{56326B665211D386}Assets/Props/Military/AmmoBox/ArsenalBox_01/ArsenalBox_01.xob"
+   Materials {
+    MaterialAssignClass "{659E98473040A643}" {
+     SourceMaterial "ArsenalBox_01_Decal"
+     AssignedMaterial "{4723E10801CC64A0}Assets/Props/Military/AmmoBox/ArsenalBox_01/Data/ArsenalBox_01_Decal_US_general.emat"
+    }
+    MaterialAssignClass "{659E98473040A65C}" {
+     SourceMaterial "ArsenalBox_01_MLOD"
+     AssignedMaterial "{A105104FC646098C}Assets/Props/Military/AmmoBox/ArsenalBox_01/Data/ArsenalBox_01_US_MLOD.emat"
+    }
+    MaterialAssignClass "{659E98473040A658}" {
+     SourceMaterial "explosive_0A0A9C1C7B189A8B"
+     AssignedMaterial "{F422577A111BA80D}Assets/Props/Military/AmmoBox/EquipmentBoxWooden_01/Data/EquipmentBoxWooden_Explosives_01_US.emat"
+    }
+    MaterialAssignClass "{659E98473040A654}" {
+     SourceMaterial "tarp_EBFB69929B4DE0C6"
+     AssignedMaterial "{57B0CA33C76D1944}Assets/Props/Military/AmmoBox/EquipmentBoxStack/Data/EquipmentBoxStack_01_cover_US.emat"
+    }
+    MaterialAssignClass "{659E98473040A653}" {
+     SourceMaterial "weapon_box_6864083D30F4F63D"
+     AssignedMaterial "{897E26EB40E12FB3}Assets/Props/Military/AmmoBox/EquipmentBoxWooden_01/Data/EquipmentBoxWooden_Weapon_01_US.emat"
+    }
+    MaterialAssignClass "{659E98473040A66F}" {
+     SourceMaterial "ArsenalBox_01_Decal"
+     AssignedMaterial "{86D5FA4AAFD02663}Assets/Props/Military/AmmoBox/ArsenalBox_01/Data/ArsenalBox_01_Decal_US_weapons.emat"
+    }
+   }
+  }
+  RigidBody "{659E98473040A67F}" {
+   Mass 10
+   ModelGeometry 1
+   Static 1
+  }
+  S7R_Select7RItemsComponent "{659E9810569308BE}" {
+   m_bBigBox 1
+   m_eVehicleLoadoutType 2147483647
+  }
+  SCR_FactionAffiliationComponent "{659E984703DDF8D2}" {
+   "faction affiliation" "7R"
+  }
+  SCR_SoundDataComponent "{659E98473040A616}" {
+   m_aAudioSourceConfiguration {
+    SCR_AudioSourceConfiguration "{659E98473040A615}" {
+     m_sSoundProject "{A73D28179B395F19}Sounds/Props/Military/AmmoBoxes/AmmoBox_Big_Wooden/Props_AmmoBox_Big_Wooden.acp"
+     m_sSoundEventName "SOUND_CONTAINER_OPEN"
+    }
+    SCR_AudioSourceConfiguration "{659E98473040A617}" {
+     m_sSoundProject "{A73D28179B395F19}Sounds/Props/Military/AmmoBoxes/AmmoBox_Big_Wooden/Props_AmmoBox_Big_Wooden.acp"
+     m_sSoundEventName "SOUND_CONTAINER_CLOSE"
+    }
+   }
+  }
+  SCR_UniversalInventoryStorageComponent "{659E98473040A6AC}" {
+   Attributes SCR_ItemAttributeCollection "{659E98473040A6CE}" {
+    ItemDisplayName SCR_InventoryUIInfo "{659E98473040A6CC}" {
+     Name "7R Big Box"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{659E9862075BADC3}" {
+     Weight 1000000
+     SizeSetupStrategy Volume
+     ItemVolume 1000000
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{659E98463C36EF5A}" {
+      CameraOrbitAngles -25 -25 0
+      CameraDistanceToItem 1.8
+      FOV 60
+     }
+    }
+    m_SlotType SLOT_ANY
+   }
+   CapacityCoefficient 10000
+   InitialStorageSlots {
+    InventoryStorageSlot StorageSlots {
+     Enabled 0
+     UpdateReplicationParent 1
+    }
+   }
+   MultiSlots {
+    MultiSlotConfiguration "{659E9867392B5832}" {
+     SlotTemplate InventoryStorageSlot MultiSlot {
+      Enabled 0
+      UpdateReplicationParent 1
+     }
+     NumSlots 50
+    }
+   }
+   m_fMaxWeight 1000000
+   m_aSlotsToShow {
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{659E9860A225D365}" {
+  }
+  ActionsManagerComponent "{659E98473040A559}" {
+   Enabled 1
+   ActionContexts {
+    UserActionContext "{659E98473040A6B3}" {
+     ContextName "default"
+     Position PointInfo "{659E98473040A6B1}" {
+      Offset 0 0.464 0
+     }
+     Radius 1.5
+    }
+   }
+   additionalActions {
+    SCR_OpenStorageAction "{659E98473040A55E}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{659E98473040A55F}" {
+      Name "#AR-Inventory_OpenStorage"
+     }
+    }
+   }
+  }
+  RplComponent "{659E98473040A556}" {
+   Enabled 1
+  }
+  Hierarchy "{659E98473040A56D}" {
+   Enabled 1
+  }
+ }
+ Flags 1027
+ coords 6427.146 162.062 6483.026
+ angleY -10.851
+}
