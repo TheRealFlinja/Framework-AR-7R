@@ -1,4 +1,4 @@
-[EntityEditorProps(category: "GameScripted/Actioning", description: "Actioning manager, attach to game mode entity!.")]
+[EntityEditorProps(category: "7R/Components", description: "Menu manager for the 7R Gamemode")]
 class S7R_MenuManagerComponentClass : SCR_BaseGameModeComponentClass
 {
 }

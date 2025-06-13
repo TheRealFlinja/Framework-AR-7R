@@ -1,0 +1,118 @@
+GenericEntity {
+ ID "659B5A72D951D091"
+ components {
+  ClimbingDataComponent "{659B5A726207EC68}" {
+  }
+  MeshObject "{659B5A726207ECB4}" {
+   Object "{56326B665211D386}Assets/Props/Military/AmmoBox/ArsenalBox_01/ArsenalBox_01.xob"
+   Materials {
+    MaterialAssignClass "{659B5A726207EC02}" {
+     SourceMaterial "ArsenalBox_01_Decal"
+     AssignedMaterial "{4723E10801CC64A0}Assets/Props/Military/AmmoBox/ArsenalBox_01/Data/ArsenalBox_01_Decal_US_general.emat"
+    }
+    MaterialAssignClass "{659B5A726207EC19}" {
+     SourceMaterial "ArsenalBox_01_MLOD"
+     AssignedMaterial "{A105104FC646098C}Assets/Props/Military/AmmoBox/ArsenalBox_01/Data/ArsenalBox_01_US_MLOD.emat"
+    }
+    MaterialAssignClass "{659B5A726207EC17}" {
+     SourceMaterial "explosive_0A0A9C1C7B189A8B"
+     AssignedMaterial "{F422577A111BA80D}Assets/Props/Military/AmmoBox/EquipmentBoxWooden_01/Data/EquipmentBoxWooden_Explosives_01_US.emat"
+    }
+    MaterialAssignClass "{659B5A726207EC2C}" {
+     SourceMaterial "tarp_EBFB69929B4DE0C6"
+     AssignedMaterial "{57B0CA33C76D1944}Assets/Props/Military/AmmoBox/EquipmentBoxStack/Data/EquipmentBoxStack_01_cover_US.emat"
+    }
+    MaterialAssignClass "{659B5A726207EC2A}" {
+     SourceMaterial "weapon_box_6864083D30F4F63D"
+     AssignedMaterial "{897E26EB40E12FB3}Assets/Props/Military/AmmoBox/EquipmentBoxWooden_01/Data/EquipmentBoxWooden_Weapon_01_US.emat"
+    }
+   }
+  }
+  RigidBody "{659B5A726207E345}" {
+   Mass 10
+   ModelGeometry 1
+   Static 1
+  }
+  SCR_ArsenalComponent "{659B5A726207E355}" {
+   m_eSupportedArsenalItemTypes 2097150
+   m_eSupportedArsenalItemModes 254
+   m_eEditableAttributeGroups 30
+   m_eArsenalSaveType NO_RESTRICTIONS
+  }
+  SCR_FactionAffiliationComponent "{659B5A726207E369}" {
+   "faction affiliation" "7R"
+  }
+  SCR_SoundDataComponent "{659B5A7262060FF4}" {
+   m_aAudioSourceConfiguration {
+    SCR_AudioSourceConfiguration "{659B5A7262060FF7}" {
+     m_sSoundProject "{A73D28179B395F19}Sounds/Props/Military/AmmoBoxes/AmmoBox_Big_Wooden/Props_AmmoBox_Big_Wooden.acp"
+     m_sSoundEventName "SOUND_CONTAINER_OPEN"
+    }
+    SCR_AudioSourceConfiguration "{659B5A7262060FF5}" {
+     m_sSoundProject "{A73D28179B395F19}Sounds/Props/Military/AmmoBoxes/AmmoBox_Big_Wooden/Props_AmmoBox_Big_Wooden.acp"
+     m_sSoundEventName "SOUND_CONTAINER_CLOSE"
+    }
+   }
+  }
+  ActionsManagerComponent "{659B5A726206659B}" {
+   Enabled 1
+   ActionContexts {
+    UserActionContext "{659B5A726206674A}" {
+     ContextName "default"
+     Position PointInfo "{659B5A726206674D}" {
+      Offset 0 0.464 0
+     }
+     Radius 1.5
+    }
+   }
+   additionalActions {
+    S7R_SetSquadRoleAction "{659B5A72A7717533}" : "{6CAF0893D43D3A7E}Configs/UserActions/SquadRoleActions/SetSquadLeaderRoleAction.conf" {
+    }
+    S7R_SetSquadRoleAction "{659B5A72A52D0819}" : "{47EF9B2CD2A290B6}Configs/UserActions/SquadRoleActions/SetCombatMedicRole.conf" {
+    }
+    S7R_SetSquadRoleAction "{659B5A72BDD5C197}" : "{BAC34F281DA450C6}Configs/UserActions/SquadRoleActions/SetSquadRiflemanRoleAction.conf" {
+    }
+    S7R_SetSquadRoleAction "{659B5A72B347BDE1}" : "{ABC85AF6F733688F}Configs/UserActions/SquadRoleActions/SetSquadARRoleAction.conf" {
+    }
+    S7R_SetSquadRoleAction "{659B5A728B0EDF80}" : "{BD4248426A948630}Configs/UserActions/SquadRoleActions/SetSquadLATRoleAction.conf" {
+    }
+    S7R_SetSquadRoleAction "{659B5A72824D91C5}" : "{66C882B162E4E423}Configs/UserActions/SquadRoleActions/SetSquadGrenadierRoleAction.conf" {
+    }
+    S7R_SetSquadRoleAction "{659B5A7285AC3E81}" : "{5622D5FA157E6FC7}Configs/UserActions/SquadRoleActions/SetSquadBattlerifleRoleAction.conf" {
+    }
+    S7R_SetSquadRoleAction "{659B5A7298D71706}" : "{056EC50778022D0C}Configs/UserActions/SquadRoleActions/SetSquadBreacherRoleAction.conf" {
+    }
+    S7R_SetSquadRoleAction "{659B5A729E8B3249}" : "{D1E82EB4711C0485}Configs/UserActions/SquadRoleActions/SetSquadDMRRoleAction.conf" {
+    }
+    S7R_SetSquadRoleAction "{659B5A7296A10D5E}" : "{01567C8806AF797A}Configs/UserActions/SquadRoleActions/SetSquadMMGRoleAction.conf" {
+    }
+    S7R_SetSquadRoleAction "{659B5A72E9DC0D77}" : "{C0CD360EA6C4A4D7}Configs/UserActions/SquadRoleActions/SetSquadMMGAssRoleAction.conf" {
+    }
+    S7R_SetSquadRoleAction "{659B5A72E6A0A421}" : "{80CB849D969FF158}Configs/UserActions/SquadRoleActions/SetSquadMATRoleAction.conf" {
+    }
+    S7R_SetSquadRoleAction "{659B5A72E7571DC6}" : "{839B33F89DF051AC}Configs/UserActions/SquadRoleActions/SetSquadMATAssRoleAction.conf" {
+    }
+    S7R_SetSquadRoleAction "{659B5A72EC74B9B0}" : "{4B657B3D9AB95B90}Configs/UserActions/SquadRoleActions/SetSquadHATRoleAction.conf" {
+    }
+    S7R_SetSquadRoleAction "{659B5A72E2D568AD}" : "{518379B8775097E5}Configs/UserActions/SquadRoleActions/SetSquadHATAssRoleAction.conf" {
+    }
+    S7R_SetSquadRoleAction "{659B5A72F95382FE}" : "{93A112D55C0AD08B}Configs/UserActions/SquadRoleActions/SetSquadEngFortRoleAction.conf" {
+    }
+    S7R_SetSquadRoleAction "{659B5A72FE3630E6}" : "{67D778D47B2A3F01}Configs/UserActions/SquadRoleActions/SetSquadEngRepRoleAction.conf" {
+    }
+    S7R_SetSquadRoleAction "{659B5A72F254FEC1}" : "{67C804B431C978B6}Configs/UserActions/SquadRoleActions/SetSquadEngDemoRoleAction.conf" {
+    }
+    S7R_SetSquadRoleAction "{659B5A72F31457FF}" : "{5BBF3E4651FE9EAF}Configs/UserActions/SquadRoleActions/SetSquadEngEODRoleAction.conf" {
+    }
+   }
+  }
+  RplComponent "{659B5A7262066585}" {
+   Enabled 1
+  }
+  Hierarchy "{659B5A726206658E}" {
+   Enabled 1
+  }
+ }
+ Flags 1027
+ coords 0 0 0
+}

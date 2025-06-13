@@ -1,0 +1,153 @@
+GenericEntity {
+ components {
+  ClimbingDataComponent "{659B0118425391CC}" {
+  }
+  MeshObject "{659B0118425390ED}" {
+   Object "{56326B665211D386}Assets/Props/Military/AmmoBox/ArsenalBox_01/ArsenalBox_01.xob"
+   Materials {
+    MaterialAssignClass "{659B0118425391FE}" {
+     SourceMaterial "ArsenalBox_01_Decal"
+     AssignedMaterial "{4723E10801CC64A0}Assets/Props/Military/AmmoBox/ArsenalBox_01/Data/ArsenalBox_01_Decal_US_general.emat"
+    }
+    MaterialAssignClass "{659B0118425391F5}" {
+     SourceMaterial "ArsenalBox_01_MLOD"
+     AssignedMaterial "{A105104FC646098C}Assets/Props/Military/AmmoBox/ArsenalBox_01/Data/ArsenalBox_01_US_MLOD.emat"
+    }
+    MaterialAssignClass "{659B01184253918C}" {
+     SourceMaterial "explosive_0A0A9C1C7B189A8B"
+     AssignedMaterial "{F422577A111BA80D}Assets/Props/Military/AmmoBox/EquipmentBoxWooden_01/Data/EquipmentBoxWooden_Explosives_01_US.emat"
+    }
+    MaterialAssignClass "{659B011842539189}" {
+     SourceMaterial "tarp_EBFB69929B4DE0C6"
+     AssignedMaterial "{57B0CA33C76D1944}Assets/Props/Military/AmmoBox/EquipmentBoxStack/Data/EquipmentBoxStack_01_cover_US.emat"
+    }
+    MaterialAssignClass "{659B011842539186}" {
+     SourceMaterial "weapon_box_6864083D30F4F63D"
+     AssignedMaterial "{897E26EB40E12FB3}Assets/Props/Military/AmmoBox/EquipmentBoxWooden_01/Data/EquipmentBoxWooden_Weapon_01_US.emat"
+    }
+    MaterialAssignClass "{659B01184253919C}" {
+     SourceMaterial "ArsenalBox_01_Decal"
+     AssignedMaterial "{453DCC8BE28B35F8}Assets/Props/Military/AmmoBox/ArsenalBox_01/Data/ArsenalBox_01_Decal_US_equip.emat"
+    }
+   }
+  }
+  RigidBody "{659B0118425390E1}" {
+   Mass 10
+   ResponseIndex "Normal"
+   ModelGeometry 1
+   Static 1
+  }
+  SCR_ArsenalComponent "{659B0118425390A0}" {
+   m_eSupportedArsenalItemTypes 1048574
+   m_eSupportedArsenalItemModes 126
+   m_eEditableAttributeGroups 30
+   m_bAllowGetFactionFromParent 1
+   m_eArsenalSaveType NO_RESTRICTIONS
+   m_bAlwaysUseDefaultFaction 1
+  }
+  SCR_FactionAffiliationComponent "{659B0118425390B6}" {
+   "faction affiliation" "7R"
+  }
+  SCR_SoundDataComponent "{659B01184252E974}" {
+   m_aAudioSourceConfiguration {
+    SCR_AudioSourceConfiguration "{659B011842525A68}" {
+     m_sSoundProject "{A73D28179B395F19}Sounds/Props/Military/AmmoBoxes/AmmoBox_Big_Wooden/Props_AmmoBox_Big_Wooden.acp"
+     m_sSoundEventName "SOUND_CONTAINER_OPEN"
+    }
+    SCR_AudioSourceConfiguration "{659B011842525A61}" {
+     m_sSoundProject "{A73D28179B395F19}Sounds/Props/Military/AmmoBoxes/AmmoBox_Big_Wooden/Props_AmmoBox_Big_Wooden.acp"
+     m_sSoundEventName "SOUND_CONTAINER_CLOSE"
+    }
+   }
+  }
+  ActionsManagerComponent "{659B01184252EBB8}" {
+   Enabled 1
+   ActionContexts {
+    UserActionContext "{659B01184252E9BA}" {
+     ContextName "default"
+     Position PointInfo "{659B01184252E9B9}" {
+      Offset 0 0.464 0
+     }
+     Radius 1.5
+    }
+   }
+   additionalActions {
+    S7R_SetSquadRoleAction "{659B0131309DA3B3}" : "{6CAF0893D43D3A7E}Configs/UserActions/SquadRoleActions/SetSquadLeaderRoleAction.conf" {
+    }
+    S7R_SetSquadRoleAction "{659B01317AA7C2CF}" : "{47EF9B2CD2A290B6}Configs/UserActions/SquadRoleActions/SetCombatMedicRole.conf" {
+    }
+    S7R_SetSquadRoleAction "{659B01315239D138}" : "{BAC34F281DA450C6}Configs/UserActions/SquadRoleActions/SetSquadRiflemanRoleAction.conf" {
+    }
+    S7R_SetSquadRoleAction "{659B4D05CE61618A}" : "{ABC85AF6F733688F}Configs/UserActions/SquadRoleActions/SetSquadARRoleAction.conf" {
+    }
+    S7R_SetSquadRoleAction "{659B4D05C6F6E163}" : "{BD4248426A948630}Configs/UserActions/SquadRoleActions/SetSquadLATRoleAction.conf" {
+    }
+    S7R_SetSquadRoleAction "{659B4D05DC83DE3D}" : "{66C882B162E4E423}Configs/UserActions/SquadRoleActions/SetSquadGrenadierRoleAction.conf" {
+    }
+    S7R_SetSquadRoleAction "{659B4D05DB3123C3}" : "{5622D5FA157E6FC7}Configs/UserActions/SquadRoleActions/SetSquadBattlerifleRoleAction.conf" {
+    }
+    S7R_SetSquadRoleAction "{659B4D05D4D6FD21}" : "{056EC50778022D0C}Configs/UserActions/SquadRoleActions/SetSquadBreacherRoleAction.conf" {
+    }
+    S7R_SetSquadRoleAction "{659B4D0005D4AB31}" : "{D1E82EB4711C0485}Configs/UserActions/SquadRoleActions/SetSquadDMRRoleAction.conf" {
+    }
+    S7R_SetSquadRoleAction "{659B4D0011980DAA}" : "{01567C8806AF797A}Configs/UserActions/SquadRoleActions/SetSquadMMGRoleAction.conf" {
+    }
+    S7R_SetSquadRoleAction "{659B4D0017FE9944}" : "{C0CD360EA6C4A4D7}Configs/UserActions/SquadRoleActions/SetSquadMMGAssRoleAction.conf" {
+    }
+    S7R_SetSquadRoleAction "{659B4D0015AC7151}" : "{80CB849D969FF158}Configs/UserActions/SquadRoleActions/SetSquadMATRoleAction.conf" {
+    }
+    S7R_SetSquadRoleAction "{659B4D006BD57914}" : "{839B33F89DF051AC}Configs/UserActions/SquadRoleActions/SetSquadMATAssRoleAction.conf" {
+    }
+    S7R_SetSquadRoleAction "{659B4D006CCC80C3}" : "{4B657B3D9AB95B90}Configs/UserActions/SquadRoleActions/SetSquadHATRoleAction.conf" {
+    }
+    S7R_SetSquadRoleAction "{659B4D0063F86A3D}" : "{518379B8775097E5}Configs/UserActions/SquadRoleActions/SetSquadHATAssRoleAction.conf" {
+    }
+    S7R_SetSquadRoleAction "{659B4D007A7B7C2F}" : "{93A112D55C0AD08B}Configs/UserActions/SquadRoleActions/SetSquadEngFortRoleAction.conf" {
+    }
+    S7R_SetSquadRoleAction "{659B4D007858CB01}" : "{67D778D47B2A3F01}Configs/UserActions/SquadRoleActions/SetSquadEngRepRoleAction.conf" {
+    }
+    S7R_SetSquadRoleAction "{659B4D007E6A3413}" : "{67C804B431C978B6}Configs/UserActions/SquadRoleActions/SetSquadEngDemoRoleAction.conf" {
+    }
+    S7R_SetSquadRoleAction "{659B4D007F2EA399}" : "{5BBF3E4651FE9EAF}Configs/UserActions/SquadRoleActions/SetSquadEngEODRoleAction.conf" {
+    }
+   }
+  }
+  RplComponent "{659B01184252EBB0}" {
+   Enabled 1
+  }
+  Hierarchy "{659B01184252F448}" {
+   Enabled 1
+  }
+ }
+ Flags 1027
+ coords 6424.998 162.07 6482.134
+ angleY -29.879
+}
+GenericEntity : "{556C771EBB02FE60}Prefabs/7R/LoadoutBoxes/BigBox.et" {
+ components {
+  SCR_UniversalInventoryStorageComponent "{659B5A7A3417C840}" {
+   Attributes SCR_ItemAttributeCollection "{659B5A795F17C8E7}" {
+    ItemDisplayName SCR_InventoryUIInfo "{659B5A79535027BA}" {
+     Name "Open Box"
+    }
+    m_Size SLOT_3x3
+    m_SlotType SLOT_WEAPONS_STORAGE
+   }
+   MultiSlots {
+    MultiSlotConfiguration "{659B5A79FF98BA46}" {
+     SlotTemplate InventoryStorageSlot Default {
+      Prefab "{A81F501D3EF6F38E}Prefabs/Items/Medicine/FieldDressing_01/FieldDressing_US_01.et"
+     }
+     NumSlots 2
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{659B5A7E6B05C2BB}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{659B5A7E62A53B31}" {
+    }
+   }
+  }
+ }
+ coords 6427.146 162.062 6483.026
+}

@@ -1,0 +1,97 @@
+GenericEntity {
+ ID "659B5A7B1C011AF0"
+ components {
+  ClimbingDataComponent "{659B5A7A210CF3E7}" {
+   CanClimbOver 1
+  }
+  MeshObject "{659B5A7A210CF337}" {
+   Object "{56326B665211D386}Assets/Props/Military/AmmoBox/ArsenalBox_01/ArsenalBox_01.xob"
+   Materials {
+    MaterialAssignClass "{659B5A7A210CF3B2}" {
+     SourceMaterial "ArsenalBox_01_Decal"
+     AssignedMaterial "{4723E10801CC64A0}Assets/Props/Military/AmmoBox/ArsenalBox_01/Data/ArsenalBox_01_Decal_US_general.emat"
+    }
+    MaterialAssignClass "{659B5A7A210CF3BC}" {
+     SourceMaterial "ArsenalBox_01_MLOD"
+     AssignedMaterial "{A105104FC646098C}Assets/Props/Military/AmmoBox/ArsenalBox_01/Data/ArsenalBox_01_US_MLOD.emat"
+    }
+    MaterialAssignClass "{659B5A7A210CF3A7}" {
+     SourceMaterial "explosive_0A0A9C1C7B189A8B"
+     AssignedMaterial "{F422577A111BA80D}Assets/Props/Military/AmmoBox/EquipmentBoxWooden_01/Data/EquipmentBoxWooden_Explosives_01_US.emat"
+    }
+    MaterialAssignClass "{659B5A7A210CF3A3}" {
+     SourceMaterial "tarp_EBFB69929B4DE0C6"
+     AssignedMaterial "{57B0CA33C76D1944}Assets/Props/Military/AmmoBox/EquipmentBoxStack/Data/EquipmentBoxStack_01_cover_US.emat"
+    }
+    MaterialAssignClass "{659B5A7A210CF3AD}" {
+     SourceMaterial "weapon_box_6864083D30F4F63D"
+     AssignedMaterial "{897E26EB40E12FB3}Assets/Props/Military/AmmoBox/EquipmentBoxWooden_01/Data/EquipmentBoxWooden_Weapon_01_US.emat"
+    }
+    MaterialAssignClass "{659B5A7A210CF3A8}" {
+     SourceMaterial "ArsenalBox_01_Decal"
+     AssignedMaterial "{86D5FA4AAFD02663}Assets/Props/Military/AmmoBox/ArsenalBox_01/Data/ArsenalBox_01_Decal_US_weapons.emat"
+    }
+   }
+  }
+  RigidBody "{659B5A7A210CF326}" {
+   Mass 10
+   ModelGeometry 1
+   Static 1
+  }
+  SCR_ArsenalComponent "{659B5A7A210CF0FB}" {
+   m_eSupportedArsenalItemTypes 1442622
+   m_eSupportedArsenalItemModes 254
+   m_eEditableAttributeGroups 30
+   m_eArsenalSaveType FACTION_ITEMS_ONLY
+  }
+  SCR_FactionAffiliationComponent "{659B5A7A210CF0E1}" {
+   "faction affiliation" "7R"
+  }
+  SCR_SoundDataComponent "{659B5A7A210CF1AB}" {
+   m_aAudioSourceConfiguration {
+    SCR_AudioSourceConfiguration "{659B5A7A210CF1A1}" {
+     m_sSoundProject "{A73D28179B395F19}Sounds/Props/Military/AmmoBoxes/AmmoBox_Big_Wooden/Props_AmmoBox_Big_Wooden.acp"
+     m_sSoundEventName "SOUND_CONTAINER_OPEN"
+    }
+    SCR_AudioSourceConfiguration "{659B5A7A210CF1AA}" {
+     m_sSoundProject "{A73D28179B395F19}Sounds/Props/Military/AmmoBoxes/AmmoBox_Big_Wooden/Props_AmmoBox_Big_Wooden.acp"
+     m_sSoundEventName "SOUND_CONTAINER_CLOSE"
+    }
+   }
+  }
+  SCR_UniversalInventoryStorageComponent "{659B5A7A3417C840}" {
+   m_fMaxWeight 200
+  }
+  ActionsManagerComponent "{659B5A7A210CEF3C}" {
+   Enabled 1
+   ActionContexts {
+    UserActionContext "{659B5A7A210CEEE2}" {
+     ContextName "default"
+     Position PointInfo "{659B5A7A210CEEE5}" {
+      Offset 0 0.464 0
+     }
+     Radius 1.5
+    }
+   }
+   additionalActions {
+    SCR_OpenStorageAction "{659B5A7A210CEEDC}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{659B5A7A210CEEDF}" {
+      Name "#AR-Inventory_OpenArsenalStorage"
+     }
+    }
+   }
+  }
+  RplComponent "{659B5A7A210CEF27}" {
+   Enabled 1
+  }
+  Hierarchy "{659B5A7A210CEF2C}" {
+   Enabled 1
+  }
+ }
+ Flags 1027
+ coords 0.565 -1.109 -0.404
+ angleY -10.851
+}

@@ -1,0 +1,21 @@
+SCR_AIWorld : "{70CCCF16487C927F}Prefabs/AI/SCR_AIWorld_Eden.et" {
+ coords 6421.597 161.963 6481.833
+}
+SCR_BaseGameMode GameMode_Base1 : "{0F307326459A1395}Prefabs/MP/Modes/GameMode_Base.et" {
+ coords 6420.312 161.972 6483.874
+}
+SCR_FactionManager FactionManager_Editor1 : "{4A188E44289B9A50}Prefabs/MP/Managers/Factions/FactionManager_Editor.et" {
+ coords 6418.096 161.909 6483.967
+ Factions {
+  SCR_Faction "{56DEAC40D2DBC8B1}" {
+  }
+  SCR_Faction "{659B4D0581C610F4}" : "{E7B7EA4823DD81F1}Configs/Factions/7R.conf" {
+  }
+ }
+}
+SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutManager_Base.et" {
+ coords 6421.451 161.993 6484.635
+ m_eFactionLoadout7RKey USVanilla
+ m_7RLoadoutImports S7R_LoadoutMasterConfig "{659B0133A62B26A9}" : "{EC84B7A42C193057}Configs/Loadouts/7R/S7R_LoadoutMasterConfig.conf" {
+ }
+}
