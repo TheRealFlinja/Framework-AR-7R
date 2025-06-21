@@ -14,6 +14,15 @@ class S7R_AISpawnHandlerComponent: ScriptComponent
 	protected ref array<ResourceName> m_aPrefabsToSpawn;
 	protected S7R_ResourceHandlerComponent m_resourceHandler;
 	
+	protected static S7R_AISpawnHandlerComponent s_Instance;
+	
+	//------------------------------------------------------------------------------------------------
+	//! \return
+	static S7R_AISpawnHandlerComponent GetInstance()
+	{
+		return s_Instance;
+	}
+	
 	//------------------------------------------------------------------------------------------------
 	int GetTotalTemplates()
 	{

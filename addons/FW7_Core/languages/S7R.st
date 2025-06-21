@@ -185,6 +185,10 @@ StringTable {
    Id "S7R-Groupname_Sierra2"
    Target_en_us "Sierra-2 Element"
   }
+  DefaultStringTableItem "{65A12516F416B7F0}" {
+   Id "S7R-Menu_Title"
+   Target_en_us "Special Monkey Menu"
+  }
   DefaultStringTableItem "{6592974670D3D2F5}" {
    Id "S7R-Name"
    Target_en_us "7th Rangers Group"

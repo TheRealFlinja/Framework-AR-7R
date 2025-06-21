@@ -12,18 +12,26 @@ TO DO:
 */
 
 class S7R_MissionManagerComponent: ScriptComponent
-{	
-	//------------------------------------------------------------------------------------------------
-	// Fields
-	protected bool m_bValidated = false;
-	protected int m_iCurrentPhase = 0;
-	protected S7R_AISpawnHandlerComponent m_aiSpawner;
-	
+{		
 	[Attribute("", UIWidgets.Object, category: "Group Templates")]
 	protected ref array<ref ResourceName> m_AIGroupTemplates;
 	
 	[Attribute("", UIWidgets.Object, category: "Mission Phases")]
 	protected ref array<ref S7R_MissionPhase> m_aMissionPhases;
+	
+	protected bool m_bValidated = false;
+	protected int m_iCurrentPhase = 0;
+	
+	protected S7R_AISpawnHandlerComponent m_aiSpawner;
+	
+	protected static S7R_MissionManagerComponent s_Instance;
+	
+	//------------------------------------------------------------------------------------------------
+	//! \return
+	static S7R_MissionManagerComponent GetInstance()
+	{
+		return s_Instance;
+	}
 	
 	//------------------------------------------------------------------------------------------------
 	//Properties

@@ -17,6 +17,15 @@ TO DO:
 
 class S7R_ResourceHandlerComponent: ScriptComponent
 {
+	protected static S7R_ResourceHandlerComponent s_Instance;
+	
+	//------------------------------------------------------------------------------------------------
+	//! \return
+	static S7R_ResourceHandlerComponent GetInstance()
+	{
+		return s_Instance;
+	}
+	
 	//------------------------------------------------------------------------------------------------
 	// Public functions
 	Resource GenerateAndValidateResource(string resourceToLoad)

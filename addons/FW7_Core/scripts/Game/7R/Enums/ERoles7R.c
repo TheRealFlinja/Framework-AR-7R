@@ -14,6 +14,7 @@ enum ERoleTypes7R
 }
 
 // Global array for iteration, realised too late iterating over enums is not a thing in Enfusion Script
+// Second note: ParamEnumArray.FromEnum() is a thing, I hate the workbench
 ref array<int> g_aERoleTypes7R = {
     ERoleTypes7R.SquadRoles,
     ERoleTypes7R.PlatoonRoles,
