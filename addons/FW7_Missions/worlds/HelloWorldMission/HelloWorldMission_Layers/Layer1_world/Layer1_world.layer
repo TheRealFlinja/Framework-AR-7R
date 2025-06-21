@@ -278,7 +278,7 @@ SCR_AIWorld SCR_AIWorld_1 {
  }
 }
 PerceptionManager PerceptionManager1 {
- coords 3901.036 15.298 8456.479
+ coords 3901.036 15.298 8456.48
  SunDirectLightElevCurve {
   CurvePoint "{653750AC3EFD604C}" {
    X -4.4

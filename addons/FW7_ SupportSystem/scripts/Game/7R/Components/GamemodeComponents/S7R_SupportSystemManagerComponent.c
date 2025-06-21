@@ -39,23 +39,72 @@ class S7R_SupportSystemManagerComponent: ScriptComponent
 	[Attribute("", UIWidgets.ResourceAssignArray, category: "Support System Configuration")]
 	protected ResourceName m_sAircraft;
 	
+	[Attribute("1200", UIWidgets.Auto, category: "Test parameters")]
+	protected int m_iSupplySpawnHeight;
+	
+	[Attribute("200", UIWidgets.Auto, category: "Test parameters")]
+	protected int m_iRandomSpawnOffset;
+	
+	[Attribute("5", UIWidgets.Auto, category: "Test parameters")]
+	protected int m_iBaseSpawnDelay;
+	
+	[Attribute("5", UIWidgets.Auto, category: "Test parameters")]
+	protected int m_iSpawnInterval;
+	
 	protected vector m_vSupplyDropMarker;
 	protected vector m_vMortarMarker;
 	
 	protected SCR_LoadoutManager m_LoadoutManager;
 	protected S7R_ResourceHandlerComponent m_ResourceHandler;
 	
+	protected static S7R_SupportSystemManagerComponent s_Instance;
+	
+	//------------------------------------------------------------------------------------------------
+	//! \return
+	static S7R_SupportSystemManagerComponent GetInstance()
+	{
+		return s_Instance;
+	}
+	
 	// Actions
 	//------------------------------------------------------------------------------------------------
 	//! Call in a supply drop
 	bool CallSupplyDrop(int amount, ESupplyBoxType supplyType, int typeID=0)
+	{	
+		// Designate positions with random offsets
+		vector adjustedDropPosition = SetHeightFromGround(m_vSupplyDropMarker, m_iSupplySpawnHeight);
+		CalculateRandomOffsetXZ(adjustedDropPosition, m_iRandomSpawnOffset);
+		
+		// Execute Supply Drop
+		int spawnDelay = m_iBaseSpawnDelay;
+		for (int i = 0; i < amount; i++)
+		{
+			GetGame().GetCallqueue().CallLater(m_ResourceHandler.SpawnEntityOnPosition, spawnDelay, param1: m_sSupplyDrop, param2: adjustedDropPosition);
+			spawnDelay += m_iSpawnInterval;
+		}
+		
+		int cost = amount;
+		m_iAvailableSupplyBoxes -= cost;
+		return true;
+	}
+	
+	//------------------------------------------------------------------------------------------------
+	//! Call in a supply drop
+	bool CanCallSupply(int amount, ESupplyBoxType supplyType, int typeID, out string reason)
 	{
+		// Replace with delayed init?
+		m_LoadoutManager = GetGame().GetLoadoutManager();
+		
 		if (!m_ResourceHandler || !m_LoadoutManager)
+		{
+			reason = "Invalid Configuration";
 			return false;
+		}
 		
 		// Check relevant position markers present
 		if (!m_vSupplyDropMarker)
 		{
+			reason = "No Supply Marker set";
 			return false;
 		}
 		
@@ -64,17 +113,10 @@ class S7R_SupportSystemManagerComponent: ScriptComponent
 		
 		if (m_iAvailableSupplyBoxes <= cost)
 		{
+			reason = "Not enough supplies";
 			return false;
 		}
 		
-		// Designate positions with random offsets
-		vector adjustedDropPosition = CalculateRandomOffsets(m_vSupplyDropMarker);
-		adjustedDropPosition = AdjustHeight(adjustedDropPosition);
-		
-		// Execute Supply Drop
-		m_ResourceHandler.SpawnEntityOnPosition(m_sSupplyDrop, adjustedDropPosition);
-		
-		m_iAvailableSupplyBoxes -= cost;
 		return true;
 	}
 	
@@ -138,9 +180,16 @@ class S7R_SupportSystemManagerComponent: ScriptComponent
 	
 	// Register and unregister markers
 	//------------------------------------------------------------------------------------------------
-	protected void RegisterMarker(vector markerPosition, ESupportMarkerType markerType)
+	void RegisterMarker(vector markerPosition, ESupportMarkerType markerType)
 	{
 		// Remove or interact with current marker
+		switch (markerType)
+		{
+			case ESupportMarkerType.SupplyDropMarker:
+			{
+				m_vSupplyDropMarker = markerPosition;
+			}
+		}
 		
 		// Get coordinates for new marker
 		
@@ -149,15 +198,21 @@ class S7R_SupportSystemManagerComponent: ScriptComponent
 	
 	// Helper Functions
 	//------------------------------------------------------------------------------------------------
-	protected vector CalculateRandomOffsets(vector marker)
+	protected void CalculateRandomOffsetXZ(vector pos, int offset)
 	{
-		return "0 0 0";
+		pos[0] = pos[0] + Math.RandomInt(-1 * offset, offset);
+		
+		pos[2] = pos[2] + Math.RandomInt(-1 * offset, offset);
 	}
 	
 	//------------------------------------------------------------------------------------------------
-	protected vector AdjustHeight(vector location)
+	protected vector SetHeightFromGround(vector pos, int height)
 	{
-		return "0 0 0";
+		SCR_TerrainHelper.GetTerrainNormal(pos);
+		
+		pos[1] = pos[1] + height;
+		
+		return pos;
 	}
 	
 	//------------------------------------------------------------------------------------------------

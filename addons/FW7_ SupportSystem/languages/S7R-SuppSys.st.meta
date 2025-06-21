@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{9C8A4A9E2992BBFD}languages/S7R-SuppSys.st"
+ Configurations {
+  StringTableResourceClass PC {
+  }
+  StringTableResourceClass XBOX_ONE : PC {
+  }
+  StringTableResourceClass XBOX_SERIES : PC {
+  }
+  StringTableResourceClass PS4 : PC {
+  }
+  StringTableResourceClass PS5 : PC {
+  }
+  StringTableResourceClass HEADLESS : PC {
+  }
+ }
+}

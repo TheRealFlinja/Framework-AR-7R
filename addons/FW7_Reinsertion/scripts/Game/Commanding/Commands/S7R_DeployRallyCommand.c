@@ -1,5 +1,5 @@
-[BaseContainerProps(), SCR_BaseGroupCommandTitleField("m_sActionName")]
-class S7R_DeployRallyMenuAction: S7R_BaseMenuAction
+[BaseContainerProps("7R/Commands", "Deploy rallypoint"), SCR_BaseGroupCommandTitleField("m_sCommandName")]
+class S7R_DeployRallyCommand: SCR_BaseGroupCommand
 {
 	[Attribute(uiwidget: UIWidgets.ResourcePickerThumbnail)]
 	protected ResourceName m_sRallyEntity;
@@ -12,14 +12,14 @@ class S7R_DeployRallyMenuAction: S7R_BaseMenuAction
 	{		
 		if (!m_ResourceHandler || !m_ReinsertionManager)
 		{
-			Print("[S7R_DeployRallyMenuAction: OnPerform] Failed to init", LogLevel.ERROR);
+			Print("[S7R_DeployRallyCommand: OnPerform] Failed to init", LogLevel.ERROR);
 			return false;
 		}
 		
 		SCR_ChimeraCharacter user = SCR_ChimeraCharacter.Cast(SCR_PlayerController.GetLocalControlledEntity());
 		if (!user)
 		{
-			Print("[S7R_DeployRallyMenuAction: OnPerform] PlayerController not found", LogLevel.ERROR);
+			Print("[S7R_DeployRallyCommand: OnPerform] PlayerController not found", LogLevel.ERROR);
 			return false;
 		}
 		
@@ -29,7 +29,7 @@ class S7R_DeployRallyMenuAction: S7R_BaseMenuAction
 		
 		if (!rally)
 		{
-			Print("[S7R_DeployRallyMenuAction: OnPerform] Failed to spawn rally", LogLevel.ERROR);
+			Print("[S7R_DeployRallyCommand: OnPerform] Failed to spawn rally", LogLevel.ERROR);
 			return false;
 		}
 		
@@ -79,28 +79,11 @@ class S7R_DeployRallyMenuAction: S7R_BaseMenuAction
 	//!
 	override bool CanBePerformed(notnull SCR_ChimeraCharacter user)
 	{
+		super.CanBePerformed(user);
+		
 		if (!m_ReinsertionManager.CanRegisterRally())
 		{
 			SetCannotPerformReason("Rally already set");
-			return false;
-		}
-
-		if (m_eRequiredRank == SCR_ECharacterRank.INVALID)
-			return true;
-
-		if (!SCR_XPHandlerComponent.IsXpSystemEnabled())
-			return true;
-
-		SCR_ECharacterRank currentRank = SCR_CharacterRankComponent.GetCharacterRank(user);
-		if (currentRank < m_eRequiredRank)
-		{
-			SCR_Faction userFaction = SCR_Faction.Cast(user.GetFaction());
-			if (!userFaction)
-				return false;
-
-			string requiredRankName = userFaction.GetRankName(m_eRequiredRank);
-			string currentRankName = userFaction.GetRankName(currentRank);
-			SetCannotPerformReason(SCR_StringHelper.Translate(CANNOT_PERFORM_RANK_TOO_LOW, requiredRankName, currentRankName));
 			return false;
 		}
 

@@ -7,6 +7,19 @@ GameProject {
  }
  Configurations {
   GameProjectConfig PC {
+   WidgetManagerSettings WidgetManagerSettings "{AC4BE58770485E02}" {
+    StringTables {
+     StringTableDefinition "{65AA74F991DFCD5A}" {
+      StringTableSource "{9C8A4A9E2992BBFD}languages/S7R-SuppSys.st"
+      Languages {
+       LanguageDefinition "{65AA74F997563758}" {
+        Code "en_us"
+        StringTableRuntime "{D6ECDA4868502BA4}languages/S7R-SuppSys.en_us.conf"
+       }
+      }
+     }
+    }
+   }
   }
   GameProjectConfig XBOX_ONE {
   }
