@@ -1,0 +1,8 @@
+GenericEntity {
+ ID "65ACEE1AC6673474"
+ {
+  SCR_SpawnPoint : "{E7F4D5562F48DDE4}Prefabs/MP/Spawning/SpawnPoint_Base.et" {
+   ID "65ACEE1BE40252B7"
+  }
+ }
+}

@@ -1,0 +1,139 @@
+SCR_BaseGameMode : "{0F307326459A1395}Prefabs/MP/Modes/GameMode_Base.et" {
+ ID "56B2B479C6B96951"
+ components {
+  SignalsManagerComponent "{65AD01C28E336B0B}" {
+  }
+  SCR_CommunicationSoundComponent "{65AD01C281A0AA40}" {
+  }
+  SCR_AdditionalGameModeSettingsComponent "{6170E11C3C452ACC}" {
+   m_bEnableTeamKillPunishment 0
+  }
+  SCR_CommandingManagerComponent "{65AD01C3AB8DEC0C}" {
+  }
+  SCR_CompositionSlotManagerComponent "{65AD01C3A1726300}" {
+  }
+  SCR_DataCollectorComponent "{5ADE83EE64329989}" {
+   m_aModules {
+    SCR_DataCollectorCrimesModule "{5D9C706AD14AF695}" {
+     m_aLightBanPunishments {
+     }
+     m_aHeavyBanPunishments {
+     }
+    }
+   }
+  }
+  SCR_DebriefingScreenComponent "{65AD01C3C8507E1C}" {
+   m_sHeaderSubtitle "7R - Mission"
+   m_BaseLayout SCR_DebriefingScreenUnevenFourTiles "{65AD01C3CD29E965}" {
+    m_TopLeftTile SCR_DebriefingScreenBigImageContent "{65AD01C3D628E72C}" {
+     m_sContentImage "{0045DBB27B03121E}UI/7R/7RHighRes.edds"
+    }
+    m_TopRightTile SCR_DebriefingScreenFinishedObjectivesContent "{65AD01C03E6A4BEA}" {
+    }
+    m_BottomLeftTile SCR_DebriefingScreenStatisticsContent "{65AD01C00A693942}" {
+     m_aStatistics {
+      SCR_DebriefingScreenStatisticKills "{65AD01C00D9CA9E2}" {
+      }
+      SCR_DebriefingScreenStatisticDeaths "{65AD01C00099A92E}" {
+      }
+     }
+    }
+    m_BottomRightTile SCR_DebriefingScreenSummaryContent "{65AD01C018611627}" {
+     m_sSubtitleText "7R - Mission"
+     m_sSubtitleLostText "7R - Mission"
+    }
+   }
+  }
+  SCR_DeployMenuBaseScreenComponent "{65AD01C06674CA92}" {
+   m_sHeaderSubtitle "7R - Mission"
+   m_BaseLayout SCR_DeployMenuBaseScreenLayout "{65AD01C07F7EB343}" {
+   }
+  }
+  SCR_EntityCatalogManagerComponent "{5C9AD18D91F9E87E}" {
+   m_aEntityCatalogs {
+    SCR_EntityCatalogMultiList "{65AD01C05EE04E7B}" {
+     m_eEntityCatalogType OBJECT
+    }
+    SCR_EntityCatalogMultiList "{65AD01C0A0E13A3F}" {
+     m_eEntityCatalogType COMPOSITION
+    }
+    SCR_EntityCatalogMultiList "{65AD01C0BCBB1FC4}" {
+     m_eEntityCatalogType SYSTEM
+    }
+    SCR_EntityCatalogMultiList "{65AD01C08BA4A3BC}" {
+     m_eEntityCatalogType RESPAWN_LOADOUT
+    }
+   }
+  }
+  SCR_GroupsManagerComponent "{5706EC99934496F5}" {
+   m_iPlayableGroupFrequencyOffset 10000
+   m_iPlayableGroupFrequencyMin 10000
+   m_iPlayableGroupFrequencyMax 100000
+   m_aGroupFlags {
+    "{0045DBB27B03121E}UI/7R/7RHighRes.edds"
+   }
+  }
+  SCR_IdentityManagerComponent "{5AEEA80681EA61AF}" {
+   m_eIdentityItemGenerationType ON_DEATH
+  }
+  SCR_NametagConfigComponent "{571AA9E54FC9210D}" {
+   m_sConfigPath "{09F7AAA14A642683}Configs/NameTags/NametagFriendlies.conf"
+  }
+  SCR_NightModeGameModeComponent "{5D50E84688D5A408}" {
+   m_bAllowGlobalNightMode 1
+  }
+  SCR_NotificationSenderComponent "{56FA84B04BE7D4C0}" {
+   m_iKillFeedType DISABLED
+  }
+  SCR_RespawnBriefingComponent "{65AD01C1DE75CE02}" {
+   m_Info SCR_UIInfo "{65AD01C62B48C30D}" {
+    Name "7R - Mission"
+    Icon "{FDC43816C7ABFBC9}UI/7R/7R.edds"
+   }
+  }
+  SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
+   m_SpawnLogic SCR_MenuSpawnLogic "{65AD01C63CA50C36}" {
+   }
+   m_fDeployMenuOpenDelay 2
+  }
+  SCR_RespawnTimerComponent "{65AD01C610A34D8D}" {
+  }
+  SCR_TimeAndWeatherHandlerComponent "{65AD01C66C45AA04}" {
+  }
+  SCR_TimedSpawnPointComponent "{65AD01C67AC6B3F7}" {
+   m_fRespawnTime 60
+  }
+  SCR_VotingManagerComponent "{5650BB6B6089393A}" {
+   Enabled 0
+  }
+  SCR_WelcomeScreenComponent "{65AD01C64C0944AB}" {
+   m_sHeaderTitle "[7R] Mission Name"
+   m_sHeaderSubtitle "7R - Mission"
+   m_BaseLayout SCR_WelcomeScreenThreeHorizontalColumns "{65AD01C65EBEB0A0}" {
+    m_LeftColumn SCR_WelcomeScreenIntroductionContent "{65AD01C6B99EAEEB}" {
+     m_aIntroduction {
+      SCR_WelcomeScreenIntroduction "{65AD01C6B043B52B}" {
+       m_sContentImage "{FDC43816C7ABFBC9}UI/7R/7R.edds"
+       m_sContentTitleText "[7R] Mission name"
+       m_sContentDescriptionText "Short Mission Description"
+      }
+     }
+    }
+    m_MiddleColumn SCR_WelcomeScreenMissionObjectivesContent "{65AD01C69ED6ED83}" {
+     m_sTitleText "Mission Objectives"
+    }
+    m_RightColumn SCR_WelcomeScreenFactionContent "{65AD01C6E52AC8F5}" {
+     m_bIsInteractible 1
+    }
+   }
+  }
+ }
+ coords 0 0 0
+ {
+  SCR_EditorSettingsEntity {
+   ID "65AD01C75CACC652"
+   coords 1 0 0
+   m_EditorManagerPrefab "{788933FFDC706A68}Prefabs/Editor/EditorManager.et"
+  }
+ }
+}

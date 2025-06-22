@@ -1,0 +1,19 @@
+SCR_SpawnPoint {
+ ID "544EB04DCBFBD126"
+ components {
+  SCR_MapDescriptorComponent "{54C659A97C47BDE2}" {
+   DisplayName "7R Base"
+   VisibleOnMap 1
+  }
+ }
+ m_fSpawnRadius 20
+ m_sFaction "7R"
+ m_bTimedSpawnPoint 1
+ m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
+  Name "7R Base"
+  Description "7R Main Base"
+  Icon "{C9D19DBFDE7AD72D}UI/Imagesets/Conflict/conflict-icons.imageset"
+  IconSetName "US_Base"
+ }
+ m_fSpawnPositionUsageRange 20
+}

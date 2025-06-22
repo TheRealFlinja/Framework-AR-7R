@@ -26,9 +26,9 @@ SCR_AIGroup : "{8B4D49A9F324E7D5}Prefabs/Groups/PlayableGroup.et" {
     m_MilitarySymbol SCR_MilitarySymbol "{6548786FB38293CF}" {
      m_Identity BLUFOR
      m_Icons INFANTRY
+     m_Amplifier SQUAD
     }
    }
-   m_bAutoRegister ALWAYS
    m_AccessKey KEY_1
    m_Flags 14340
   }
@@ -46,6 +46,10 @@ SCR_AIGroup : "{8B4D49A9F324E7D5}Prefabs/Groups/PlayableGroup.et" {
   }
  }
  m_faction "7R"
+ m_aUnitPrefabSlots {
+  "{DB862612A6CB4A6D}Prefabs/Characters/7R/Character_Base_7R.et" "{DB862612A6CB4A6D}Prefabs/Characters/7R/Character_Base_7R.et" "{DB862612A6CB4A6D}Prefabs/Characters/7R/Character_Base_7R.et" "{DB862612A6CB4A6D}Prefabs/Characters/7R/Character_Base_7R.et" "{DB862612A6CB4A6D}Prefabs/Characters/7R/Character_Base_7R.et" "{DB862612A6CB4A6D}Prefabs/Characters/7R/Character_Base_7R.et" "{DB862612A6CB4A6D}Prefabs/Characters/7R/Character_Base_7R.et" "{37578B1666981FCE}Prefabs/Characters/Core/Character_Base.et"
+ }
+ m_bSpawnImmediately 0
  m_iGroupRadioFrequency 10000
  m_iMaxMembers 8
  m_bDeleteIfNoPlayer 0

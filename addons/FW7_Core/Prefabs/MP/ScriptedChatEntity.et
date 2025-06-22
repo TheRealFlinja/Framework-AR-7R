@@ -1,0 +1,28 @@
+ScriptedChatEntity {
+ ID "50D6E52DAA9A19F8"
+ "Base style" BaseChatChannelStyle "{65ACEE1F8462D23E}" {
+ }
+ Channels {
+  FactionChatChannel "{559077E76537C0B4}" {
+   Style BaseChatChannelStyle "{65ACEE1F8914ADB6}" {
+   }
+  }
+  GroupChatChannel "{58729124A5B6D815}" {
+   Style BaseChatChannelStyle "{65ACEE1F8F9E4AC3}" {
+   }
+  }
+  SCR_VehicleChatChannel "{559077E68D10F660}" {
+   Style BaseChatChannelStyle "{65ACEE1F8C6EDA24}" {
+   }
+  }
+  LocalChatChannel "{559077E6A85B7EEE}" {
+   Style BaseChatChannelStyle "{65ACEE1F8D0543A3}" {
+   }
+  }
+ }
+ "Whisper channel" PrivateMessageChannel "{52927B26F407CAD5}" {
+  Style BaseChatChannelStyle "{65ACEE1F80C7299B}" {
+  }
+ }
+ "Default channel" "Faction"
+}

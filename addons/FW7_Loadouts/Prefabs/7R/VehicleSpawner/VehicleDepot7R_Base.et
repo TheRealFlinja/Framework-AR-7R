@@ -1,0 +1,70 @@
+GenericEntity {
+ ID "6548785B6BC1B96D"
+ components {
+  MapDescriptorComponent "{652883681EE86754}" {
+   DisplayName "Vehicle Depot"
+   MapItemDescriptor 1
+   MainType Spawnpoint
+   UnitType Vehicle
+  }
+  MeshObject "{6527561D6C3C97A2}" {
+   Object "{2F6237318749D8A4}Assets/Props/Military/InteractionPoints/VehicleService/VehicleService_Barrels_US_01.xob"
+   LODFactors {
+    5 2 1.5 1 1 1
+   }
+  }
+  RigidBody "{6527561D6C3C9667}" {
+   Layers 3
+   ResponseIndex "SmallDestructible"
+   ModelGeometry 1
+   Static 1
+  }
+  SCR_FactionAffiliationComponent "{6527561D6C3D0AB9}" {
+   "faction affiliation" "7R"
+  }
+  ActionsManagerComponent "{6527561D6C3DB47A}" {
+   ActionContexts {
+    UserActionContext "{6528831A6AB9BAC9}" {
+     UIInfo SCR_ActionContextUIInfo "{652D547192594AD3}" {
+     }
+     ContextName "default"
+     Position PointInfo "{6528831A6F306443}" {
+      Offset 0 0.8 0.1
+     }
+     Radius 1.5
+    }
+   }
+   additionalActions {
+    S7R_SpawnVehicleAction "{65AD01C527804825}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo SCR_ActionUIInfo "{65AD01C53DC31C69}" {
+      Name "Spawn Vehicle"
+      m_sIconName "vehicles"
+     }
+     ActionTitle "Spawn Vehicle"
+     m_sVehiclePrefab "{F649585ABB3706C4}Prefabs/Vehicles/Wheeled/M151A2/M151A2.et"
+     m_sNameSpawnLocation "vic_spawn_1"
+    }
+   }
+  }
+  RplComponent "{6527561D6C3DB40E}" {
+   Enabled 1
+  }
+  Hierarchy "{6527561D6C3DB405}" {
+   Enabled 1
+  }
+ }
+ Flags 1027
+ {
+  GenericEntity vic_spawn_1 {
+   ID "6548785B6BC1B96C"
+   components {
+    RplComponent "{6536D264FDE7AC41}" {
+    }
+   }
+   coords 0 0 5
+  }
+ }
+}

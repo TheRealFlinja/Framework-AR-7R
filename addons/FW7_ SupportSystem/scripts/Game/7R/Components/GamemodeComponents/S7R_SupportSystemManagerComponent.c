@@ -54,22 +54,22 @@ class S7R_SupportSystemManagerComponent: ScriptComponent
 	[Attribute("", UIWidgets.ResourceAssignArray, category: "Supply Configuration")]
 	protected ResourceName m_sConstructionSupplyDrop;
 	
-	[Attribute("20", UIWidgets.Auto, category: "Supply Configuration")]
+	[Attribute("60", UIWidgets.Auto, category: "Supply Configuration")]
 	protected int m_iSupplyDropUseDelay;
 	
 	[Attribute("", UIWidgets.ResourceAssignArray, category: "Air Support Configuration")]
 	protected ResourceName m_sAircraft;
 	
-	[Attribute("10", UIWidgets.Auto, category: "Test parameters")]
+	[Attribute("200", UIWidgets.Auto, category: "Test parameters")]
 	protected int m_iSupplySpawnHeight;
 	
-	[Attribute("5", UIWidgets.Auto, category: "Test parameters")]
+	[Attribute("10", UIWidgets.Auto, category: "Test parameters")]
 	protected int m_iRandomSpawnOffset;
 	
 	[Attribute("5", UIWidgets.Auto, category: "Test parameters")]
 	protected int m_iBaseSpawnDelay;
 	
-	[Attribute("5", UIWidgets.Auto, category: "Test parameters")]
+	[Attribute("2", UIWidgets.Auto, category: "Test parameters")]
 	protected int m_iSpawnInterval;
 	
 	protected bool m_bSupplyDropDelayActive = false;

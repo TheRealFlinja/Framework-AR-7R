@@ -1,0 +1,9 @@
+GenericEntity : "{C8E0818125917BD8}Prefabs/7R/BaseManagerElements/BaseManagerElements.et" {
+ coords 6431.238 162.062 6479.108
+ {
+  SCR_LoadoutManager {
+   ID "65ACEE196CC227B7"
+   m_eFactionLoadout7RKey USVanilla
+  }
+ }
+}

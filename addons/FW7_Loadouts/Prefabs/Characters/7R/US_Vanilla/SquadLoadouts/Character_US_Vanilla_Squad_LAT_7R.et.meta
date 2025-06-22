@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{0201DAA60CACF0EC}Prefabs/Characters/7R/US_Vanilla/Character_US_Vanilla_Squad_LAT_7R.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

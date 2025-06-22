@@ -1,0 +1,13 @@
+SCR_BaseGameMode {
+ ID "56B2B479C6B96951"
+ components {
+  S7R_SupportSystemManagerComponent "{65AD01C2FF27F957}" {
+   m_sInfantrySupplyDrop "{19F40B0D4B7EA59E}Prefabs/7R/SupplyBoxes/InfantrySupplyDropBox7R.et"
+   m_sMedicalSupplyDrop "{6850AA89DE75A280}Prefabs/7R/SupplyBoxes/MedicalSupplyDropBox7R.et"
+   m_sMATSupplyDrop "{49140FFC854D94BA}Prefabs/7R/SupplyBoxes/MATSupplyDropBox7R.et"
+   m_sHATSupplyDrop "{9B0C45BC6FED52F3}Prefabs/7R/SupplyBoxes/HATSupplyDropBox7R.et"
+   m_sMMGSupplyDrop "{0A420A0ABE7961C1}Prefabs/7R/SupplyBoxes/MMGSupplyDropBox7R.et"
+   m_sMortarSupplyDrop "{9B3B654B9E9E9DEB}Prefabs/7R/SupplyBoxes/MortarSupplyDropBox7R.et"
+  }
+ }
+}

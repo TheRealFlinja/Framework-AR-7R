@@ -113,41 +113,11 @@ GenericEntity {
     }
     S7R_SetSquadRoleAction "{659B4D007F2EA399}" : "{5BBF3E4651FE9EAF}Configs/UserActions/SquadRoleActions/SetSquadEngEODRoleAction.conf" {
     }
-    SCR_SaveArsenalLoadout "{659F531E24075DB4}" {
-     ParentContextList {
-      "default"
-     }
-     UIInfo UIInfo "{65AC7E8F84AD50D5}" {
-      Name "#S7R-Loadouts_SaveLoadout"
-     }
-     "Sort Priority" 100
-     m_bAllowGetFactionOfParent 1
-     m_bAllowGetArsenalFromParent 1
-     m_sS7RLoadoutLabel "7R Loadout"
+    SCR_SaveArsenalLoadout "{65AD1A844C1CDB0A}" : "{0E3E0A1017E3EBF2}Configs/UserActions/ArsenalActions/S7R_SaveArsenalLoadout.conf" {
     }
-    S7R_LoadArsenalLoadout "{659F531E39A11DC3}" {
-     ParentContextList {
-      "default"
-     }
-     UIInfo UIInfo "{65AC7E8FC561682D}" {
-      Name "Load 7R Loadout"
-     }
-     "Sort Priority" 200
-     m_bAllowGetFactionOfParent 1
-     m_sS7RSlotId "Loadout7R"
-     m_sS7RLoadoutLabel "Load 7R Loadout"
+    S7R_LoadArsenalLoadout "{65AD1A8442EE20B8}" : "{80EC8237FEC10AC6}Configs/UserActions/ArsenalActions/S7R_Load7RLoadoutAction.conf" {
     }
-    S7R_LoadArsenalLoadout "{659F531E12271BB0}" {
-     ParentContextList {
-      "default"
-     }
-     UIInfo UIInfo "{65AC7E8FDE9B8731}" {
-      Name "Load Base Loadout"
-     }
-     "Sort Priority" 300
-     m_bAllowGetFactionOfParent 1
-     m_sS7RSlotId "Base7R"
-     m_sS7RLoadoutLabel "Load 7R Base Loadout"
+    S7R_LoadArsenalLoadout "{65AD1A8443E360EB}" : "{267D0A5A92734617}Configs/UserActions/ArsenalActions/S7R_LoadBase7RAction.conf" {
     }
    }
   }
@@ -159,6 +129,5 @@ GenericEntity {
   }
  }
  Flags 1027
- coords 6424.998 162.07 6482.134
- angleY -29.879
+ coords -2 0 10
 }

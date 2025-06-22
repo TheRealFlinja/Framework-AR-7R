@@ -1,0 +1,3 @@
+SCR_BaseGameMode GameMode_7RMission1 : "{271028FA52D6456A}Prefabs/MP/Modes/GameMode_7RMission.et" {
+ coords 6430.33 162.062 6477.77
+}

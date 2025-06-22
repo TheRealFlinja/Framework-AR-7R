@@ -1,0 +1,17 @@
+GenericEntity {
+ ID "65ACEE196CC227B9"
+ {
+  SCR_FactionManager FactionManager_Base1 : "{A242612865F2A48E}Prefabs/MP/Managers/Factions/FactionManager_Base.et" {
+   ID "65ACEE19CCAAF61D"
+   coords 2 0 0
+  }
+  SCR_BaseTaskManager : "{1AC69CD7907FB4F8}Prefabs/Systems/ScenarioFramework/Tasks/TaskManager.et" {
+   ID "65ACEE19B854E419"
+   coords -1 0 0
+  }
+  SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutManager_Base.et" {
+   ID "65ACEE196CC227B7"
+   coords 1 0 0
+  }
+ }
+}

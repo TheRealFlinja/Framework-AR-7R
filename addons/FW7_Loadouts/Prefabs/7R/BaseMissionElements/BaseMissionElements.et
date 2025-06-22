@@ -1,0 +1,17 @@
+GenericEntity {
+ ID "65ACEE1AC6673474"
+ {
+  GenericEntity : "{26EA1CF697D0ACB2}Prefabs/7R/LoadoutBoxes/PlatoonLoadoutBox.et" {
+   ID "65AD1080C90288B0"
+   coords 0 0 10
+  }
+  GenericEntity : "{556C771EBB02FE60}Prefabs/7R/LoadoutBoxes/BigBox.et" {
+   ID "65AD1080CCCDD32B"
+   coords 2 0 10
+  }
+  GenericEntity : "{68628F92E7448920}Prefabs/7R/LoadoutBoxes/SquadLoadoutBox.et" {
+   ID "65AD1080CE2A0B40"
+   coords -2 0 10
+  }
+ }
+}
