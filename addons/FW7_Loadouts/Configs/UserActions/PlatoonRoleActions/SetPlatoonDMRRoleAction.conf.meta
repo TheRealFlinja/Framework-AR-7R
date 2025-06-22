@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{80CC0413DDBDFCB9}Configs/ControlHints/AvailableActions.conf"
+ Name "{001AFA82AC835F94}Configs/UserActions/PlatoonRoleActions/SetPlatoonMarksmanRoleAction.conf"
  Configurations {
   CONFResourceClass PC {
   }

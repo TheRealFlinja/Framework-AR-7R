@@ -53,13 +53,6 @@ class S7R_CallSupplyCommand: SCR_BaseGroupCommand
 	
 	//------------------------------------------------------------------------------------------------
 	//!
-	override bool CanShowOnMap()
-	{
-		return true;
-	}
-	
-	//------------------------------------------------------------------------------------------------
-	//!
 	override bool CanBePerformed(notnull SCR_ChimeraCharacter user)
 	{
 		if (!super.CanBePerformed(user))

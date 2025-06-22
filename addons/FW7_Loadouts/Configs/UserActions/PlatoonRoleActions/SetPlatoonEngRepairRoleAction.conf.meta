@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{8E9F784766BF8038}Configs/UserActions/PlatoonRoleActions/SetPlatoonEngRepairRoleAction.conf"
+ Configurations {
+  CONFResourceClass PC {
+  }
+  CONFResourceClass XBOX_ONE : PC {
+  }
+  CONFResourceClass XBOX_SERIES : PC {
+  }
+  CONFResourceClass PS4 : PC {
+  }
+  CONFResourceClass PS5 : PC {
+  }
+  CONFResourceClass HEADLESS : PC {
+  }
+ }
+}

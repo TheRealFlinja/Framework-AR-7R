@@ -41,11 +41,4 @@ class S7R_SetMarkerCommand: SCR_BaseGroupCommand
 		
 		return true;
 	}
-	
-	//------------------------------------------------------------------------------------------------
-	//!
-	override bool CanShowOnMap()
-	{
-		return true;
-	}
 }

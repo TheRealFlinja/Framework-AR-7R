@@ -78,4 +78,15 @@ class S7R_ResourceHandlerComponent: ScriptComponent
 		
 		return ent;
 	}
+	
+	//------------------------------------------------------------------------------------------------
+	// constructor
+	//! \param[in] src
+	//! \param[in] ent
+	//! \param[in] parent
+	void S7R_ResourceHandlerComponent(IEntityComponentSource src, IEntity ent, IEntity parent)
+	{
+		if (!s_Instance)
+			s_Instance = this;
+	}
 }

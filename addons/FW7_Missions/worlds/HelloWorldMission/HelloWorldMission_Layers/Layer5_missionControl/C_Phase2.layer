@@ -114,14 +114,6 @@ GenericEntity : "{6E9190BC2713551D}Prefabs/Compositions/Slotted/BuildableComposi
   FactionAffiliationComponent "{5D06E95DB55F37A7}" {
    "faction affiliation" "USSR"
   }
-  RigidBody "{5E96A067A67C5029}" {
-   Geometries {
-    PhysicsBoxGeometry UserAction {
-     Extents 12 0.5 5
-    }
-   }
-   Static 0
-  }
   SCR_CampaignBuildingCompositionComponent "{5E96A067C097D570}" {
    m_AudioSourceConfigurationSpawn SCR_AudioSourceConfiguration "{5E96A067C355978C}" {
     m_sSoundEventName "SOUND_BUILD_MG_NEST_01"

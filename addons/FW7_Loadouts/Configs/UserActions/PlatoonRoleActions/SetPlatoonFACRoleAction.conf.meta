@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{CE9B5783063A4DC9}Configs/UserActions/PlatoonRoleActions/SetPlatoonFACRoleAction.conf"
+ Configurations {
+  CONFResourceClass PC {
+  }
+  CONFResourceClass XBOX_ONE : PC {
+  }
+  CONFResourceClass XBOX_SERIES : PC {
+  }
+  CONFResourceClass PS4 : PC {
+  }
+  CONFResourceClass PS5 : PC {
+  }
+  CONFResourceClass HEADLESS : PC {
+  }
+ }
+}

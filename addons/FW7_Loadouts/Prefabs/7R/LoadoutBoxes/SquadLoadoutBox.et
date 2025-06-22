@@ -61,15 +61,17 @@ GenericEntity {
     }
    }
   }
+  SCR_ArsenalInventoryStorageManagerComponent "{65AC7EB02404D967}" {
+  }
   ActionsManagerComponent "{659B01184252EBB8}" {
    Enabled 1
    ActionContexts {
     UserActionContext "{659B01184252E9BA}" {
      ContextName "default"
      Position PointInfo "{659B01184252E9B9}" {
-      Offset 0 0.464 0
+      Offset 0 0.2 0
      }
-     Radius 1.5
+     Radius 1
     }
    }
    additionalActions {
@@ -115,12 +117,23 @@ GenericEntity {
      ParentContextList {
       "default"
      }
+     UIInfo UIInfo "{65AC7E8F84AD50D5}" {
+      Name "#S7R-Loadouts_SaveLoadout"
+     }
+     "Sort Priority" 100
+     m_bAllowGetFactionOfParent 1
+     m_bAllowGetArsenalFromParent 1
      m_sS7RLoadoutLabel "7R Loadout"
     }
     S7R_LoadArsenalLoadout "{659F531E39A11DC3}" {
      ParentContextList {
       "default"
      }
+     UIInfo UIInfo "{65AC7E8FC561682D}" {
+      Name "Load 7R Loadout"
+     }
+     "Sort Priority" 200
+     m_bAllowGetFactionOfParent 1
      m_sS7RSlotId "Loadout7R"
      m_sS7RLoadoutLabel "Load 7R Loadout"
     }
@@ -128,6 +141,11 @@ GenericEntity {
      ParentContextList {
       "default"
      }
+     UIInfo UIInfo "{65AC7E8FDE9B8731}" {
+      Name "Load Base Loadout"
+     }
+     "Sort Priority" 300
+     m_bAllowGetFactionOfParent 1
      m_sS7RSlotId "Base7R"
      m_sS7RLoadoutLabel "Load 7R Base Loadout"
     }

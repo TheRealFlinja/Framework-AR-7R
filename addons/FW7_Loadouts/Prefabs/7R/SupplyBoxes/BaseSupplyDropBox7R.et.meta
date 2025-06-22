@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{97B6A100990B7E88}Prefabs/Props/Military/SupplyBox/SupplyStack/SupplyStack_Small_01/BaseSupplyDropBox.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

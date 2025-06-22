@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{C5EE4B63B54D9409}Configs/Loadouts/7R/S7R_BaseScopeBox.conf"
+ Configurations {
+  CONFResourceClass PC {
+  }
+  CONFResourceClass XBOX_ONE : PC {
+  }
+  CONFResourceClass XBOX_SERIES : PC {
+  }
+  CONFResourceClass PS4 : PC {
+  }
+  CONFResourceClass PS5 : PC {
+  }
+  CONFResourceClass HEADLESS : PC {
+  }
+ }
+}
