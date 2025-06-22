@@ -38,6 +38,8 @@ class S7R_Select7RItemsComponent : ScriptComponent
 	//------------------------------------------------------------------------------------------------
 	protected void AddBigBoxItems()
 	{
+		loadoutManager = GetGame().GetLoadoutManager();
+		
 		if (!storageCmp || !loadoutManager)
 		{
 			Print("[S7R_Select7RItemsComponent: AddItemsFromBigBoxConfig] Configuration failed", LogLevel.ERROR);
@@ -77,6 +79,8 @@ class S7R_Select7RItemsComponent : ScriptComponent
 	//------------------------------------------------------------------------------------------------
 	protected void AddSupplyLoadout(ESupplyBoxType supplyType, int typeID = 0)
 	{
+		loadoutManager = GetGame().GetLoadoutManager();
+		
 		if (!storageCmp || !loadoutManager)
 		{
 			Print("[S7R_Select7RItemsComponent: AddSupplyLoadout] Configuration failed", LogLevel.ERROR);
@@ -115,6 +119,8 @@ class S7R_Select7RItemsComponent : ScriptComponent
 	//------------------------------------------------------------------------------------------------
 	protected void AddVehicleLoadout(EVehicleLoadoutType vehicleLoadoutType, int typeID = 0)
 	{
+		loadoutManager = GetGame().GetLoadoutManager();
+		
 		if (!storageCmp || !loadoutManager)
 		{
 			Print("[S7R_Select7RItemsComponent: AddVehicleLoadout] Configuration failed", LogLevel.ERROR);

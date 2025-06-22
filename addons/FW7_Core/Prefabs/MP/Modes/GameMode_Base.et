@@ -3,8 +3,6 @@ SCR_BaseGameMode {
  components {
   S7R_AISpawnHandlerComponent "{658E99890413B7F8}" {
   }
-  S7R_MenuManagerComponent "{65935B58A983DD6F}" {
-  }
   S7R_MissionManagerComponent "{658E9989160FA97F}" {
   }
   S7R_ResourceHandlerComponent "{658E99896AE963FF}" {

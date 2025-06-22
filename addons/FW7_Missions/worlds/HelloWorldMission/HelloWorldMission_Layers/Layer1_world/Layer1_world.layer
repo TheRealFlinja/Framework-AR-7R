@@ -1,3 +1,6 @@
+SCR_MapEntity MapEntity_Everon1 : "{E1B88C66BF6CA1F9}Prefabs/World/Game/MapEntity_Everon.et" {
+ coords 3899.637 15.275 8454.234
+}
 SCR_AIWorld SCR_AIWorld_1 {
  components {
   AIBirdManagerComponent "{654878425A29AF3F}" {

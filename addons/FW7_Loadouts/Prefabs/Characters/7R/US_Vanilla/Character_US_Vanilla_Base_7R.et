@@ -1,13 +1,10 @@
 SCR_ChimeraCharacter : "{DB862612A6CB4A6D}Prefabs/Characters/7R/Character_Base_7R.et" {
  ID "520EC961A090B1EE"
  components {
-  CharacterGrenadeSlotComponent "{520EA1D2F659CE6E}" {
-   WeaponTemplate "{9DB69176CEF0EE97}Prefabs/Weapons/Grenades/Smoke_ANM8HC.et"
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{3E413771E1834D2F}Prefabs/Weapons/Rifles/M16/Rifle_M16A2.et"
   }
-  CharacterGrenadeSlotComponent "{5A6CDA0CCF43068E}" {
-   WeaponTemplate "{E8F00BF730225B00}Prefabs/Weapons/Grenades/Grenade_M67.et"
-  }
-  CharacterHandWeaponSlotComponent "{5C9CA35B6F6B604C}" {
+  CharacterWeaponSlotComponent "{520EA1D2F659CFDC}" {
    WeaponTemplate "{1353C6EAD1DCFE43}Prefabs/Weapons/Handguns/M9/Handgun_M9.et"
   }
   BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
@@ -30,13 +27,42 @@ SCR_ChimeraCharacter : "{DB862612A6CB4A6D}Prefabs/Characters/7R/Character_Base_7
   SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
    InitialInventoryItems {
     ItemsInitConfigurationItem "{65257694014102C7}" {
-     PrefabsToSpawn + {
-      "{F2539FA5706E51E4}Prefabs/Items/Equipment/Binoculars/Binoculars_B12/Binoculars_B12.et"
-     }
     }
     ItemsInitConfigurationItem "{652576946727BED3}" {
      PrefabsToSpawn + {
-      "{9DA944F4D6A611BA}Prefabs/Weapons/Ammo/Ammo_9x19_HP_JHP.et" "{9DA944F4D6A611BA}Prefabs/Weapons/Ammo/Ammo_9x19_HP_JHP.et"
+      "{9D290AA75ADA4618}Prefabs/Weapons/Ammo/Ammo_9x19_Ball_M882.et" "{9D290AA75ADA4618}Prefabs/Weapons/Ammo/Ammo_9x19_Ball_M882.et"
+     }
+    }
+    ItemsInitConfigurationItem "{65AD41DD532A0406}" {
+     TargetStorage "Vest/Vest_ALICE_rifleman.et/Bayonet/Scabbard_Bayonet_M9.et"
+     TargetPurpose 64
+     PrefabsToSpawn {
+      "{558117556F3880A8}Prefabs/Weapons/Attachments/Bayonets/Bayonet_M9.et"
+     }
+    }
+    ItemsInitConfigurationItem "{65AD41DD35381A9D}" {
+     TargetStorage "Vest/Vest_ALICE_rifleman.et/Suspenders/Vest_ALICE_suspenders_2.et"
+     TargetPurpose 64
+     PrefabsToSpawn {
+      "{3A421547BC29F679}Prefabs/Items/Equipment/Flashlights/Flashlight_MX991/Flashlight_MX991.et"
+     }
+    }
+    ItemsInitConfigurationItem "{65AD41DFA68B15E5}" {
+     TargetStorage "Vest/Vest_ALICE_rifleman.et/MagPouch/Pouch_ALICE_30rnd_STANAG.et"
+     PrefabsToSpawn {
+      "{2EBF60EF24B108FC}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_30rnd_M855_Ball.et" "{2EBF60EF24B108FC}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_30rnd_M855_Ball.et" "{2EBF60EF24B108FC}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_30rnd_M855_Ball.et" "{E8F00BF730225B00}Prefabs/Weapons/Grenades/Grenade_M67.et"
+     }
+    }
+    ItemsInitConfigurationItem "{65AD41DDF8103FC6}" {
+     TargetStorage "Vest/Vest_ALICE_rifleman.et/MagPouch2/Pouch_ALICE_30rnd_STANAG.et"
+     PrefabsToSpawn {
+      "{2EBF60EF24B108FC}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_30rnd_M855_Ball.et" "{2EBF60EF24B108FC}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_30rnd_M855_Ball.et" "{2EBF60EF24B108FC}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_30rnd_M855_Ball.et" "{E8F00BF730225B00}Prefabs/Weapons/Grenades/Grenade_M67.et"
+     }
+    }
+    ItemsInitConfigurationItem "{65AD41D2DB0AB173}" {
+     TargetStorage "Vest/Vest_ALICE_rifleman.et/Buttpack/Vest_ALICE_buttpack.et"
+     PrefabsToSpawn {
+      "{9DB69176CEF0EE97}Prefabs/Weapons/Grenades/Smoke_ANM8HC.et" "{9DB69176CEF0EE97}Prefabs/Weapons/Grenades/Smoke_ANM8HC.et" "{9DB69176CEF0EE97}Prefabs/Weapons/Grenades/Smoke_ANM8HC.et" "{9DB69176CEF0EE97}Prefabs/Weapons/Grenades/Smoke_ANM8HC.et"
      }
     }
    }

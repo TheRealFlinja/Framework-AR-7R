@@ -1,0 +1,8 @@
+GenericEntity {
+ ID "65ACEE1AC6673474"
+ {
+  GenericEntity : "{D687EFAAB158642E}Prefabs/7R/Systems/ReinsertionFlag7R.et" {
+   ID "65AD2C52EF95DBC5"
+  }
+ }
+}

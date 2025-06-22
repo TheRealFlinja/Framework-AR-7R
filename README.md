@@ -8,8 +8,7 @@
 
 * 7R Core
     - Mission Manager
-    - Custom Actions menu for 7R (default keybind: H)
-    - Vehicle spawner
+    - Custom Commands menu for 7R (default keybind: H)
 * 7R Full
     - Empty add-on containing all dependencies
     - All in one subscribe
@@ -17,6 +16,7 @@
     - Loadout selection
     - US Vanilla loadouts
     - Supply loadouts
+    - Vehicle loadouts
 * 7R Missions
     - Add-on for storing missions
 * 7R Reinsertion
@@ -24,20 +24,20 @@
 * 7R Support System
     - Supplies
     - IDF
-* 7R Basic Respawn system
-    - Respawn with loadout
+    - Vehicle spawner with loadout
 
 ### Planned Features
 
 * 7R Core
     - Triggers
     - Custom Objectives
+    - Use AIGroups
     - Briefing
 * 7R Loadouts
-    - ActionContextMenu
+    - ActionContextMenu for boxes
 * 7R Support System
-    - CAS
-    - UAV
+    - CAS (not in AR yet)
+    - UAV (not in AR yet)
 * 7R Better Respawn System
 * 7R Warcrime Tracker
 

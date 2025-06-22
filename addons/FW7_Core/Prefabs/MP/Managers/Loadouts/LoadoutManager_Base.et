@@ -1,0 +1,5 @@
+SCR_LoadoutManager {
+ ID "56B2B47708C4F23A"
+ m_7RLoadoutImports S7R_LoadoutMasterConfig "{65ACEE18F9AFF61E}" : "{EC84B7A42C193057}Configs/Loadouts/7R/S7R_LoadoutMasterConfig.conf" {
+ }
+}

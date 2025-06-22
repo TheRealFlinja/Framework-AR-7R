@@ -1,0 +1,17 @@
+GenericEntity {
+ ID "65ACEE1F565FFA77"
+ {
+  PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+   ID "65ACEE1F565FFA72"
+   coords 1 0 0
+  }
+  RadioManagerEntity : "{B8E09FAB91C4ECCD}Prefabs/Radio/RadioManager.et" {
+   ID "65ACEE1F565FFA0F"
+   coords -1 0 0
+  }
+  ScriptedChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedChatEntity.et" {
+   ID "65ACEE1F950FC86B"
+   coords -2 0 0
+  }
+ }
+}

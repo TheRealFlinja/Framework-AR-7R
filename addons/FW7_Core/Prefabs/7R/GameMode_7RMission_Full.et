@@ -1,0 +1,20 @@
+SCR_BaseGameMode : "{271028FA52D6456A}Prefabs/MP/Modes/GameMode_7RMission.et" {
+ ID "56B2B479C6B96951"
+ {
+  SCR_EditorSettingsEntity {
+   ID "65AD01C75CACC652"
+   coords 0 0 -1
+  }
+  GenericEntity : "{1F16CFF7438828AD}Prefabs/7R/BaseWorldElements/BaseWorldElements.et" {
+   ID "65AD01C46E6F8992"
+   coords 0 0 -2
+  }
+  GenericEntity : "{A42405B57E686E96}Prefabs/7R/BaseMissionElements/BaseMissionElements.et" {
+   ID "65AD01C46E6F896C"
+  }
+  GenericEntity : "{C8E0818125917BD8}Prefabs/7R/BaseManagerElements/BaseManagerElements.et" {
+   ID "65AD01C46E6F8968"
+   coords 0 0 1
+  }
+ }
+}
