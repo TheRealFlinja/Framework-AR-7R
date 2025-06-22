@@ -6,8 +6,6 @@ SCR_BaseGameMode {
   }
   S7R_AISpawnHandlerComponent "{6542BB3525D9AA8B}" {
   }
-  S7R_MenuManagerComponent "{65929761B39DC329}" {
-  }
   S7R_MissionManagerComponent "{6542BB24CB3BB8BB}" {
    m_AIGroupTemplates {
     "{E552DABF3636C2AD}Prefabs/Groups/OPFOR/Group_USSR_RifleSquad.et" "{43C7A28EEB660FF8}Prefabs/Groups/OPFOR/Group_USSR_Team_GL.et" "{CB58D90EA14430AD}Prefabs/Groups/OPFOR/Group_USSR_SentryTeam.et" "{A2F75E45C66B1C0A}Prefabs/Groups/OPFOR/Group_USSR_MachineGunTeam.et" "{1C0502B5729E7231}Prefabs/Groups/OPFOR/Group_USSR_Team_Suppress.et"
@@ -179,7 +177,14 @@ SCR_BaseGameMode {
   S7R_ResourceHandlerComponent "{6542BB3AC3AD4B27}" {
   }
   S7R_SupportSystemManagerComponent "{65A12511AFD41B72}" {
-   m_sSupplyDrop "{556C771EBB02FE60}Prefabs/7R/LoadoutBoxes/BigBox.et"
+   m_sInfantrySupplyDrop "{19F40B0D4B7EA59E}Prefabs/7R/SupplyBoxes/InfantrySupplyDropBox7R.et"
+   m_sMedicalSupplyDrop "{6850AA89DE75A280}Prefabs/7R/SupplyBoxes/MedicalSupplyDropBox7R.et"
+   m_sMATSupplyDrop "{49140FFC854D94BA}Prefabs/7R/SupplyBoxes/MATSupplyDropBox7R.et"
+   m_sHATSupplyDrop "{9B0C45BC6FED52F3}Prefabs/7R/SupplyBoxes/HATSupplyDropBox7R.et"
+   m_sMMGSupplyDrop "{0A420A0ABE7961C1}Prefabs/7R/SupplyBoxes/MMGSupplyDropBox7R.et"
+   m_sMortarSupplyDrop "{9B3B654B9E9E9DEB}Prefabs/7R/SupplyBoxes/MortarSupplyDropBox7R.et"
+   m_iSupplySpawnHeight 100
+   m_iRandomSpawnOffset 20
   }
   SCR_AdditionalGameModeSettingsComponent "{6523010B4170073B}" {
    m_bEnableTeamKillPunishment 0

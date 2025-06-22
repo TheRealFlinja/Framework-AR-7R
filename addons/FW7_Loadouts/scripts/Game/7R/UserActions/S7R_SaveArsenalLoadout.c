@@ -31,6 +31,7 @@ modded class SCR_SaveArsenalLoadout : SCR_BaseFactionCheckUserAction
 		m_ArsenalManager.S7R_TrySavePlayerArsenalLoadout_S(m_sS7RSlotId, playerId, GameEntity.Cast(pUserEntity), m_ArsenalComponent, SCR_EArsenalSupplyCostType.DEFAULT);
 	}
 
+	/*
 	//------------------------------------------------------------------------------------------------
 	override protected void UpdateActionDisplayName(notnull IEntity user)
 	{
@@ -76,4 +77,5 @@ modded class SCR_SaveArsenalLoadout : SCR_BaseFactionCheckUserAction
 			return;
 		}
 	}
+	*/
 }

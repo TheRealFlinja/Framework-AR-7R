@@ -1,0 +1,9 @@
+GenericEntity : "{97B6A100990B7E88}Prefabs/7R/SupplyBoxes/BaseSupplyDropBox7R.et" {
+ ID "F0DBA538AC2A0552"
+ components {
+  S7R_Select7RItemsComponent "{65AC7E8BB780F62E}" {
+   m_bSupplyLoadout 1
+   m_eSupplyLoadoutType MortarSupply
+  }
+ }
+}

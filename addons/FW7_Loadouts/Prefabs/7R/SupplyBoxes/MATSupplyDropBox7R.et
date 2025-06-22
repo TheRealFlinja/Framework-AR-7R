@@ -1,0 +1,80 @@
+GenericEntity : "{17E6E7BC798AD3F4}Prefabs/Props/Military/SupplyBox/SupplyStack/SupplyStack_Small_01/SupplyStack_Small_01_Base.et" {
+ ID "F0DBA538AC2A0552"
+ components {
+  RigidBody "{5872F0EB7DFB5A9D}" {
+   Layers 257
+   Active Active
+   Mass 200
+   MasslessInertia 0.27 0.264 0.238
+   ResponseIndex "LargeMomentum"
+   Static 0
+  }
+  S7R_Select7RItemsComponent "{65AC7EBBD64DF6A8}" {
+   m_bSupplyLoadout 1
+   m_eSupplyLoadoutType MATSupply
+  }
+  SCR_ResourceComponent "{5D247A59598D71AE}" {
+   Enabled 0
+  }
+  SCR_UniversalInventoryStorageComponent "{65AC7EBBD64DF6B7}" {
+   Attributes SCR_ItemAttributeCollection "{65AC7EBBD64DF6B5}" {
+    ItemDisplayName SCR_InventoryUIInfo "{65AC7EBBD64DF6BB}" {
+     Name "Supply Box"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{65AC7EBBD64DF6B9}" {
+     Weight 5000
+     SizeSetupStrategy Volume
+     ItemVolume 5000
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{65AC7EBBD64DF6BD}" {
+      CameraOrbitAngles -25 -25 0
+      CameraDistanceToItem 2
+     }
+    }
+    m_SlotType SLOT_ANY
+   }
+   CapacityCoefficient 10000
+   InitialStorageSlots {
+    InventoryStorageSlot StorageSlot {
+     UpdateReplicationParent 1
+    }
+   }
+   MultiSlots {
+    MultiSlotConfiguration "{65AC7EBBD64DF687}" {
+     SlotTemplate InventoryStorageSlot StorageSlot {
+      Enabled 0
+     }
+     NumSlots 50
+    }
+   }
+   m_fMaxWeight 5000
+  }
+  SCR_InventoryStorageManagerComponent "{65AC7EBBD64DF68A}" {
+  }
+  ActionsManagerComponent "{65AC7EBBD64DF688}" {
+   ActionContexts {
+    UserActionContext "{65AC7EBBD64DF68E}" {
+     UIInfo UIInfo "{65AC7EBBD64DF68D}" {
+     }
+     ContextName "default"
+     Position PointInfo "{65AC7EBBD64DF692}" {
+     }
+     Radius 1
+    }
+   }
+   additionalActions {
+    SCR_OpenStorageAction "{65AC7EBBD64DF696}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{65AC7EBBD64DF69D}" {
+      Name "#AR-Inventory_OpenStorage"\
+      ""
+     }
+    }
+   }
+  }
+ }
+ Flags 3
+}

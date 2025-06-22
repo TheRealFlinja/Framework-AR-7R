@@ -42,7 +42,7 @@ class S7R_AISpawnHandlerComponent: ScriptComponent
 		if (!GetGame().InPlayMode())
 			return;
 		
-		m_resourceHandler = S7R_ResourceHandlerComponent.Cast(GetGame().GetGameMode().FindComponent(S7R_ResourceHandlerComponent));
+		m_resourceHandler = S7R_ResourceHandlerComponent.GetInstance();
 		
 		if (!m_resourceHandler)
 		{
@@ -71,7 +71,7 @@ class S7R_AISpawnHandlerComponent: ScriptComponent
 	// Resource Handler functions
 	private Resource GenerateAndValidateResource(string resourceToLoad)
 	{
-		m_resourceHandler = S7R_ResourceHandlerComponent.Cast(GetOwner().FindComponent(S7R_ResourceHandlerComponent));
+		m_resourceHandler = S7R_ResourceHandlerComponent.GetInstance();
 		
 		if (!m_resourceHandler)
 		{
@@ -84,7 +84,7 @@ class S7R_AISpawnHandlerComponent: ScriptComponent
 	
 	private EntitySpawnParams GenerateSpawnParameters(vector spawnPosition)
 	{
-		m_resourceHandler = S7R_ResourceHandlerComponent.Cast(GetOwner().FindComponent(S7R_ResourceHandlerComponent));
+		m_resourceHandler = S7R_ResourceHandlerComponent.GetInstance();
 		
 		if (!m_resourceHandler)
 		{
@@ -232,5 +232,16 @@ class S7R_AISpawnHandlerComponent: ScriptComponent
 		}
 		
 		return waypoint;
+	}
+	
+	//------------------------------------------------------------------------------------------------
+	// constructor
+	//! \param[in] src
+	//! \param[in] ent
+	//! \param[in] parent
+	void S7R_AISpawnHandlerComponent(IEntityComponentSource src, IEntity ent, IEntity parent)
+	{
+		if (!s_Instance)
+			s_Instance = this;
 	}
 }

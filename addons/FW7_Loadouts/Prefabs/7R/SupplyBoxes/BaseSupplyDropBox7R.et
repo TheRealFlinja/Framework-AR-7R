@@ -1,0 +1,78 @@
+GenericEntity : "{17E6E7BC798AD3F4}Prefabs/Props/Military/SupplyBox/SupplyStack/SupplyStack_Small_01/SupplyStack_Small_01_Base.et" {
+ ID "F0DBA538AC2A0552"
+ components {
+  RigidBody "{5872F0EB7DFB5A9D}" {
+   Layers 257
+   Active Active
+   Mass 200
+   MasslessInertia 0.27 0.264 0.238
+   ResponseIndex "LargeMomentum"
+   Static 0
+  }
+  S7R_Select7RItemsComponent "{65AC7E8BB780F62E}" {
+  }
+  SCR_ResourceComponent "{5D247A59598D71AE}" {
+   Enabled 0
+  }
+  SCR_UniversalInventoryStorageComponent "{65AC7E8B5AA049A1}" {
+   Attributes SCR_ItemAttributeCollection "{65AC7E89055BE495}" {
+    ItemDisplayName SCR_InventoryUIInfo "{65AC7E8919F21E99}" {
+     Name "Supply Box"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{65AC7E89142FED93}" {
+     Weight 5000
+     SizeSetupStrategy Volume
+     ItemVolume 5000
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{65AC7E89A09F9E4B}" {
+      CameraOrbitAngles -25 -25 0
+      CameraDistanceToItem 2
+     }
+    }
+    m_SlotType SLOT_ANY
+   }
+   CapacityCoefficient 10000
+   InitialStorageSlots {
+    InventoryStorageSlot StorageSlot {
+     UpdateReplicationParent 1
+    }
+   }
+   MultiSlots {
+    MultiSlotConfiguration "{65AC7E89E0D4E94E}" {
+     SlotTemplate InventoryStorageSlot StorageSlot {
+      Enabled 0
+     }
+     NumSlots 50
+    }
+   }
+   m_fMaxWeight 5000
+  }
+  SCR_InventoryStorageManagerComponent "{65AC7E8909DA494E}" {
+  }
+  ActionsManagerComponent "{65AC7E8B5AA049A2}" {
+   ActionContexts {
+    UserActionContext "{65AC7E8B5AA049BE}" {
+     UIInfo UIInfo "{65AC7E8B5AA049B9}" {
+     }
+     ContextName "default"
+     Position PointInfo "{65AC7E8B5AA049BA}" {
+     }
+     Radius 1
+    }
+   }
+   additionalActions {
+    SCR_OpenStorageAction "{65AC7E8B5AA049B3}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{65AC7E8B5AA04849}" {
+      Name "#AR-Inventory_OpenStorage"\
+      ""
+     }
+    }
+   }
+  }
+ }
+ Flags 3
+}

@@ -63,9 +63,9 @@ GenericEntity {
      Name "7R Big Box"
     }
     ItemPhysAttributes ItemPhysicalAttributes "{659E9862075BADC3}" {
-     Weight 1000000
+     Weight 50
      SizeSetupStrategy Volume
-     ItemVolume 1000000
+     ItemVolume 2000
     }
     CustomAttributes {
      PreviewRenderAttributes "{659E98463C36EF5A}" {
@@ -92,7 +92,7 @@ GenericEntity {
      NumSlots 50
     }
    }
-   m_fMaxWeight 1000000
+   m_fMaxWeight 2000
    m_aSlotsToShow {
    }
   }
