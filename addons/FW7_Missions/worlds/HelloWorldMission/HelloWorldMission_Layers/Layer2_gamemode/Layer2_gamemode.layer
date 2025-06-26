@@ -287,7 +287,6 @@ SCR_BaseGameMode {
    }
   }
   SCR_GameModeHealthSettings "{651F0CC663E62F9F}" {
-   m_bPermitUnconsciousVON 1
   }
   SCR_GameOverScreenManagerComponent "{651F0CC663E62F9D}" {
    m_GameOverScreenConfig SCR_GameOverScreenConfig "{651F0CC7CF671264}" {
