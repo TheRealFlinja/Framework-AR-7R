@@ -76,6 +76,7 @@ enum ESquadRoles7R
 	SquadBattleRifle = 42,	//! <Squad BattleRifle Role>
 	SquadSpecialist = 43,	//! <Squad Specialist Role>
 	SquadBreacher = 44,		//! <Squad Breacher Role>
+	SquadSpecialist2 = 45,	//! <Squad Specialist 2 Role>
 	
 	// Heavy Weapons Roles
 	

@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{4547E5E8845909EE}Prefabs/Characters/7R/US_Vanilla/Character_US_Vanilla_Operator_EngFort_7R.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{11C7ACEE3FFA3C4D}Prefabs/Characters/7R/US_Vanilla/Character_US_Vanilla_Operator_MMGAss_7R.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

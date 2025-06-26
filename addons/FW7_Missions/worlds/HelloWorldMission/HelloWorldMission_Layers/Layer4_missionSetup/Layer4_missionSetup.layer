@@ -213,11 +213,14 @@ SCR_SpawnPoint {
   IconSetName "US_Base"
  }
 }
+GenericEntity : "{26EA1CF697D0ACB2}Prefabs/7R/LoadoutBoxes/PlatoonLoadoutBox.et" {
+ coords 3910.55 15.219 8423.293
+}
 GenericEntity : "{556C771EBB02FE60}Prefabs/7R/LoadoutBoxes/BigBox.et" {
  coords 3905.45 15.219 8423.633
  angleY 5.506
 }
 GenericEntity : "{68628F92E7448920}Prefabs/7R/LoadoutBoxes/SquadLoadoutBox.et" {
- coords 3911.368 15.219 8423.064
+ coords 3908.231 15.219 8423.438
  angleY 0.37
 }
