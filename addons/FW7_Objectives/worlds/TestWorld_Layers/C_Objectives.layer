@@ -1,0 +1,16 @@
+SCR_TriggerTask : "{7259F0B101761BD5}Prefabs/Tasks/MoveTask.et" {
+ components {
+  SCR_MapDescriptorComponent "{55D072570E7E8AB7}" {
+   MainType "Icon (generic)"
+   UnitType Infantry
+  }
+ }
+ coords 6413.289 160.424 6484.362
+ {
+  SCR_FactionPlayerTriggerEntity trigger_1 {
+   ID "55D072570E7E8ABF"
+   DrawShape 1
+   m_sOwnerFactionKey "7R"
+  }
+ }
+}

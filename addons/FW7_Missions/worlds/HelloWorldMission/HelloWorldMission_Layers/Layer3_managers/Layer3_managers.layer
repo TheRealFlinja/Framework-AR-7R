@@ -11019,27 +11019,6 @@ SCR_BaseTaskManager {
   SCR_EditorTaskSupportEntity {
    m_sTaskPrefab "{3AD0A1257870E6C7}Prefabs/Tasks/CustomTask.et"
   }
-  SCR_ScenarioFrameworkTaskClearAreaSupportEntity {
-   coords 26.159 0 -5.561
-  }
-  SCR_ScenarioFrameworkTaskDefendSupportEntity {
-   coords 0.039 -0.46 -0.373
-  }
-  SCR_ScenarioFrameworkTaskDeliverSupportEntity {
-   coords 27.003 0 -8.09
-  }
-  SCR_ScenarioFrameworkTaskDestroySupportEntity {
-   coords 26.723 0 -14.302
-  }
-  SCR_ScenarioFrameworkTaskExtractSupportEntity {
-   coords 26.681 0 -21.389
-  }
-  SCR_ScenarioFrameworkTaskKillSupportEntity {
-   coords -0.241 -0.531 -0.447
-  }
-  SCR_ScenarioFrameworkTaskSupportEntity {
-   coords 29.739 0 -15.822
-  }
   SCR_TriggerTaskSupportEntity {
    m_sTaskPrefab "{830711F178046FA7}Prefabs/Tasks/BaseTriggerTask.et"
   }
