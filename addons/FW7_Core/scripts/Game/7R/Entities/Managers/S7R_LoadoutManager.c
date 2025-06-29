@@ -274,7 +274,7 @@ modded class SCR_LoadoutManager : GenericEntity
 		// Find the base loadout
 		if (!m_7RLoadoutImports)
 		{
-			Print("[S7R_LoadoutManager: EOnActivate] Master Config is empty", LogLevel.ERROR);
+			Print("[S7R_LoadoutManager: EOnInit] Master Config is empty", LogLevel.ERROR);
 			return;
 		}
 		
@@ -282,17 +282,18 @@ modded class SCR_LoadoutManager : GenericEntity
 		
 		if (!m_BaseLoadout)
 		{
-			Print("[S7R_LoadoutManager: EOnActivate] No base loadout found", LogLevel.ERROR);
+			Print("[S7R_LoadoutManager: EOnInit] No base loadout found", LogLevel.ERROR);
 			return;
 		}
 		
 		// Find the faction loadouts
 		m_aPlayerLoadouts.Insert(m_BaseLoadout);
 		GetOnMappedPlayerLoadoutInfoChanged();
+		OnPlayerLoadoutInfoChanged();
 		
 		if (!m_7RLoadoutImports.GetLoadoutsFromFactionKey(m_eFactionLoadout7RKey))
 		{
-			Print(("[S7R_LoadoutManager: EOnActivate] No loadout found for Factionkey " + m_eFactionLoadout7RKey), LogLevel.ERROR);
+			Print(("[S7R_LoadoutManager: EOnInit] No loadout found for Factionkey " + m_eFactionLoadout7RKey), LogLevel.ERROR);
 			return;
 		}
 		

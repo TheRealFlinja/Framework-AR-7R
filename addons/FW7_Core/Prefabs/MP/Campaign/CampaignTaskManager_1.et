@@ -1,0 +1,31 @@
+SCR_BaseTaskManager {
+ ID "65B8A80874B59958"
+ components {
+  SCR_TextsTaskManagerComponent "{58F0BAE2BB50533C}" : "{6F59CB11B5383430}Prefabs/MP/Managers/Tasks/TaskManagerComponent.ct" {
+  }
+  SCR_UITaskManagerComponent "{65B8A80874B57C09}" {
+  }
+  RplComponent "{65B8A80874B57C05}" {
+   Streamable Disabled
+  }
+ }
+ {
+  SCR_CampaignTaskSupportEntity : "{44E2F4E355FDF0DF}Prefabs/Tasks/SupportEntities/CampaignTaskSupportEntity.et" {
+   ID "65B8A80874B5995C"
+   coords 0 0 0
+  }
+  SCR_TriggerTaskSupportEntity : "{4C8DA18200A21299}Prefabs/Tasks/SupportEntities/TriggerTaskSupportEntity.et" {
+   ID "65B8A80874B59953"
+  }
+  SCR_CampaignBuildingTaskSupportEntity : "{B5CCD7203D442A19}Prefabs/Tasks/SupportEntities/CampaignBuildingTaskSupportEntity.et" {
+   ID "65B8A80874B59952"
+   coords 0 0 0
+  }
+  SCR_EditorTaskSupportEntity : "{CB9D29FD69ABF3F3}Prefabs/Tasks/SupportEntities/EditorTaskSupportEntity.et" {
+   ID "65B8A80874B59951"
+  }
+  SCR_BaseTaskSupportEntity : "{F927E136363469D2}Prefabs/Tasks/SupportEntities/BaseTaskSupportEntity.et" {
+   ID "65B8A80874B57C13"
+  }
+ }
+}

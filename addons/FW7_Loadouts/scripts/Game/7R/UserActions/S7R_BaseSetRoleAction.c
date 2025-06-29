@@ -20,6 +20,18 @@ class S7R_BaseSetRoleAction : SCR_ScriptedUserAction
 	}
 	
 	//------------------------------------------------------------------------------------------------
+	protected bool IsValidLoadout(SCR_PlayerArsenalLoadout loadout)
+	{
+		if (!loadout)
+			return false;
+		
+		if(!loadout.GetFactionKey() || !loadout.GetLoadoutResource())
+			return false;
+		
+		return true;
+	}
+	
+	//------------------------------------------------------------------------------------------------
 	override bool CanBeShownScript(IEntity user)
 	{
 		if (!super.CanBeShownScript(user))
@@ -42,7 +54,9 @@ class S7R_BaseSetRoleAction : SCR_ScriptedUserAction
 		if (!super.CanBePerformedScript(user))
 			return false;
 		
-		if (!RetrieveLoadout(m_Loadout))
+		
+		
+		if (!RetrieveLoadout(m_Loadout) || !IsValidLoadout(m_Loadout))
 		{
 			m_sCannotPerformReason = "Role not found";
 			return false;

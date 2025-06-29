@@ -1,0 +1,14 @@
+SCR_BaseGameMode GameMode_7RMission_Full1 : "{A3E360547DEFC3D5}Prefabs/7R/GameMode_7RMission_Full.et" {
+ coords 6431.257 162.094 6482.902
+ {
+  GenericEntity {
+   ID "65AD01C46E6F8968"
+   {
+    SCR_LoadoutManager {
+     ID "65ACEE196CC227B7"
+     m_eFactionLoadout7RKey USVanilla
+    }
+   }
+  }
+ }
+}

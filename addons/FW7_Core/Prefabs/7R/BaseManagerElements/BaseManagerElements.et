@@ -5,8 +5,12 @@ GenericEntity {
    ID "65ACEE19CCAAF61D"
    coords 2 0 0
   }
-  SCR_BaseTaskManager : "{1AC69CD7907FB4F8}Prefabs/Systems/ScenarioFramework/Tasks/TaskManager.et" {
-   ID "65ACEE19B854E419"
+  SCR_EditorManagerEntity : "{788933FFDC706A68}Prefabs/Editor/EditorManager.et" {
+   ID "65B8A9C650C2F36B"
+   coords -2 0 0
+  }
+  SCR_BaseTaskManager : "{87208DAD6F3C0DE2}Prefabs/MP/Managers/Tasks/TaskManager_Editor.et" {
+   ID "65B8A9C67CF3553B"
    coords -1 0 0
   }
   SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutManager_Base.et" {

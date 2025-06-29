@@ -111,4 +111,15 @@ class S7R_MissionManagerComponent: ScriptComponent
 			}
 		}
 	}
+	
+	//------------------------------------------------------------------------------------------------
+	// constructor
+	//! \param[in] src
+	//! \param[in] ent
+	//! \param[in] parent
+	void S7R_MissionManagerComponent(IEntityComponentSource src, IEntity ent, IEntity parent)
+	{
+		if (!s_Instance)
+			s_Instance = this;
+	}
 }
