@@ -8,21 +8,45 @@ $grp GenericEntity {
  s_3_1 {
   coords 4450.12 12.869 10734.684
  }
+ s_3_4 {
+  coords 4428.983 9.495 11024.59
+ }
+ s_3_5 {
+  coords 4451.503 5.779 11106.236
+ }
+ s_3_6 {
+  coords 4449.944 5.78 11199.951
+ }
+ s_3_7 {
+  coords 4398.071 1.593 11171.512
+ }
+ s_3_8 {
+  coords 4447.343 2.393 11046.332
+ }
+ s_3_9 {
+  coords 4465.83 2.581 11081.223
+ }
+ s_3_10 {
+  coords 4651.357 27.802 11209.91
+ }
+ s_3_11 {
+  coords 4647.874 27.72 11129.643
+ }
+ s_3_12 {
+  coords 4602.092 25.343 11193.246
+ }
 }
-S7R_FactionControlTriggerEntity B_phase3_trigger {
- coords 4558.442 16.047 10498.757
- TriggerShapeType Sphere
- SphereRadius 50
- BoxMins -1000 -50 -80
- BoxMaxs 1000 100 80
+SCR_FactionPlayerTriggerEntity a_phase3_trigger {
+ coords 4559.111 20.308 10487.584
+ angleY 22.178
+ TriggerShapeType "Oriented Bounding Box"
+ SphereRadius 100
+ BoxMins -800 -200 -100
+ BoxMaxs 800 200 100
  TriggerActivationType "First change"
  PeriodicQueries 1
- UpdatePeriod 1
- RunDefaultQueryFirst 0
- m_sOwnerFactionKey "7R"
+ m_bActivateMissionPhase 1
  m_iActivateMissionPhase 3
- m_iRatioMethod "More than"
- m_fFriendlyRatioLimit 0.01
 }
 SCR_SearchAndDestroyWaypoint sd_3_1 {
  coords 4532.076 16.002 10402.422
@@ -35,5 +59,27 @@ SCR_SearchAndDestroyWaypoint sd_3_1 {
  CompletionType Any
  m_TimedWaypointParameters SCR_AITimedWaypointParameters "{6548D99C9DFAB42F}" {
   m_holdingTime 600
+ }
+}
+$grp SCR_DefendWaypoint : "{93291E72AC23930F}Prefabs/AI/Waypoints/AIWaypoint_Defend.et" {
+ d_3_1 {
+  coords 4428.191 3.234 11025.328
+  CompletionRadius 10
+ }
+ d_3_2 {
+  coords 4445.091 1.594 11156.03
+  CompletionRadius 100
+ }
+ d_3_3 {
+  coords 4447.946 2.895 11046.445
+  CompletionRadius 5
+ }
+ d_3_4 {
+  coords 4463.823 3.535 11079.313
+  CompletionRadius 18
+ }
+ d_3_5 {
+  coords 4638.346 27.844 11165.521
+  CompletionRadius 75
  }
 }

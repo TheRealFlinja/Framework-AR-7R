@@ -6,8 +6,8 @@ TO DO:
 
 */
 
-
-class IMissionPhaseEvent: ScriptAndConfig
+[BaseContainerProps()]
+class IMissionPhaseEvent
 {
 	[Attribute("5", UIWidgets.Auto, category: "Parameters")]
 	protected int m_iExecutionDelay;

@@ -22,7 +22,9 @@ class S7R_MissionManagerComponent: ScriptComponent
 	protected bool m_bValidated = false;
 	protected int m_iCurrentPhase = 0;
 	
+	protected RplComponent m_rplComponent;
 	protected S7R_AISpawnHandlerComponent m_aiSpawner;
+	protected SCR_HintManagerComponent m_hintManager;
 	
 	protected static S7R_MissionManagerComponent s_Instance;
 	
@@ -69,11 +71,42 @@ class S7R_MissionManagerComponent: ScriptComponent
 	*/
 	
 	//------------------------------------------------------------------------------------------------
-	void ActivatePhase(int missionPhaseNumber)
+	bool CanPhaseBeActivated(int missionPhaseNumber)
 	{
+		m_rplComponent = RplComponent.Cast(GetOwner().FindComponent(RplComponent));
+		if (!m_rplComponent)
+		{
+			Print("[S7R_MissionManagerComponent: CanPhaseBeActivated] No Replication component found", LogLevel.ERROR);
+			return false;
+		}
+		
 		if (missionPhaseNumber < 0)
 		{
-			Print("[S7R_MissionManagerComponent] ActivatePhase, Invalid phase given", LogLevel.ERROR);
+			Print("[S7R_MissionManagerComponent: CanPhaseBeActivated] Invalid phase given", LogLevel.ERROR);
+			return false;
+		}
+		
+		foreach(S7R_MissionPhase missionPhase: this.m_aMissionPhases)
+		{
+			if (missionPhase.GetMissionPhaseNumber() == missionPhaseNumber && !missionPhase.HasPhaseBeenActivated())
+			{
+				return true;
+			}
+		}
+		
+		return false;
+	}
+	
+	//------------------------------------------------------------------------------------------------
+	void ActivatePhase(int missionPhaseNumber)
+	{
+		// Execute only on server
+		if (!m_rplComponent || m_rplComponent.IsProxy())
+			return;
+		
+		if (missionPhaseNumber < 0)
+		{
+			Print("[S7R_MissionManagerComponent: ActivatePhase] Invalid phase given", LogLevel.ERROR);
 			return;
 		}
 		
@@ -82,7 +115,7 @@ class S7R_MissionManagerComponent: ScriptComponent
 			if (missionPhase.GetMissionPhaseNumber() == missionPhaseNumber)
 			{
 				missionPhase.ActivatePhase();
-				Print("[S7R_MissionManagerComponent] Phase activated", LogLevel.DEBUG);
+				Print("[S7R_MissionManagerComponent: ActivatePhase] Phase activated", LogLevel.DEBUG);
 				return;
 			}
 		}
@@ -96,11 +129,34 @@ class S7R_MissionManagerComponent: ScriptComponent
 		if (!GetGame().InPlayMode())
 			return;
 		
+		m_hintManager = SCR_HintManagerComponent.GetInstance();
+		
+		if (!m_hintManager)
+		{
+			Print("[S7R_MissionManagerComponent: OnPostInit] No hint manager found", LogLevel.ERROR);
+			return;
+		}
+		
+		m_rplComponent = RplComponent.Cast(GetOwner().FindComponent(RplComponent));
+		if (!m_rplComponent)
+		{
+			Print("[S7R_MissionManagerComponent: OnPostInit] No Replication component found", LogLevel.ERROR);
+			return;
+		}
+		
 		GetGame().GetCallqueue().CallLater(ValidateMissionPhases, 5000);
 	}
 	
 	protected void ValidateMissionPhases()
 	{
+		if (!m_hintManager)
+		{
+			Print("[S7R_MissionManagerComponent: ValidateMissionPhases] No hint manager found", LogLevel.ERROR);
+			return;
+		}
+		
+		m_hintManager.ShowCustom(description: "Validation of Mission Phases started", name: "Mission Manager Validation", duration: 5.0, type: EHint.UNDEFINED);
+		
 		m_bValidated = false;
 		foreach(S7R_MissionPhase missionPhase: this.m_aMissionPhases)
 		{

@@ -21,21 +21,6 @@ $grp GenericEntity {
   coords 4528.987 14.749 9427.157
  }
 }
-S7R_FactionControlTriggerEntity B_phase0_missionstart {
- coords 3948.733 12.874 8599.305
- TriggerShapeType "Oriented Bounding Box"
- SphereRadius 250
- BoxMins -500 -20 -50
- BoxMaxs 500 200 50
- TriggerActivationType "First change"
- PeriodicQueries 1
- UpdatePeriod 1
- RunDefaultQueryFirst 0
- m_sOwnerFactionKey "7R"
- m_iActivateMissionPhase 0
- m_iRatioMethod "More than"
- m_fFriendlyRatioLimit 0.1
-}
 SCR_AIWaypoint p_0_1 {
  coords 4501.137 16.617 9524.159
  Type "Patrol"
@@ -62,7 +47,18 @@ SCR_BoardingTimedWaypoint gin_0_1 {
   m_holdingTime 5
  }
 }
+SCR_FactionPlayerTriggerEntity a_phase0_trigger {
+ coords 3958.596 12.051 8687.712
+ TriggerShapeType "Oriented Bounding Box"
+ BoxMins -200 -200 -100
+ BoxMaxs 200 200 100
+ TriggerActivationType "First change"
+ PeriodicQueries 1
+ m_bActivateMissionPhase 1
+ m_iActivateMissionPhase 0
+ m_sOwnerFactionKey "7R"
+}
 GenericEntity : "{114DE81321786CD9}Prefabs/Compositions/Slotted/SlotFlatSmall/MachineGunNest_S_USSR_01_PKM.et" {
- coords 4451.194 10.107 9421.745
+ coords 4451.128 10.107 9422.726
  angleY 176.184
 }
