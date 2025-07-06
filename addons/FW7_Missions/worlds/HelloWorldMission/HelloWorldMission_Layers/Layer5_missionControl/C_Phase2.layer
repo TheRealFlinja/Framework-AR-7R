@@ -1,3 +1,6 @@
+SCR_MapEntity MapEntity_Everon2 : "{E1B88C66BF6CA1F9}Prefabs/World/Game/MapEntity_Everon.et" {
+ coords 4154.186 3.224 9455.151
+}
 $grp GenericEntity {
  s_2_1 {
   coords 4584.028 15.896 10492.251
@@ -20,21 +23,6 @@ $grp GenericEntity {
  s_2_7 {
   coords 4525.573 14.158 10377.01
  }
-}
-S7R_FactionControlTriggerEntity B_phase2_trigger {
- coords 4560.828 17.222 9824.646
- TriggerShapeType "Oriented Bounding Box"
- SphereRadius 250
- BoxMins -1000 -50 -80
- BoxMaxs 1000 100 160
- TriggerActivationType "First change"
- PeriodicQueries 1
- UpdatePeriod 1
- RunDefaultQueryFirst 0
- m_sOwnerFactionKey "7R"
- m_iActivateMissionPhase 2
- m_iRatioMethod "More than"
- m_fFriendlyRatioLimit 0.01
 }
 SCR_BoardingTimedWaypoint gin_2_1 {
  coords 4584.831 16.52 10491.09
@@ -108,6 +96,17 @@ $grp SCR_DefendWaypoint {
    }
   }
  }
+}
+SCR_FactionPlayerTriggerEntity a_phase2_trigger {
+ coords 4458.916 19.766 9954.946
+ TriggerShapeType "Oriented Bounding Box"
+ BoxMins -600 -200 -100
+ BoxMaxs 600 200 100
+ TriggerActivationType "First change"
+ PeriodicQueries 1
+ m_bActivateMissionPhase 1
+ m_iActivateMissionPhase 2
+ m_sOwnerFactionKey "7R"
 }
 GenericEntity : "{6E9190BC2713551D}Prefabs/Compositions/Slotted/BuildableComposition_Base.et" {
  components {

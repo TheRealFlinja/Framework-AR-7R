@@ -5,8 +5,7 @@ TO DO:
 	Find a OnInit functionality to load in AISpawner => Maybe change inherited class or put Missionmanager/AISpawner somewhere more logical
 
 */
-
-
+[BaseContainerProps(), SCR_BaseContainerCustomTitleField("m_sSpawnpoint", "Spawn: %1")]
 class SpawnTemplate: IMissionPhaseEvent
 {
 	[Attribute("0", UIWidgets.Auto, category: "SpawnParameters")]

@@ -19,7 +19,7 @@ modded class SCR_BaseTriggerEntity : ScriptedGameTriggerEntity
 			return;
 		}
 		
-		if (m_bActivateMissionPhase)
+		if (m_bActivateMissionPhase && missionManager.CanPhaseBeActivated(m_iActivateMissionPhase))
 			missionManager.ActivatePhase(m_iActivateMissionPhase);
 	}
 }

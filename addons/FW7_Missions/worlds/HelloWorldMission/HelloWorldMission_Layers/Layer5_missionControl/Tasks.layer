@@ -8,7 +8,7 @@ SCR_TaskDestroyObject task_4 {
  }
  coords 4930.648 28.775 11761.216
  m_sName "#AR-Commanding_Command_SaD"
- m_sDescription "#AR-Editor_ContextAction_NeutralizeEntity_Description"
+ m_sDescription "The vehicles have already been moved to the nearby airport. Destroy them"
  m_sMapIconName "Task_Sabotage"
  m_sTaskListIconName "Task_Sabotage"
  m_bNotifyAssignment 1
@@ -101,12 +101,12 @@ $grp SCR_TriggerTask {
     MainType "Radio/ Tower"
    }
   }
+  Flags 2
   coords 4421.438 3.99 11089.206
   m_sName "Destroy enemy Equipment"
   m_sDescription "Capture the Harbour and destroy the equipment"
   m_sTaskListIconName "Task_Seize"
   m_bNotifyAssignment 1
-  m_bOnTriggerDeactivate 1
   {
    SCR_FactionPlayerTriggerEntity {
     components {
@@ -122,7 +122,6 @@ $grp SCR_TriggerTask {
     coords 32.83 0 142.993
     TriggerShapeType Sphere
     SphereRadius 20
-    DrawShape 1
     TriggerActivationType "All changes"
     PeriodicQueries 1
     ClassesFilter {

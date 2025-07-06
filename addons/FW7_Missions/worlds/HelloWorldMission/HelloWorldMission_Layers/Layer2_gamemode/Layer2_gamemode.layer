@@ -15,50 +15,51 @@ SCR_BaseGameMode {
      m_sMissionPhaseName "Mission start"
      _missionPhaseNumber 0
      m_missionPhaseEvents {
-      SpawnTemplate "{65487848F5379DC9}" {
+      SpawnTemplate "{65CCC505607E0CF2}" {
        m_iTemplate 2
        m_sSpawnpoint "s_0_1"
        m_aWaypoints {
         "p_0_1"
        }
       }
-      SpawnTemplate "{6548784D597FBEC7}" {
+      SpawnTemplate "{65CCC5054C944EAA}" {
        m_iTemplate 2
        m_sSpawnpoint "s_0_2"
        m_aWaypoints {
         "p_0_1"
        }
       }
-      SpawnTemplate "{6548784D4C65102B}" {
-       m_iTemplate 2
+      SpawnTemplate "{65CCC5054D83339C}" {
+       m_iTemplate 3
        m_sSpawnpoint "s_0_3"
        m_aWaypoints {
         "p_0_1"
        }
       }
-      SpawnTemplate "{6548785321C4A6C9}" {
+      SpawnTemplate "{65CCC505429025C9}" {
        m_iTemplate 2
        m_sSpawnpoint "s_0_4"
        m_aWaypoints {
         "p_0_1"
        }
       }
-      SpawnTemplate "{6548D995F44DD8D1}" {
+      SpawnTemplate "{65CCC50557B344AB}" {
        m_iTemplate 2
        m_sSpawnpoint "s_0_5"
        m_aWaypoints {
         "gin_0_1"
        }
       }
-      SpawnTemplate "{6548D994A9194BC1}" {
-       m_sSpawnpoint "s_0_7"
+      SpawnTemplate "{65CCC50556429E9D}" {
+       m_iTemplate 2
+       m_sSpawnpoint "s_0_6"
        m_aWaypoints {
         "p_0_1"
        }
       }
-      SpawnTemplate "{6548D994B72D7195}" {
+      SpawnTemplate "{65CCC50551055022}" {
        m_iTemplate 2
-       m_sSpawnpoint "s_0_6"
+       m_sSpawnpoint "s_0_7"
        m_aWaypoints {
         "p_0_1"
        }
@@ -68,52 +69,50 @@ SCR_BaseGameMode {
     S7R_MissionPhase "{6542BB48D20C5DB9}" {
      m_sMissionPhaseName "Mission Phase 1"
      m_missionPhaseEvents {
-      SpawnTemplate "{6542BB4DBA95D49C}" {
-       m_iExecutionDelay 60
+      SpawnTemplate "{65CCC5059B56DAEA}" {
+       m_iExecutionDelay 30
        m_sSpawnpoint "s_1_1"
        m_aWaypoints {
-        "w_1_1" "sd_1_1"
+        "" "sd_1_1"
        }
       }
-      SpawnTemplate "{65487841A5161C44}" {
-       m_iExecutionDelay 5
+      SpawnTemplate "{65CCC505D3623069}" {
        m_iTemplate 1
        m_sSpawnpoint "s_1_2"
        m_aWaypoints {
-        "w_1_1" "sd_1_1"
+        "" "sd_1_1"
        }
       }
-      SpawnTemplate "{65487849CB213039}" {
+      SpawnTemplate "{65CCC505D0493B4C}" {
        m_sSpawnpoint "s_1_3"
        m_aWaypoints {
-        "w_1_1" "sd_1_1"
+        "" "sd_1_1"
        }
       }
-      SpawnTemplate "{65487853604A2FEB}" {
-       m_iExecutionDelay 120
+      SpawnTemplate "{65CCC506264BD989}" {
+       m_iExecutionDelay 30
        m_sSpawnpoint "s_1_4"
        m_aWaypoints {
-        "w_1_1" "sd_1_1"
+        "sd_1_1"
        }
       }
-      SpawnTemplate "{65487853798B717F}" {
+      SpawnTemplate "{65CCC506278AD23E}" {
        m_sSpawnpoint "s_1_5"
        m_aWaypoints {
-        "w_1_1" "sd_1_1"
+        "sd_1_1"
        }
       }
-      SpawnTemplate "{6548785340802A05}" {
-       m_iExecutionDelay 30
+      SpawnTemplate "{65CCC506249C45E0}" {
        m_sSpawnpoint "s_1_6"
        m_aWaypoints {
-        "w_1_1" "sd_1_1"
+        "sd_1_1"
        }
       }
-      SpawnTemplate "{65487855372850E1}" {
-       m_iExecutionDelay 10
+      SpawnTemplate "{65CCC50636A9A674}" {
+       m_iTemplate 1
        m_sSpawnpoint "s_1_7"
        m_aWaypoints {
-        "w_1_1" "sd_1_1"
+        "sd_1_1"
        }
       }
      }
@@ -122,50 +121,221 @@ SCR_BaseGameMode {
      m_sMissionPhaseName "Mission Phase 2"
      _missionPhaseNumber 2
      m_missionPhaseEvents {
-      SpawnTemplate "{6548D9907DFA7419}" {
+      SpawnTemplate "{65CCC5066C97EEF5}" {
        m_iTemplate 2
        m_sSpawnpoint "s_2_1"
        m_aWaypoints {
         "gin_2_1"
        }
       }
-      SpawnTemplate "{6548D990ADA1C32C}" {
-       m_iTemplate 4
+      SpawnTemplate "{65CCC5069E05EE82}" {
+       m_iTemplate 3
        m_sSpawnpoint "s_2_2"
        m_aWaypoints {
         "d_2_1"
        }
       }
-      SpawnTemplate "{6548D990BB8D058C}" {
+      SpawnTemplate "{65CCC506ECB35D5A}" {
        m_iTemplate 4
        m_sSpawnpoint "s_2_3"
        m_aWaypoints {
         "d_2_1"
        }
       }
-      SpawnTemplate "{6548D9908D6AFBD0}" {
+      SpawnTemplate "{65CCC5069CBEAA35}" {
        m_sSpawnpoint "s_2_4"
        m_aWaypoints {
         "d_2_2"
        }
       }
-      SpawnTemplate "{6548D990E804DFEB}" {
+      SpawnTemplate "{65CCC5069F6F1BC6}" {
+       m_iTemplate 1
        m_sSpawnpoint "s_2_5"
        m_aWaypoints {
         "d_2_2"
        }
       }
-      SpawnTemplate "{6548D990E68C57F2}" {
+      SpawnTemplate "{65CCC506DF38A4EC}" {
+       m_iTemplate 3
        m_sSpawnpoint "s_2_6"
        m_aWaypoints {
         "d_2_2"
        }
       }
-      SpawnTemplate "{6548D990F411E6DF}" {
-       m_iTemplate 2
-       m_sSpawnpoint "s_2_7"
+      SpawnTemplate "{65CCC506DFD2A86C}" {
+       m_iTemplate 4
+       m_sSpawnpoint "s_2_6"
        m_aWaypoints {
         "d_2_2"
+       }
+      }
+     }
+    }
+    S7R_MissionPhase "{65CCA114D207DA7C}" {
+     m_sMissionPhaseName "Mission Phase 3"
+     _missionPhaseNumber 3
+     m_missionPhaseEvents {
+      SpawnTemplate "{65CCC507093B2CC4}" {
+       m_iExecutionDelay 10
+       m_sSpawnpoint "s_3_1"
+       m_aWaypoints {
+        "sd_3_1"
+       }
+      }
+      SpawnTemplate "{65CCC507688C65AB}" {
+       m_iTemplate 1
+       m_sSpawnpoint "s_3_2"
+       m_aWaypoints {
+        "sd_3_1"
+       }
+      }
+      SpawnTemplate "{65CCC507930C6E0D}" {
+       m_iTemplate 1
+       m_sSpawnpoint "s_3_3"
+       m_aWaypoints {
+        "sd_3_1"
+       }
+      }
+      SpawnTemplate "{65CCC5076ED3AA56}" {
+       m_iTemplate 3
+       m_sSpawnpoint "s_3_4"
+       m_aWaypoints {
+        "d_3_1"
+       }
+      }
+      SpawnTemplate "{65CCC5075DEDDA81}" {
+       m_iTemplate 1
+       m_sSpawnpoint "s_3_5"
+       m_aWaypoints {
+        "sd_3_2"
+       }
+      }
+      SpawnTemplate "{65CCC507AF2BD302}" {
+       m_iTemplate 2
+       m_sSpawnpoint "s_3_6"
+       m_aWaypoints {
+        "sd_3_2"
+       }
+      }
+      SpawnTemplate "{65CCC507ADEB8EC2}" {
+       m_iTemplate 2
+       m_sSpawnpoint "s_3_7"
+       m_aWaypoints {
+        "sd_3_2"
+       }
+      }
+      SpawnTemplate "{65CCC507529C272E}" {
+       m_iTemplate 4
+       m_sSpawnpoint "s_3_8"
+       m_aWaypoints {
+        "sd_3_3"
+       }
+      }
+      SpawnTemplate "{65CCC507539E11C8}" {
+       m_iTemplate 2
+       m_sSpawnpoint "s_3_9"
+       m_aWaypoints {
+        "d_3_4"
+       }
+      }
+      SpawnTemplate "{65CCC507CA25F93D}" {
+       m_iTemplate 2
+       m_sSpawnpoint "s_3_10"
+       m_aWaypoints {
+        "d_3_5"
+       }
+      }
+      SpawnTemplate "{65CCC507C63C4E82}" {
+       m_iTemplate 2
+       m_sSpawnpoint "s_3_11"
+       m_aWaypoints {
+        "d_3_5"
+       }
+      }
+      SpawnTemplate "{65CCC507C73D3685}" {
+       m_iTemplate 2
+       m_sSpawnpoint "s_3_12"
+       m_aWaypoints {
+        "d_3_5"
+       }
+      }
+     }
+    }
+    S7R_MissionPhase "{65CCA11DFC1380C0}" {
+     m_sMissionPhaseName "Mission Phase 4"
+     _missionPhaseNumber 4
+     m_missionPhaseEvents {
+      SpawnTemplate "{65CCC51808F577A1}" {
+       m_iTemplate 2
+       m_sSpawnpoint "s_4_1"
+       m_aWaypoints {
+        "p_4_1"
+       }
+      }
+      SpawnTemplate "{65CCC51804854271}" {
+       m_iTemplate 2
+       m_sSpawnpoint "s_4_2"
+       m_aWaypoints {
+        "p_4_1"
+       }
+      }
+      SpawnTemplate "{65CCC5181301D1A5}" {
+       m_iTemplate 1
+       m_sSpawnpoint "s_4_3"
+       m_aWaypoints {
+        "d_4_1"
+       }
+      }
+      SpawnTemplate "{65CCC5187821D323}" {
+       m_iTemplate 1
+       m_sSpawnpoint "s_4_4"
+       m_aWaypoints {
+        "d_4_1"
+       }
+      }
+      SpawnTemplate "{65CCC5184F402779}" {
+       m_iTemplate 2
+       m_sSpawnpoint "s_4_5"
+       m_aWaypoints {
+        "p_4_2"
+       }
+      }
+      SpawnTemplate "{65CCC518A6FF83BB}" {
+       m_iTemplate 2
+       m_sSpawnpoint "s_4_6"
+       m_aWaypoints {
+        "p_4_2"
+       }
+      }
+      SpawnTemplate "{65CCC518BF3F4009}" {
+       m_iTemplate 2
+       m_sSpawnpoint "s_4_7"
+       m_aWaypoints {
+        "p_4_3"
+       }
+      }
+      SpawnTemplate "{65CCC51888AE0A73}" {
+       m_sSpawnpoint "s_4_8"
+       m_aWaypoints {
+        "p_4_3"
+       }
+      }
+      SpawnTemplate "{65CCC51882532468}" {
+       m_sSpawnpoint "s_4_9"
+       m_aWaypoints {
+        "p_4_3"
+       }
+      }
+      SpawnTemplate "{65CCC51892E86124}" {
+       m_sSpawnpoint "s_4_10"
+       m_aWaypoints {
+        "d_4_1"
+       }
+      }
+      SpawnTemplate "{65CCC518F05756FE}" {
+       m_sSpawnpoint "s_4_11"
+       m_aWaypoints {
+        "d_4_1"
        }
       }
      }
@@ -183,8 +353,6 @@ SCR_BaseGameMode {
    m_sHATSupplyDrop "{9B0C45BC6FED52F3}Prefabs/7R/SupplyBoxes/HATSupplyDropBox7R.et"
    m_sMMGSupplyDrop "{0A420A0ABE7961C1}Prefabs/7R/SupplyBoxes/MMGSupplyDropBox7R.et"
    m_sMortarSupplyDrop "{9B3B654B9E9E9DEB}Prefabs/7R/SupplyBoxes/MortarSupplyDropBox7R.et"
-   m_iSupplySpawnHeight 100
-   m_iRandomSpawnOffset 20
   }
   SCR_AdditionalGameModeSettingsComponent "{6523010B4170073B}" {
    m_bEnableTeamKillPunishment 0
@@ -311,6 +479,7 @@ SCR_BaseGameMode {
    }
   }
   SCR_HintManagerComponent "{6548D99BA633DCFF}" {
+   m_bIgnoreHintSettings 1
   }
   SCR_IdentityManagerComponent "{651F0CC663E62F6A}" {
    Enabled 1

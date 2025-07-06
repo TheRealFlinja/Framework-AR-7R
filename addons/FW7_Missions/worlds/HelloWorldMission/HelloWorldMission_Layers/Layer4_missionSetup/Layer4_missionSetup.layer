@@ -202,8 +202,8 @@ SCR_SpawnPoint {
   Hierarchy "{65A53E5F75E5F7AF}" {
   }
  }
- coords 3908 15.302 8430
- angleY 180
+ coords 3908 15.313 8434.889
+ angleY -180
  m_fSpawnRadius 50
  m_sFaction "7R"
  m_Info SCR_UIInfo "{65A53E5F75E5F649}" {
